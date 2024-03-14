@@ -1,0 +1,90 @@
+.glass{
+    background-color: #fff;
+    width: 48%;
+    margin-top: 20px;
+    height: 500px;
+    border: 1px solid rgb(228, 224, 224);
+}
+.glass_wrapper{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.glass_wrapper .glass_product{
+    width: 60%;
+    height: 100%;
+}
+.glass_wrapper .glass_banner{
+    width: 35%;
+    margin: 10px auto 10px auto;
+    height: 95%;
+}
+.glass_wrapper .glass_banner img{
+    width: 100%;
+    height: 100%;
+}
+.glass_heading{
+    width: 98%;
+    height: 15%;
+    margin: 10px 10px 5px 10px;
+    background: #f28c78;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.glass_heading img{
+    width: 70px;
+    margin: 0 10px;
+}
+.glass_product_col{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 80%;
+
+}
+.glass_product_col .g_p_col{
+    width: 35%;
+    height: 155px;
+    border: 1px solid #fcd5d7;
+    border-radius: 8px;
+    margin: 10px 0 ;
+}
+.glass_product_col .g_p_col .g_p_col_img{
+    width: 80%;
+    height: 40%;
+    background:#fcd5d7;
+    border-radius: 10px;
+    margin: 10px auto 0px auto;
+    text-align: center;
+}
+.glass_product_col .g_p_col .g_p_col_img img{
+    height: 100%;
+}
+.g_p_col_info{
+    width: 99%;
+    height: 50%;
+    margin: 10px auto;
+    padding: 0px 5px;
+}
+.g_p_col_info .g_p_heading{
+    font-size: 12px;
+}
+.g_p_col_info .g_p_desc{
+    font-size: 10px;
+    color: gray;
+}
+@media only screen and (min-width:321px) and (max-width:768px){
+    .glass{
+        margin: 5px;
+        background-color: #fff;
+        width: 97%;
+        margin-top: 10px;
+        height: 500px;
+        border: 1px solid rgb(228, 224, 224);
+    }
+}

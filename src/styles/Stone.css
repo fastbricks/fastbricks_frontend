@@ -1,0 +1,34 @@
+.stone{
+    background-color: #fff;
+    width: 48%;
+    margin-top: 20px;
+    height: 500px;
+    border: 1px solid rgb(228, 224, 224);
+}
+.stone_heading{
+    height: 15%;
+    width: 100%;
+    background: #f28c78;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.store_product{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 75%;
+}
+
+@media only screen and (min-width:321px) and (max-width:768px){
+    .stone{
+        margin: 5px;
+        background-color: #fff;
+        width: 97%;
+        margin-top: 10px;
+        height: 500px;
+        border: 1px solid rgb(228, 224, 224);
+    }
+}

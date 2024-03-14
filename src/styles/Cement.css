@@ -1,0 +1,90 @@
+.cement{
+    background-color: #fff;
+    width: 48%;
+    margin-top: 20px;
+    height: 500px;
+    border: 1px solid rgb(228, 224, 224);
+}
+.cement_wrapper{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cement_wrapper .cement_product{
+    width: 60%;
+    height: 100%;
+}
+.cement_wrapper .cement_banner{
+    width: 35%;
+    margin: 10px auto 10px auto;
+    height: 95%;
+}
+.cement_wrapper .cement_banner img{
+    width: 100%;
+    height: 100%;
+}
+.cement_heading{
+    width: 98%;
+    height: 15%;
+    margin: 10px 10px 5px 10px;
+    background: #f28c78;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.cement_heading img{
+    width: 30px;
+    margin: 0 10px;
+}
+.cement_product_col{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 80%;
+
+}
+.cement_product_col .c_p_col{
+    width: 35%;
+    height: 155px;
+    border: 1px solid #fcd5d7;
+    border-radius: 8px;
+    margin: 10px 0 ;
+}
+.cement_product_col .c_p_col .c_p_col_img{
+    width: 80%;
+    height: 40%;
+    background:#fcd5d7;
+    border-radius: 10px;
+    margin: 10px auto 0px auto;
+    text-align: center;
+}
+.cement_product_col .c_p_col .c_p_col_img img{
+    height: 100%;
+}
+.c_p_col_info{
+    width: 99%;
+    height: 50%;
+    margin: 10px auto;
+    padding: 0px 5px;
+}
+.c_p_col_info .c_p_heading{
+    font-size: 12px;
+}
+.c_p_col_info .c_p_desc{
+    font-size: 10px;
+    color: gray;
+}
+@media only screen and (min-width:321px) and (max-width:768px){
+    .cement{
+        margin: 5px;
+        background-color: #fff;
+        width: 97%;
+        margin-top: 10px;
+        height: 500px;
+        border: 1px solid rgb(228, 224, 224);
+    }
+}
