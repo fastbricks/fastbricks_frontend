@@ -88,7 +88,7 @@ export default function Home() {
           </Box>
         </div>
         <div style={{ marginTop: "10px" }}>
-          <Image src={poster} className="img" />
+          <Image src={poster} className="img" />h
         </div>
       </div>
     </main>
