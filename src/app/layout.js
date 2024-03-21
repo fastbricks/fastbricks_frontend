@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Navbar />
-        <div className="marginTop">{children}</div>
+        <div className=" mt-0 sm:mt-20">{children}</div>
         {/* <BottomNavBar /> */}
         <div className="marginBottomForMob">
           <Footer />

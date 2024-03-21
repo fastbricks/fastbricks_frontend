@@ -11,6 +11,8 @@ import { FaCartShopping } from "react-icons/fa6";
 import { IoCartOutline } from "react-icons/io5";
 import { FaBoxOpen } from "react-icons/fa";
 import { PiCubeDuotone } from "react-icons/pi";
+import { TbClipboardText } from "react-icons/tb";
+import { FaClipboard } from "react-icons/fa";
 
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";

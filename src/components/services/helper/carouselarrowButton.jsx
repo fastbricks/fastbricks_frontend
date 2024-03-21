@@ -1,9 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
-import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 const CustomLeftArrow = ({ onClick }) => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -21,8 +20,8 @@ const CustomLeftArrow = ({ onClick }) => {
   }
 
   return (
-    <div className="icon-west-carousel_service reverse">
-      <ArrowLeftIcon onClick={() => onClick()} className="icon-box-a reverse" />
+    <div className="flex justify-between items-center absolute bg-white left-0 rounded-[50%] p-2">
+      <ChevronLeftIcon onClick={() => onClick()} className="" />
     </div>
   );
 };
@@ -44,8 +43,8 @@ const CustomRightArrow = ({ onClick }) => {
   }
 
   return (
-    <div className="icon-east-carousel_service ">
-      <ArrowRightIcon onClick={() => onClick()} className="icon-box-a" />
+    <div className="flex justify-between items-center absolute bg-white right-0 rounded-[50%] p-2">
+      <ChevronRightIcon onClick={() => onClick()} className="" />
     </div>
   );
 };

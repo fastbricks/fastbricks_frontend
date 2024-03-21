@@ -137,9 +137,10 @@ export default function Login() {
                         <Button
                           variant="contained"
                           disableElevation
+                          className="bg-red-500"
                           sx={{
                             margin: "5px 5px",
-                            backgroundColor: "red",
+                            backgroundColor: "#fb5d0e",
                             ":hover": {
                               backgroundColor: "#fb5d0e",
                             },

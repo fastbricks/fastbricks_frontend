@@ -16,6 +16,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import "./Navbar.css";
 import styles from "./mobileNav.module.css";
+import TypeAnimationComp from "../TypeAnimation/TypeAnimation";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -81,13 +82,15 @@ const Navbar = () => {
           </div>
         </a>
         <div className="center">
-          <div className="search-container">
+          <div className="search-container relative">
             <SearchIcon />
-            <input
-              type="text"
-              placeholder="Search Your Product , Brand Or More"
-            />
-            <MicIcon />
+            <input type="text" placeholder="Search for" />
+            <div className="left-32 absolute flex">
+              <h1>&apos;</h1>
+              <TypeAnimationComp />
+              <h1>&apos;</h1>
+            </div>
+            {/* <MicIcon /> */}
           </div>
           <div>
             <Link href={"/account/login"} style={{ textDecoration: "none" }}>
@@ -115,7 +118,7 @@ const Navbar = () => {
           <Link href={"/cart"} style={{ textDecoration: "none" }}>
             <div className="cart">
               <ShoppingCartOutlinedIcon className="cart-icon" />
-              <h1 className="cart-text">Cart</h1>
+              <h1 className="seller">Cart</h1>
             </div>
           </Link>
         </div>
@@ -211,10 +214,12 @@ const Navbar = () => {
           >
             <div className={styles.searchContainer}>
               <SearchIcon />
-              <input
-                type="text"
-                placeholder="Search Your Product , Brand Or More"
-              />
+              <input type="text" placeholder="Search for" />
+              <div className="left-32 absolute flex">
+                <h1>&apos;</h1>
+                <TypeAnimationComp />
+                <h1>&apos;</h1>
+              </div>
               <MicIcon />
             </div>
           </div>
@@ -235,10 +240,12 @@ const Navbar = () => {
       >
         <div className={styles.searchContainer}>
           <SearchIcon />
-          <input
-            type="text"
-            placeholder="Search Your Product , Brand Or More"
-          />
+          <input type="text" placeholder="Search for" />
+          <div className="left-32 absolute flex">
+            <h1>&apos;</h1>
+            <TypeAnimationComp />
+            <h1>&apos;</h1>
+          </div>
           <MicIcon />
         </div>
       </div>

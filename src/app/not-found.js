@@ -3,33 +3,17 @@ import Lottie from "lottie-react";
 import { Box, styled, Button } from "@mui/material";
 import Link from "next/link";
 import animationData from "../Lottie/stop.json";
-const LottieBox = styled(Box)(({ theme }) => ({
-  height: 300,
-  width: 300,
-  [theme.breakpoints.down("md")]: {
-    height: 200,
-    width: 200,
-  },
-}));
+
 export default function NotFound() {
   return (
-    <div
-      style={{
-        display: "grid",
-        justifyContent: "center",
-        height: "90vh",
-        alignContent: "center",
-        alignItems: "center",
-        textAlign: "center",
-      }}
-    >
-      <LottieBox>
+    <div className="flex flex-col h-[90vh] items-center text-center justify-center">
+      <div className="">
         <Lottie
           animationData={animationData}
-          className="h-[70vh]"
+          className="h-[50vh]"
           loop={true}
         />
-      </LottieBox>
+      </div>
       <h6>Page Not Found</h6>
       <style jsx>
         {`
