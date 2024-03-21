@@ -1,5 +1,3 @@
-import "../tailwind.css";
-// import "./categories.module.css";
 import { Box, Card, Typography, styled } from "@mui/material";
 
 // const Wrapper = styled(Box)(({ theme }) => ({
