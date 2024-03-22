@@ -5,7 +5,7 @@ import HomeCarousel from "@/components/HomeCraousel/HomeCarousel";
 import Machinecategory from "@/components/services/Machinecategory";
 import Quick from "@/components/services/Quick";
 
-import ServiceCard from "@/components/services/ServiceCard";
+import ServiceCard from "@/components/services/Servicecard";
 
 import { Box, Button } from "@mui/material";
 import Image from "next/image";
