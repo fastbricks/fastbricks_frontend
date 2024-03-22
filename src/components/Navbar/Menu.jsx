@@ -20,6 +20,8 @@ import Link from "next/link";
 import { TbCategoryFilled } from "react-icons/tb";
 import { AccountCircle } from "@mui/icons-material";
 import Person2Icon from "@mui/icons-material/Person2";
+import { TbClipboardText } from "react-icons/tb";
+
 export default function Menu() {
   const [state, setState] = React.useState({
     top: false,
@@ -75,19 +77,11 @@ export default function Menu() {
 
         <List>
           <ListItem disablePadding>
-            <ListItemButton href="/all-categories">
+            <ListItemButton href="/bookings">
               <ListItemIcon>
-                <TbCategoryFilled className="cart-icon" />
+                <TbClipboardText className="cart-icon" />
               </ListItemIcon>
-              <ListItemText>All Categories</ListItemText>
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton href="/orders">
-              <ListItemIcon>
-                <FaBoxOpen className="cart-icon" />
-              </ListItemIcon>
-              <ListItemText>My Orders</ListItemText>
+              <ListItemText>Bookings</ListItemText>
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>

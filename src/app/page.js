@@ -1,16 +1,13 @@
 // "use client";
 import BottomNavBar from "@/components/BottomNavigation/BottomNavBar";
 import ServiceCategory from "@/components/CategoryService/ServiceCategory";
-import HomeCarousel from "@/components/HomeCraousel/HomeCarousel";
+import HomeCarousel from "@/components/HomeCarousel/HomeCarousel";
 import Machinecategory from "@/components/services/Machinecategory";
 import Quick from "@/components/services/Quick";
 
 import ServiceCard from "@/components/services/Servicecard";
 
-import { Box, Button } from "@mui/material";
-import Image from "next/image";
 import { Card, Typography } from "@mui/material";
-import TypeAnimationComp from "@/components/TypeAnimation/TypeAnimation";
 import Poster from "@/components/featured/Poster";
 import PosterSecond from "@/components/featured/PosterSecond";
 export const metadata = {
