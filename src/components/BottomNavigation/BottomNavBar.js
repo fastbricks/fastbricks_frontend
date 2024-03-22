@@ -36,9 +36,9 @@ function BottomNavBar() {
     switch (route) {
       case "/":
         return 0;
-      case "/services":
+      case "/":
         return 1;
-      case "/orders":
+      case "/bookings":
         return 2;
       case "/cart":
         return 3;
@@ -53,11 +53,12 @@ function BottomNavBar() {
       case 0:
         router.push("/");
         break;
+
       case 1:
-        router.push("/services");
+        router.push("/");
         break;
       case 2:
-        router.push("/orders");
+        router.push("/bookings");
         break;
       case 3:
         router.push("/cart");
@@ -80,7 +81,7 @@ function BottomNavBar() {
         zIndex: 999,
         // backgroundColor: "#FFEFEB",
         backgroundColor: "#fff",
-
+        boxShadow: "0px -1px 10px 0 rgba(0, 0, 0, 20%)",
         "& .MuiBottomNavigationAction-root": {
           fontSize: "1.7rem",
         },
@@ -109,28 +110,10 @@ function BottomNavBar() {
         }
       />
       <BottomNavigationAction
-        label="Services"
+        label="Orders"
         value={1}
         icon={
           value === 1 ? (
-            <BiSolidCategoryAlt style={{ color: "#FD9696" }} />
-          ) : (
-            <BiCategoryAlt style={{ color: "#f7adad" }} />
-          )
-        }
-        sx={{
-          "& .MuiBottomNavigationAction-label": {
-            color: value === 1 ? "#FD9696" : "gray",
-            fontWeight: value === 1 ? "bold" : "normal",
-            fontFamily: "sans-serif",
-          },
-        }}
-      />
-      <BottomNavigationAction
-        label="Orders"
-        value={2}
-        icon={
-          value === 2 ? (
             <FaBoxOpen style={{ color: "#FD9696" }} />
           ) : (
             <PiCubeDuotone style={{ color: "#f7adad" }} />
@@ -143,6 +126,25 @@ function BottomNavBar() {
           },
         }}
       />
+      <BottomNavigationAction
+        label="Bookings"
+        value={2}
+        icon={
+          value === 2 ? (
+            <FaClipboard style={{ color: "#FD9696" }} />
+          ) : (
+            <TbClipboardText style={{ color: "#f7adad" }} />
+          )
+        }
+        sx={{
+          "& .MuiBottomNavigationAction-label": {
+            color: value === 1 ? "#FD9696" : "gray",
+            fontWeight: value === 1 ? "bold" : "normal",
+            fontFamily: "sans-serif",
+          },
+        }}
+      />
+
       <BottomNavigationAction
         label="Cart"
         value={3}

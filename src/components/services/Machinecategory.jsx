@@ -12,10 +12,10 @@ import shuttering from "@/components/services/assets/category/shuttering.png";
 import wpm from "@/components/services/assets/category/wpm.png";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import {
-  CustomLeftArrow,
-  CustomRightArrow,
-} from "@/components/services/helper/CategoryCustumArrow";
+// import {
+//   CustomLeftArrow,
+//   CustomRightArrow,
+// } from "@/components/services/helper/CategoryCustumArrow";
 function Machinecategory() {
   const responsive = {
     desktop: {
@@ -35,8 +35,8 @@ function Machinecategory() {
     <Box sx={{ backgroundColor: "#ffe" }}>
       <Carousel
         responsive={responsive}
-        customLeftArrow={<CustomLeftArrow />}
-        customRightArrow={<CustomRightArrow />}
+        customLeftArrow={<></>}
+        customRightArrow={<></>}
       >
         <Card className="category-card">
           <div className="firstbox">

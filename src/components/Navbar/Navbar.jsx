@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import StorefrontIcon from "@mui/icons-material/Storefront";
 import SearchIcon from "@mui/icons-material/Search";
-import MicIcon from "@mui/icons-material/Mic";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Menu from "./Menu";
 import Head from "next/head";
@@ -17,10 +16,11 @@ import { MdOutlineAccountCircle } from "react-icons/md";
 import "./Navbar.css";
 import styles from "./mobileNav.module.css";
 import TypeAnimationComp from "../TypeAnimation/TypeAnimation";
+import SearchBar from "./SearchBar";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
-
+  const [typingStarted, setTypingStarted] = useState(false);
   useEffect(() => {
     const userAgent = window.navigator.userAgent;
     setIsMobile(
@@ -33,6 +33,9 @@ const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [searchContainerFixed, setSearchContainerFixed] = useState(false);
   const [upperDivHidden, setUpperDivHidden] = useState(false);
+  const handleTypingStart = () => {
+    setTypingStarted(true);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -82,16 +85,17 @@ const Navbar = () => {
           </div>
         </a>
         <div className="center">
-          <div className="search-container relative">
-            <SearchIcon />
+          <button className="search-container relative">
+            {/* <SearchIcon />
             <input type="text" placeholder="Search for" />
             <div className="left-32 absolute flex">
               <h1>&apos;</h1>
               <TypeAnimationComp />
               <h1>&apos;</h1>
             </div>
-            {/* <MicIcon /> */}
-          </div>
+            <MicIcon /> */}
+            <SearchBar display={"none"} handleTypingStart={handleTypingStart} />
+          </button>
           <div>
             <Link href={"/account/login"} style={{ textDecoration: "none" }}>
               <h3 title="Login" tagType="button" className="login">
@@ -213,14 +217,15 @@ const Navbar = () => {
             }}
           >
             <div className={styles.searchContainer}>
-              <SearchIcon />
+              {/* <SearchIcon />
               <input type="text" placeholder="Search for" />
               <div className="left-32 absolute flex">
                 <h1>&apos;</h1>
                 <TypeAnimationComp />
                 <h1>&apos;</h1>
               </div>
-              <MicIcon />
+              <MicIcon /> */}
+              <SearchBar />
             </div>
           </div>
         </div>
@@ -234,19 +239,22 @@ const Navbar = () => {
           paddingTop: 5,
           paddingBottom: 5,
           zIndex: 9999,
+          boxShadow: "0px -1px 10px 0 rgba(0, 0, 0, 20%)",
+
           justifyContent: "center",
         }}
         className={`${""} ${searchContainerFixed ? styles.fixed : styles.mt}`}
       >
         <div className={styles.searchContainer}>
-          <SearchIcon />
+          {/* <SearchIcon />
           <input type="text" placeholder="Search for" />
           <div className="left-32 absolute flex">
             <h1>&apos;</h1>
             <TypeAnimationComp />
             <h1>&apos;</h1>
           </div>
-          <MicIcon />
+          <MicIcon /> */}
+          <SearchBar />
         </div>
       </div>
     </div>

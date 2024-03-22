@@ -11,7 +11,7 @@ import four from "@/components/services/assets/cardimage/4.png";
 import five from "@/components/services/assets/cardimage/5.png";
 import six from "@/components/services/assets/cardimage/6.png";
 import seven from "@/components/services/assets/cardimage/7.png";
-function Servicecard() {
+function ServiceCard() {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -23,14 +23,14 @@ function Servicecard() {
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 2,
+      items: 1,
     },
   };
   return (
     <Box
       sx={{
         width: "100%",
-
+        marginTop: "5px",
         backgroundColor: "#fff",
       }}
     >
@@ -44,7 +44,12 @@ function Servicecard() {
         Services on Rent
       </span>
       <Box>
-        <Carousel responsive={responsive}>
+        <Carousel
+          responsive={responsive}
+          customLeftArrow={<></>}
+          customRightArrow={<></>}
+          className="rounded-lg bg-emerald-50"
+        >
           <Box>
             <Cardset img={one} />
           </Box>
@@ -72,4 +77,4 @@ function Servicecard() {
   );
 }
 
-export default Servicecard;
+export default ServiceCard;

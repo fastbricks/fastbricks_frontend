@@ -15,15 +15,11 @@ import painter from "@/components/services/assets/category/painter.png";
 import styles from "@/components/services/styles/serviceCategory.module.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import {
-  CustomLeftArrow,
-  CustomRightArrow,
-} from "@/components/services/helper/CategoryCustumArrow";
 
 function ServiceCategory() {
   return (
     <div className="border-0 border-gray-200 sm:border p-2 rounded-lg">
-      <Typography className="pl-5 text-lg text-gray-600">
+      <Typography className="pl-5 text-lg text-gray-500 pb-5 md:pb-0 font-bold">
         What are you looking for?
       </Typography>
       <div className=" rounded grid grid-cols-3  sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 md:grid-cols-3">

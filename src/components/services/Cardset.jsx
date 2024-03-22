@@ -7,23 +7,10 @@ function Cardset(props) {
     <Box>
       <div>
         <WrapperCard>
-          {" "}
-          {/* <Card
-          sx={{
-            borderRadius: 5,
-            position: "absolute",
-            fontWeight: "bold",
-            textAlign: "right",
-            backgroundColor: "red",
-            height: "3vh",
-            width: "11vh",
-          }}
-        >
-          <span style={{ color: "white", fontSize: "15px" }}>Rent now!!</span>
-        </Card> */}
           <Image
             src={props.img}
             alt=""
+            className="rounded-lg "
             style={{ width: "100%", height: "100%", objectFit: "fill" }}
           />
         </WrapperCard>
@@ -36,5 +23,8 @@ export default Cardset;
 const WrapperCard = styled(Box)(({ theme }) => ({
   padding: "10px",
   objectFit: "cover",
-  [theme.breakpoints.down("md")]: {},
+  height: 300,
+  [theme.breakpoints.down("md")]: {
+    height: 350,
+  },
 }));
