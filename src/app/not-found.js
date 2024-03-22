@@ -63,12 +63,13 @@ export default function NotFound() {
       <Link href={"/"}>
         <Button
           variant="contained"
+          className="bg-[#fa936e]"
           sx={{
             backgroundColor: "#fa936e",
             marginY: 2,
-            ":hover": {
-              backgroundColor: "#fa936e",
-            },
+            // ":hover": {
+            //   backgroundColor: "#fa936e",
+            // },
           }}
         >
           GO TO HOMEPAGE
