@@ -3,13 +3,13 @@ import BottomNavBar from "@/components/BottomNavigation/BottomNavBar";
 import ServiceCategory from "@/components/CategoryService/ServiceCategory";
 import HomeCarousel from "@/components/HomeCarousel/HomeCarousel";
 import Machinecategory from "@/components/services/Machinecategory";
-import Quick from "@/components/services/Quick";
 
 import ServiceCard from "@/components/services/Servicecard";
 
 import { Card, Typography } from "@mui/material";
 import Poster from "@/components/featured/Poster";
 import PosterSecond from "@/components/featured/PosterSecond";
+import Testimonials from "@/components/Testimonials/Testimonials";
 export const metadata = {
   title: "Fastbricks | Build Strong",
   description: "Fastbricks - with you in your construction journey ",
@@ -53,11 +53,12 @@ export default function Home() {
         <ServiceCard />
         <Poster />
         <PosterSecond />
-        <Quick />
+        {/* <Quick /> */}
 
         <div style={{ paddingTop: "8px" }}>
           <Machinecategory />
         </div>
+        <Testimonials />
       </div>
     </main>
   );
