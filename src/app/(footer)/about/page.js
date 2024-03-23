@@ -46,7 +46,7 @@ const LottieBoxFour = styled(Box)(({ theme }) => ({
 export default function About() {
   return (
     <>
-      <Box sx={{ backgroundColor: "#f8c8bd65" }}>
+      <Box sx={{ backgroundColor: "#f8c8bd6s5" }} className="bg-gray-50">
         <Box>
           <Box
             sx={{
