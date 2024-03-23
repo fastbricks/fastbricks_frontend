@@ -67,6 +67,13 @@ const Footer = () => {
                   <h4>About Us</h4>
                 </Link>
                 <Link
+                  href="https://blog.fastbricks.in/"
+                  target="_blank"
+                  style={{ textDecoration: "none" }}
+                >
+                  <h4>Blog</h4>
+                </Link>
+                <Link
                   href="https://careers.fastbricks.in/"
                   target="blank"
                   style={{ textDecoration: "none" }}
