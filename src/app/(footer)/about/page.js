@@ -229,9 +229,7 @@ export default function About() {
             </Card>
           </div>
         </Box>
-        <div className="video-responsive ">
-          <YoutubeEmbed />
-        </div>
+        <div className="video-responsive ">{/* <YoutubeEmbed /> */}</div>
       </Box>
     </>
   );
