@@ -75,27 +75,6 @@ export default function Login() {
       <Wrapper>
         <FirstCard sx={{}}>
           <div style={{ display: "grid", justifyContent: "center" }}>
-            <BootstrapDialogTitle>
-              {/* <div className="nav_left">
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "end",
-                  }}
-                >
-                  <img
-                    src="/img/logo.png"
-                    className="nav_logo"
-                    alt="fastbricks"
-                    style={{ transform: "scale(1.5)", marginRight: "10px" }}
-                  />
-                  <div className="nav_logo_text">
-                    <p className="fastbricks_text1">FAST</p>
-                    <p className="fastbricks_text2">BRICKS</p>
-                  </div>
-                </div>
-              </div> */}
-            </BootstrapDialogTitle>
             <DialogContent>
               {account.view === "login" ? (
                 <Box>
@@ -216,6 +195,7 @@ export default function Login() {
                         </TermBoxStyle>
                         <Button
                           variant="contained"
+                          className="bg-orange-500"
                           disableElevation
                           sx={{
                             margin: "5px 5px",

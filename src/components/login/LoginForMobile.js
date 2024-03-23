@@ -93,6 +93,7 @@ export default function LoginForMobile() {
           <Button
             variant="contained"
             onClick={handleClickOpen}
+            className="bg-orange-500"
             sx={{
               backgroundColor: "#fa936e",
               marginY: 2,
@@ -215,6 +216,7 @@ export default function LoginForMobile() {
                           </TermBoxStyle>
                           <Button
                             variant="contained"
+                            className="bg-orange-500"
                             disableElevation
                             sx={{
                               margin: "5px 5px",
@@ -303,6 +305,7 @@ export default function LoginForMobile() {
                           </TermBoxStyle>
                           <Button
                             variant="contained"
+                            className="bg-orange-500"
                             disableElevation
                             sx={{
                               margin: "5px 5px",
