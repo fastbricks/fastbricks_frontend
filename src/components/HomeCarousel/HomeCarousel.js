@@ -72,7 +72,7 @@ function HomeCarousel() {
               <img
                 className="object-cover h-[80vh] md:object-cover sm:h-[90vh]"
                 src={data.image}
-                alt="First slide"
+                alt="slide"
               />
             </div>
           );

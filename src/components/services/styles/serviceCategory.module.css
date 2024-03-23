@@ -45,6 +45,8 @@
 .service_category_images{
     height: 140px;
     width: 140px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 .quickbox{
     display: flex;
