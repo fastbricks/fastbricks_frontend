@@ -144,6 +144,8 @@ const Navbar = () => {
               justifyContent: "space-around",
               width: "100%",
               paddingBottom: "5px",
+
+              gap: "50px",
             }}
           >
             <div
@@ -154,9 +156,9 @@ const Navbar = () => {
                 gap: 10,
               }}
             >
-              <div className={styles.navbarMenu}>
+              {/* <div className={styles.navbarMenu}>
                 <Menu />
-              </div>
+              </div> */}
               <a href="/" style={{ textDecoration: "none" }}>
                 <div className={styles.nav_left}>
                   <Image
@@ -167,10 +169,10 @@ const Navbar = () => {
                   />
                   <div className={styles.logo_text}>
                     <p className={styles.fastbricks_text}>
-                      <span className={anton.className}>Fast</span>
+                      <span className={anton.className}>FAST</span>
                     </p>
                     <p className={styles.fastbricks_text2}>
-                      <span className={anton.className}>bricks</span>
+                      <span className={anton.className}>BRICKS</span>
                     </p>
                   </div>
                 </div>
@@ -204,8 +206,13 @@ const Navbar = () => {
                   Login
                 </h3>
               </Link>
+
+              <div className={styles.navbarMenu}>
+                <Menu />
+              </div>
             </div>
           </div>
+
           <div
             style={{
               display: "flex",
@@ -239,7 +246,7 @@ const Navbar = () => {
           paddingTop: 5,
           paddingBottom: 5,
           zIndex: 9999,
-          boxShadow: "0px -1px 10px 0 rgba(0, 0, 0, 20%)",
+          // boxShadow: "0px -1px 10px 0 rgba(0, 0, 0, 20%)",
 
           justifyContent: "center",
         }}
