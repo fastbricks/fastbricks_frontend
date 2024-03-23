@@ -15,15 +15,16 @@ export default function Faqs() {
           </Typography>
           <Box sx={{ paddingRight: "50px" }}>
             <Typography sx={{ paddingTop: "10px" }}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-              facere illo amet iusto molestiae est repudiandae voluptates atque,
-              id expedita?
+              Fastbricks Help Center resolves construction services and rentals
+              issues promptly.Get help with services, rentals, and more.
+              Simplify construction marketplace experience.
             </Typography>
           </Box>
 
           <Button
             variant="contained"
             color="warning"
+            className="bg-orange-500"
             sx={{ paddingTop: "10px", margin: "10px 0px" }}
           >
             Read more

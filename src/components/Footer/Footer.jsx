@@ -172,7 +172,7 @@ const Footer = () => {
               alignItems: "center",
             }}
           >
-            <Typography sx={{ fontSize: 20, color: "#fff" }}>
+            <Typography className=" text-md text-white font-bold">
               Fastbricks, Your Construction Companion
             </Typography>
           </Box>
@@ -189,13 +189,13 @@ const Footer = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              fontSize: 15,
+
               color: "#fff",
             }}
           >
             <Typography>&copy;</Typography>
-            <Typography>
-              2024 Copyright |<b>Fastbricks</b>
+            <Typography className=" text-sm text-white">
+              2024 Copyright | <b>Fastbricks</b>
               <vl></vl>
             </Typography>
           </Box>
