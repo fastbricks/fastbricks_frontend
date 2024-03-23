@@ -15,9 +15,13 @@ const CustomLeftArrow = ({ onClick }) => {
     );
   }, []);
 
-  // if (isMobile) {
-  //   return null; // Render nothing on mobile
-  // }
+  if (isMobile) {
+    return (
+      <div className="flex justify-between items-center absolute  left-0 rounded-lg scale-150 bg-white">
+        <ChevronLeftIcon onClick={() => onClick()} className="" />
+      </div>
+    ); // Render nothing on mobile
+  }
 
   return (
     <div className="flex justify-between items-center absolute  left-0 rounded-lg pt-2 pb-2 scale-150 bg-white">
@@ -39,7 +43,11 @@ const CustomRightArrow = ({ onClick }) => {
   }, []);
 
   if (isMobile) {
-    return null; // Render nothing on mobile
+    return (
+      <div className="flex justify-between items-center absolute bg-white right-0 rounded-lg  scale-150">
+        <ChevronRightIcon onClick={() => onClick()} className="" />
+      </div>
+    ); // Render nothing on mobile
   }
 
   return (
