@@ -1,4 +1,5 @@
 "use client";
+import { CustomLeftArrow } from "@/components/services/helper/CarouselButton";
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -8,35 +9,35 @@ const Testimonials = () => {
     {
       service: "Contractors",
       rating: 5,
-      image: "/faq.jpg", // Placeholder image for contractors
+      image: "/test/contractors.jpg", // Placeholder image for contractors
       content:
         "FastBricks helped us find reliable contractors for our construction projects. Their platform made it easy to connect with skilled professionals who delivered high-quality work on time and within budget.",
     },
     {
       service: "Labour",
       rating: 4,
-      image: "/faq.jpg", // Placeholder image for laborers
+      image: "/test/labour.avif", // Placeholder image for laborers
       content:
         "We've been using FastBricks to hire skilled laborers for various tasks on our construction sites. Their platform provides access to a pool of experienced workers, making it convenient for us to find the right people for the job.",
     },
     {
       service: "Masons",
       rating: 4.5,
-      image: "/faq.jpg", // Placeholder image for masons
+      image: "/test/masons.jpg", // Placeholder image for masons
       content:
         "FastBricks connected us with expert masons who have contributed to the success of our projects. Their platform made it simple to find masons with the right expertise and experience, ensuring top-notch craftsmanship.",
     },
     {
       service: "Civil Workers",
       rating: 4,
-      image: "/faq.jpg", // Placeholder image for civil workers
+      image: "/test/civil.jpg", // Placeholder image for civil workers
       content:
         "We rely on FastBricks to hire skilled civil workers for our infrastructure projects. Their platform streamlines the hiring process and allows us to find qualified professionals quickly, helping us meet project deadlines efficiently.",
     },
     {
       service: "Machinery Rentals Services",
       rating: 5,
-      image: "/faq.jpg", // Placeholder image for machinery rental services
+      image: "/test/rentals.jpg", // Placeholder image for machinery rental services
       content:
         "FastBricks offers an extensive range of machinery rental services, helping us access the equipment we need for our construction projects. Their platform provides competitive rates and ensures the availability of machinery when we need it.",
     },
@@ -55,7 +56,7 @@ const Testimonials = () => {
         infinite={false}
         containerClass="carousel-container"
         dotListClass=""
-        customLeftArrow={<></>}
+        customLeftArrow={<CustomLeftArrow />}
         customRightArrow={<></>}
         draggable
         focusOnSelect={false}
@@ -94,7 +95,7 @@ const Testimonials = () => {
             <img
               src={testimonial.image}
               alt={testimonial.service}
-              className="w-full h-48 object-cover"
+              className="w-full h-48 object-fill "
             />
             <div className="p-4 h-full sm:h-52 overflow-hidden">
               <div className="flex items-center justify-between">
