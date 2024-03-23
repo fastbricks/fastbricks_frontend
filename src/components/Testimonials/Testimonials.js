@@ -97,28 +97,30 @@ const Testimonials = () => {
               className="w-full h-48 object-cover"
             />
             <div className="p-4 h-full sm:h-52 overflow-hidden">
-              <h4 className="text-lg font-semibold mb-2">
-                {testimonial.service}
-              </h4>
-              <div className="flex mb-2">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <svg
-                    key={i}
-                    className={`h-4 w-4 fill-current ${
-                      i < testimonial.rating
-                        ? "text-yellow-500"
-                        : "text-gray-300"
-                    }`}
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 15.854l-6.364 3.156 1.227-7.049L.367 7.646l7.195-1.044L10 0l2.438 6.602 7.195 1.044-4.863 4.315 1.227 7.049z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                ))}
+              <div className="flex items-center justify-between">
+                <h4 className="text-lg font-semibold mb-2">
+                  {testimonial.service}
+                </h4>
+                <div className="flex mb-2">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <svg
+                      key={i}
+                      className={`h-4 w-4 fill-current ${
+                        i < testimonial.rating
+                          ? "text-yellow-500"
+                          : "text-gray-300"
+                      }`}
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 15.854l-6.364 3.156 1.227-7.049L.367 7.646l7.195-1.044L10 0l2.438 6.602 7.195 1.044-4.863 4.315 1.227 7.049z"
+                        clipRule="evenodd"
+                      ></path>
+                    </svg>
+                  ))}
+                </div>
               </div>
               <p className="text-gray-600">{testimonial.content}</p>
             </div>
