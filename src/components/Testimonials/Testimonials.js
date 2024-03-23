@@ -1,5 +1,8 @@
 "use client";
-import { CustomLeftArrow } from "@/components/services/helper/CarouselButton";
+import {
+  CustomLeftArrow,
+  CustomRightArrow,
+} from "@/components/services/helper/CarouselButton";
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -57,7 +60,7 @@ const Testimonials = () => {
         containerClass="carousel-container"
         dotListClass=""
         customLeftArrow={<CustomLeftArrow />}
-        customRightArrow={<></>}
+        customRightArrow={<CustomRightArrow />}
         draggable
         focusOnSelect={false}
         itemClass=""
