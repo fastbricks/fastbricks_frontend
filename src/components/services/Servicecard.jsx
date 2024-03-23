@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Box } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -11,6 +11,10 @@ import four from "@/components/services/assets/cardimage/4.png";
 import five from "@/components/services/assets/cardimage/5.png";
 import six from "@/components/services/assets/cardimage/6.png";
 import seven from "@/components/services/assets/cardimage/7.png";
+import {
+  CustomLeftArrow,
+  CustomRightArrow,
+} from "./helper/carouselarrowButton";
 function ServiceCard() {
   const responsive = {
     desktop: {
@@ -23,7 +27,7 @@ function ServiceCard() {
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1,
+      items: 1.3,
     },
   };
   return (
@@ -46,9 +50,12 @@ function ServiceCard() {
       <Box>
         <Carousel
           responsive={responsive}
-          customLeftArrow={<></>}
-          customRightArrow={<></>}
-          className="rounded-lg bg-emerald-50"
+          customLeftArrow={<CustomLeftArrow />}
+          customRightArrow={<CustomRightArrow />}
+          className="rounded-lg bg-white pb-5"
+          showDots={true}
+          dotListClass="custom-dot-list"
+          customDot={<CustomDot />}
         >
           <Box>
             <Cardset img={one} />
@@ -78,3 +85,31 @@ function ServiceCard() {
 }
 
 export default ServiceCard;
+
+const CustomDot = ({ onClick, active }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const userAgent = window.navigator.userAgent;
+    setIsMobile(
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        userAgent
+      )
+    );
+  }, []);
+
+  if (!isMobile) {
+    return null; //render nothing on desktop
+  }
+
+  return (
+    <div className="bg-white rounded-md">
+      <button
+        className={`${
+          active ? "bg-red-300 rounded-md" : "bg-gray-100 "
+        } w-4 h-2 transition-all duration-300 `}
+        onClick={() => onClick()}
+      ></button>
+    </div>
+  );
+};

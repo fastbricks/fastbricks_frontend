@@ -25,6 +25,6 @@ const WrapperCard = styled(Box)(({ theme }) => ({
   objectFit: "cover",
   height: 300,
   [theme.breakpoints.down("md")]: {
-    height: 350,
+    height: 200,
   },
 }));
