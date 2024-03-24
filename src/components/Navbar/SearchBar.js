@@ -4,7 +4,7 @@ import "./Navbar.css";
 import MicIcon from "@mui/icons-material/Mic";
 import SearchPage from "../SearchBar/SearchPage";
 
-function SearchBar({ display }) {
+function SearchBar({ display, disabled }) {
   const words = [
     "'civil workers'",
     "'labour'",
@@ -63,7 +63,7 @@ function SearchBar({ display }) {
       <input
         type="text"
         placeholder={placeholder}
-        disabled
+        disabled={false}
         className="cursor-pointer"
       />
       <div
