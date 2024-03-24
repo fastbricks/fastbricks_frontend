@@ -18,6 +18,8 @@ import Link from "next/link";
 import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
 import { Card, Box, TextField } from "@mui/material";
+import WestIcon from "@mui/icons-material/West";
+import { FcGoogle } from "react-icons/fc";
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -115,10 +117,12 @@ export default function LoginForMobile() {
       >
         <Box
           sx={{
-            backgroundColor: "#f7c8bd",
+            backgroundColor: "",
             width: "100vw",
+            boxShadow: "0px -1px 5cap 0px rgba(150, 150, 150, 0.2)",
+
             overflowX: "hidden",
-            backgroundImage: "url(/login/loginred1.png)",
+            backgroundImage: "url(/login/loginred1-.png)",
             backgroundRepeat: "no-repeat",
             backgroundSize: "100% 100%",
             height: "100%",
@@ -127,48 +131,29 @@ export default function LoginForMobile() {
           <AppBar
             sx={{
               position: "relative",
-              //   backgroundColor: "#f7c8bd",
-              backgroundColor: "transparent",
-
-              boxShadow: "none",
+              backgroundColor: "#fff",
+              boxShadow: "0px -1px 5cap 0px rgba(150, 150, 150, 0.2)",
+              // boxShadow: "none",
               display: "flex",
               flexDirection: "row",
               justifyContent: "space-between",
               paddingLeft: 2,
             }}
           >
-            <IconButton
-              edge="start"
-              color="red"
-              onClick={handleClose}
-              aria-label="close"
-            >
-              <CloseIcon />
-            </IconButton>
-            <Toolbar sx={{}}>
-              <BootstrapDialogTitle>
-                <div className="nav_left">
-                  <div
-                    style={{
-                      display: "flex",
-                      gap: 5,
-                    }}
-                  >
-                    <h3 style={{ color: "red", fontWeight: 900 }}>
-                      Fast
-                      <span style={{ color: "brown", fontWeight: 900 }}>
-                        bricks
-                      </span>
-                    </h3>
-                    <img
-                      src="/img/logo.png"
-                      className="nav_logo"
-                      alt="fastbricks"
-                      style={{ transform: "scale(1.5)", marginRight: "10px" }}
-                    />
-                  </div>
-                </div>
-              </BootstrapDialogTitle>
+            <Toolbar className="flex justify-center w-full">
+              <IconButton
+                edge="start"
+                color="gray"
+                onClick={handleClose}
+                aria-label="close"
+                className="absolute left-0"
+              >
+                <WestIcon />
+              </IconButton>
+
+              <Typography className="text-gray-600 font-bold text-lg">
+                Login to continue
+              </Typography>
             </Toolbar>
           </AppBar>
           <FirstCard sx={{}}>
@@ -214,20 +199,21 @@ export default function LoginForMobile() {
                             &nbsp; and&nbsp;
                             <StyledLink href={{}}>Privacy Policy</StyledLink>.
                           </TermBoxStyle>
-                          <Button
-                            variant="contained"
-                            className="bg-orange-500"
-                            disableElevation
-                            sx={{
-                              margin: "5px 5px",
-                              backgroundColor: "red",
-                              ":hover": {
-                                backgroundColor: "#fb5d0e",
-                              },
-                            }}
-                          >
-                            Request OTP
-                          </Button>
+                          <div className="flex justify-center w-full justify-items-center items-center">
+                            <Button
+                              variant="contained"
+                              className="bg-orange-500 absolute flex bottom-0 w-[80%] m-2 p-3 "
+                              disableElevation
+                              sx={{
+                                backgroundColor: "red",
+                                ":hover": {
+                                  backgroundColor: "#fb5d0e",
+                                },
+                              }}
+                            >
+                              Request OTP
+                            </Button>
+                          </div>
                         </Box>
                       </Card>
                     </Box>
@@ -282,7 +268,7 @@ export default function LoginForMobile() {
                               paddingLeft: "20px",
                             }}
                           >
-                            Sign up
+                            Welcome! you are new here!
                           </Typography>
                         </Box>
                         <Box
@@ -303,20 +289,21 @@ export default function LoginForMobile() {
                             &nbsp; and&nbsp;
                             <StyledLink href={{}}>Privacy Policy</StyledLink>.
                           </TermBoxStyle>
-                          <Button
-                            variant="contained"
-                            className="bg-orange-500"
-                            disableElevation
-                            sx={{
-                              margin: "5px 5px",
-                              backgroundColor: "red",
-                              ":hover": {
-                                backgroundColor: "#fb5d0e",
-                              },
-                            }}
-                          >
-                            continue
-                          </Button>
+                          <div className="flex justify-center w-full justify-items-center items-center">
+                            <Button
+                              variant="contained"
+                              className="bg-orange-500 flex absolute bottom-0 w-[80%] m-2 p-3 "
+                              disableElevation
+                              sx={{
+                                backgroundColor: "red",
+                                ":hover": {
+                                  backgroundColor: "#fb5d0e",
+                                },
+                              }}
+                            >
+                              continue
+                            </Button>
+                          </div>
                         </Box>
                       </Card>
                     </Box>
@@ -354,6 +341,14 @@ export default function LoginForMobile() {
                   </Box>
                 )}
               </DialogContent>
+              <div className="flex justify-center justify-items-center w-full">
+                <button className="flex items-center border-[1px] border-gray-300 justify-center gap-5 bg-gray-50 pt-3 rounded-lg pb-3 pl-5 pr-5">
+                  <div className="">
+                    <FcGoogle />
+                  </div>
+                  <Typography>Sign in with google</Typography>
+                </button>
+              </div>
             </div>
           </FirstCard>
         </Box>
@@ -362,17 +357,10 @@ export default function LoginForMobile() {
   );
 }
 const FirstCard = styled(Box)(({ theme }) => ({
-  //   width: "100%",
-  //   height: "100%",
-  //   backgroundColor: "white",
   zIndex: 999,
-  //   borderTopLeftRadius: "30px",
-  //   borderTopRightRadius: "30px",
-  //   transform: "scale3d(1.05, 1.05, 1)",
+
   [theme.breakpoints.down("md")]: {
     width: "100%",
-    // borderTopLeftRadius: "30px",
-    // borderTopRightRadius: "30px",
   },
 }));
 const TermBoxStyle = styled(Box)(({ theme }) => ({

@@ -1,11 +1,10 @@
 "use client";
-import { useEffect } from "react";
+
 import { useRouter } from "next/navigation";
 import Dialog from "@mui/material/Dialog";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@mui/icons-material/Close";
 import SearchIcon from "@mui/icons-material/Search";
 import MicIcon from "@mui/icons-material/Mic";
 import List from "@mui/material/List";
@@ -18,23 +17,6 @@ const Transition = (props) => {
 
 export default function SearchSuggestion() {
   const router = useRouter();
-
-  // useEffect(() => {
-  //   const handleAndroidBackButton = (event) => {
-  //     if (event.key === "Backspace" || event.key === "Back") {
-  //       event.preventDefault();
-  //       if (router.pathname !== "/") {
-  //         router.replace("/");
-  //       }
-  //     }
-  //   };
-
-  //   document.addEventListener("keydown", handleAndroidBackButton);
-
-  //   return () => {
-  //     document.removeEventListener("keydown", handleAndroidBackButton);
-  //   };
-  // }, [router]);
 
   const handleClose = () => {
     router.replace("/");
@@ -61,7 +43,7 @@ export default function SearchSuggestion() {
           </IconButton>
           <div className={styles.searchContainer}>
             <SearchIcon />
-            <input type="text" placeholder="Search for" />
+            <input type="text" placeholder="Search for ..." />
             <MicIcon />
           </div>
         </Toolbar>

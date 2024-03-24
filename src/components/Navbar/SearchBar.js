@@ -3,6 +3,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import "./Navbar.css";
 import MicIcon from "@mui/icons-material/Mic";
 import { useRouter } from "next/navigation";
+import TypeAnimationComp from "../TypeAnimation/TypeAnimation";
 function SearchBar({ display, disabled }) {
   const words = [
     "'civil workers'",
@@ -61,7 +62,7 @@ function SearchBar({ display, disabled }) {
       <SearchIcon />
       <input
         type="text"
-        placeholder={placeholder}
+        placeholder={"Search for"}
         disabled={false}
         className="cursor-pointer"
       />
@@ -77,8 +78,9 @@ function SearchBar({ display, disabled }) {
       ></div>
       {/* {isCardOpen && <SearchPage />} */}
       <div className="left-32 absolute flex">
-        {/* <h1>&apos;</h1>
-        <h1>&apos;</h1> */}
+        <h1>&apos;</h1>
+        <TypeAnimationComp />
+        <h1>&apos;</h1>
       </div>
       <MicIcon style={{ display: display }} />
     </div>
