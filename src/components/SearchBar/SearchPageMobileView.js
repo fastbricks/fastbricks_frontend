@@ -1,3 +1,4 @@
+import * as React from "react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Dialog from "@mui/material/Dialog";
@@ -10,39 +11,80 @@ import MicIcon from "@mui/icons-material/Mic";
 import List from "@mui/material/List";
 import Slide from "@mui/material/Slide";
 import styles from "@/components/Navbar/mobileNav.module.css";
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 
-const Transition = (props) => {
-  return <Slide direction="up" {...props} />;
-};
+import Button from "@mui/material/Button";
+import ListItemText from "@mui/material/ListItemText";
+import ListItemButton from "@mui/material/ListItemButton";
 
-export default function SearchPageMobileView() {
-  const [open, setOpen] = useState(true);
-  const router = useRouter();
+import Divider from "@mui/material/Divider";
+
+// import Typography from '@mui/material/Typography';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
+
+export default function FullScreenDialog() {
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
 
   const handleClose = () => {
-    router.push("/"); // Navigate to the home screen
+    setOpen(true);
   };
 
   return (
-    <Dialog fullScreen open={open} TransitionComponent={Transition}>
-      <AppBar sx={{ position: "relative", backgroundColor: "red" }}>
-        <Toolbar>
-          <IconButton
-            edge="start"
-            color="inherit"
-            onClick={handleClose}
-            aria-label="close"
-          >
-            <CloseIcon />
-          </IconButton>
-          <div className={styles.searchContainer}>
-            <SearchIcon />
-            <input type="text" placeholder="Search for" />
-            <MicIcon />
-          </div>
-        </Toolbar>
-      </AppBar>
-      <List></List>
-    </Dialog>
+    <React.Fragment>
+      {/* <Button variant="outlined" onClick={handleClickOpen}>
+        Open full-screen dialog
+      </Button> */}
+      <Dialog
+        fullScreen
+        open={true}
+        onClose={handleClose}
+        onClick={handleClickOpen}
+        TransitionComponent={Transition}
+      >
+        <AppBar
+          sx={{
+            position: "relative",
+            backgroundColor: "#fff",
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
+          <Toolbar>
+            <IconButton
+              edge="start"
+              color="gray"
+              onClick={handleClose}
+              aria-label="close"
+            >
+              <KeyboardBackspaceIcon />
+            </IconButton>
+            <div className={styles.searchContainer}>
+              <SearchIcon />
+              <input type="text" placeholder="Search for" />
+              <MicIcon />
+            </div>
+          </Toolbar>
+        </AppBar>
+        <List>
+          <ListItemButton>
+            <ListItemText primary="Phone ringtone" secondary="Titania" />
+          </ListItemButton>
+          <Divider />
+          <ListItemButton>
+            <ListItemText
+              primary="Default notification ringtone"
+              secondary="Tethys"
+            />
+          </ListItemButton>
+        </List>
+      </Dialog>
+    </React.Fragment>
   );
 }
