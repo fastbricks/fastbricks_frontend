@@ -49,6 +49,8 @@ export default function Home() {
             <HomeCarousel />
           </Card>
         </div>
+        <Poster />
+
         <div className="w-full flex flex-col justify-center justify-items-center gap-10 p-2 sm:p-5 items-center md:flex-row sm:gap-16 ">
           <div className="w-full md:2/4 ">
             <Typography className=" font-sans font-semibold text-[26px] leading-[40px] text-gray-600 pb-5 sm:text-[36px] pl-2 sm:pl-0 pr-2 sm:pr-0 sm:leading-[44px] sm:text-gray-800 hidden md:block">
@@ -62,7 +64,6 @@ export default function Home() {
           </div>
         </div>
         <ServiceCard />
-        <Poster />
         <PosterSecond />
 
         <Testimonials />
