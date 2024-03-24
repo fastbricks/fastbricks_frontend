@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import "./Navbar.css";
 import MicIcon from "@mui/icons-material/Mic";
-import SearchPage from "../SearchBar/SearchPage";
-
+import { useRouter } from "next/navigation";
 function SearchBar({ display, disabled }) {
   const words = [
     "'civil workers'",
@@ -17,7 +16,7 @@ function SearchBar({ display, disabled }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [typingIndex, setTypingIndex] = useState(0);
   let timeoutId;
-
+  const router = useRouter();
   useEffect(() => {
     const typingAnimation = () => {
       const word = words[currentIndex];
@@ -44,13 +43,13 @@ function SearchBar({ display, disabled }) {
 
   const [isCardOpen, setIsCardOpen] = useState(false);
 
-  const toggleCard = () => {
-    setIsCardOpen(!isCardOpen);
-  };
+  // const toggleCard = () => {
+  //   setIsCardOpen(!isCardOpen);
+  // };
 
   return (
     <div
-      onClick={toggleCard}
+      onClick={() => router.push("/searchsuggestion")}
       style={{
         position: "relative",
         display: "flex",
@@ -76,7 +75,7 @@ function SearchBar({ display, disabled }) {
           cursor: "pointer",
         }}
       ></div>
-      {isCardOpen && <SearchPage />}
+      {/* {isCardOpen && <SearchPage />} */}
       <div className="left-32 absolute flex">
         {/* <h1>&apos;</h1>
         <h1>&apos;</h1> */}

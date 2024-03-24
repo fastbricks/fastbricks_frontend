@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Typography } from "@mui/material";
 import RentalCategory from "@/components/RentalCategory/RentalCategory";
+import Image from "next/image";
 function RentalSection() {
   return (
     <div className="mt-5">

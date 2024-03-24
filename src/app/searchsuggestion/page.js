@@ -11,7 +11,7 @@ import MicIcon from "@mui/icons-material/Mic";
 import List from "@mui/material/List";
 import Slide from "@mui/material/Slide";
 import styles from "@/components/Navbar/mobileNav.module.css";
-
+import WestIcon from "@mui/icons-material/West";
 const Transition = (props) => {
   return <Slide direction="up" {...props} />;
 };
@@ -42,7 +42,14 @@ export default function SearchSuggestion() {
 
   return (
     <Dialog fullScreen open={true} TransitionComponent={Transition}>
-      <AppBar sx={{ position: "relative", backgroundColor: "#fff" }}>
+      <AppBar
+        sx={{
+          position: "relative",
+          backgroundColor: "#fff",
+          boxShadow: "0px -1px 5cap 0px rgba(150, 150, 150, 0.2)",
+          padding: "5px",
+        }}
+      >
         <Toolbar>
           <IconButton
             edge="start"
@@ -50,7 +57,7 @@ export default function SearchSuggestion() {
             onClick={handleClose}
             aria-label="close"
           >
-            <CloseIcon />
+            <WestIcon />
           </IconButton>
           <div className={styles.searchContainer}>
             <SearchIcon />
@@ -61,6 +68,5 @@ export default function SearchSuggestion() {
       </AppBar>
       <List></List>
     </Dialog>
-    // <div>search page</div>
   );
 }
