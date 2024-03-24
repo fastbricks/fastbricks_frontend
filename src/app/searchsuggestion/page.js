@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Dialog from "@mui/material/Dialog";
 import AppBar from "@mui/material/AppBar";
@@ -23,6 +23,19 @@ export default function SearchSuggestion() {
   const handleClose = () => {
     router.push("/"); // Navigate to the home screen
   };
+
+  useEffect(() => {
+    const handleBackButton = (event) => {
+      event.preventDefault();
+      handleClose();
+    };
+
+    window.addEventListener("popstate", handleBackButton);
+
+    return () => {
+      window.removeEventListener("popstate", handleBackButton);
+    };
+  }, []);
 
   return (
     <Dialog fullScreen open={true}>
