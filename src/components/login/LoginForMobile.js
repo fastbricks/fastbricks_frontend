@@ -238,7 +238,7 @@ export default function LoginForMobile() {
                         </Typography>
                       </Divider>
 
-                      <Card onClick={toggleSignup}>
+                      <div onClick={toggleSignup}>
                         <Button autoFocus>
                           <span
                             style={{ textTransform: "none", color: "#fd9696" }}
@@ -246,7 +246,7 @@ export default function LoginForMobile() {
                             Create Your Fastbricks account
                           </span>
                         </Button>
-                      </Card>
+                      </div>
                     </Box>
                   </Box>
                 ) : (
