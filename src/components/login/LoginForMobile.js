@@ -320,7 +320,7 @@ export default function LoginForMobile() {
                           Existing User?
                         </Typography>
                       </Divider>
-                      <Card onClick={toggleSignin}>
+                      <div onClick={toggleSignin}>
                         <Button
                           variant="contained"
                           disableElevation
@@ -336,7 +336,7 @@ export default function LoginForMobile() {
                         >
                           sign in
                         </Button>
-                      </Card>
+                      </div>
                     </Box>
                   </Box>
                 )}
