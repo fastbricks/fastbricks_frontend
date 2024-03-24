@@ -30,7 +30,7 @@ export default function SearchSuggestion() {
         <Toolbar>
           <IconButton
             edge="start"
-            color="inherit"
+            color="gray"
             onClick={handleClose}
             aria-label="close"
           >
