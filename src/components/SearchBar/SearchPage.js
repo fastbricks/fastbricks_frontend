@@ -38,7 +38,7 @@ function SearchPage() {
     }
   }, [open]);
 
-  if (isMobile) {
+  if (!isMobile) {
     router.replace("/searchsuggestion");
   }
   return (
