@@ -1,15 +1,14 @@
 // "use client";
 import BottomNavBar from "@/components/BottomNavigation/BottomNavBar";
-import ServiceCategory from "@/components/CategoryService/ServiceCategory";
-import HomeCarousel from "@/components/HomeCarousel/HomeCarousel";
 
 import ServiceCard from "@/components/services/Servicecard";
 
-import { Card, Typography } from "@mui/material";
 import Poster from "@/components/featured/Poster";
 import PosterSecond from "@/components/featured/PosterSecond";
 import Testimonials from "@/components/Testimonials/Testimonials";
-import RentalCategory from "@/components/RentalCategory/RentalCategory";
+
+import ServiceSection from "@/components/featured/ServiceSection";
+import RentalSection from "@/components/featured/RentalSection";
 export const metadata = {
   title: "Fastbricks | Build Strong",
   description: "Fastbricks - with you in your construction journey ",
@@ -37,32 +36,9 @@ export default function Home() {
     <main className="pl-0 pr-0 md:pl-20 md:pr-20">
       <div>
         <BottomNavBar />
-        <div className="w-full flex flex-col justify-center justify-items-center gap-10 p-2 sm:p-5 items-center md:flex-row sm:gap-16 ">
-          <div className="w-full md:2/4">
-            <Typography className=" font-sans font-semibold text-[26px] leading-[40px] text-gray-600 pb-5 sm:text-[36px] pl-2 sm:pl-0 pr-2 sm:pr-0 sm:leading-[44px] sm:text-gray-800 hidden md:block">
-              Give contracts for different <br />
-              services
-            </Typography>
-            <ServiceCategory />
-          </div>
-          <Card className="w-full md:2/4 rounded-lg md:h-full p-0 sm:p-2 ">
-            <HomeCarousel />
-          </Card>
-        </div>
+        <ServiceSection />
         <Poster />
-
-        <div className="w-full flex flex-col justify-center justify-items-center gap-10 p-2 sm:p-5 items-center md:flex-row sm:gap-16 ">
-          <div className="w-full md:2/4 ">
-            <Typography className=" font-sans font-semibold text-[26px] leading-[40px] text-gray-600 pb-5 sm:text-[36px] pl-2 sm:pl-0 pr-2 sm:pr-0 sm:leading-[44px] sm:text-gray-800 hidden md:block">
-              Give contracts for different <br />
-              services
-            </Typography>
-            <RentalCategory />
-          </div>
-          <div className="w-full md:2/4 rounded-lg md:h-full p-0 sm:p-2 ">
-            <img src="/rentals.png" />
-          </div>
-        </div>
+        <RentalSection />
         <ServiceCard />
         <PosterSecond />
 

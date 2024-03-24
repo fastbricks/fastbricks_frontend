@@ -48,7 +48,7 @@ const Testimonials = () => {
 
   return (
     <div className="container mx-auto py-12">
-      <hr className="bg-gray-100 p-1" />
+      <hr className="bg-gray-100 p-1 block sm:hidden" />
       <Carousel
         additionalTransfrom={0}
         arrows

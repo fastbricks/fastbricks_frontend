@@ -34,10 +34,13 @@ function ServiceCard() {
     <Box
       sx={{
         width: "100%",
-        marginTop: "5px",
+        marginTop: "20px",
+        marginBottom: "20px",
         backgroundColor: "#fff",
       }}
     >
+      <hr className="bg-gray-100 p-1 block sm:hidden" />
+
       <span
         style={{
           fontSize: "25px",
