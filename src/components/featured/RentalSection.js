@@ -15,7 +15,7 @@ function RentalSection() {
           <RentalCategory />
         </div>
         <div className="w-full md:2/4 rounded-lg md:h-full p-0 sm:p-2 ">
-          <Image src={RentalImage} className=" rounded-lg" />
+          <Image src={RentalImage} className="" />
         </div>
       </div>
     </div>
