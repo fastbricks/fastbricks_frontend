@@ -11,6 +11,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import CloseIcon from "@mui/icons-material/Close";
 import Slide from "@mui/material/Slide";
+import SearchBar from "../Navbar/SearchBar";
 import SearchIcon from "@mui/icons-material/Search";
 import MicIcon from "@mui/icons-material/Mic";
 import styles from "@/components/Navbar/mobileNav.module.css";
@@ -27,24 +28,12 @@ export default function SearchPageMobileView() {
   };
 
   const handleClose = () => {
-    setOpen(false);
-  };
-
-  const handleBackdropClick = (event) => {
-    // Prevent closing when clicking on the dialog screen
-    event.stopPropagation();
+    setOpen(true);
   };
 
   return (
-    <Dialog
-      fullScreen
-      open={open}
-      TransitionComponent={Transition}
-      onClose={handleClose}
-      BackdropProps={{
-        onClick: handleBackdropClick,
-      }}
-    >
+    // <React.Fragment>
+    <Dialog fullScreen open={open} TransitionComponent={Transition}>
       <AppBar sx={{ position: "relative", backgroundColor: "red" }}>
         <Toolbar>
           <IconButton
@@ -65,28 +54,6 @@ export default function SearchPageMobileView() {
       </AppBar>
       <List></List>
     </Dialog>
+    // </React.Fragment>
   );
-}
-
-export async function getServerSideProps({ req }) {
-  const userAgent = req.headers["user-agent"];
-  const isMobile =
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      userAgent
-    );
-
-  if (!isMobile) {
-    return {
-      redirect: {
-        destination: "/not-found",
-        permanent: false,
-      },
-    };
-  }
-
-  return {
-    props: {
-      isMobile,
-    },
-  };
 }

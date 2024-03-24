@@ -7,13 +7,11 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import SearchPageMobileView from "./SearchPageMobileView";
-import { useRouter } from "next/navigation";
 
 function SearchPage() {
   const [open, setOpen] = React.useState(true);
   const [scroll, setScroll] = React.useState("paper");
   const [isMobile, setIsMobile] = React.useState(false);
-  const router = useRouter();
 
   const handleClose = () => {
     setOpen(false);
@@ -38,8 +36,8 @@ function SearchPage() {
     }
   }, [open]);
 
-  if (!isMobile) {
-    router.replace("/searchsuggestion");
+  if (isMobile) {
+    return <SearchPageMobileView />;
   }
   return (
     <React.Fragment>
