@@ -20,7 +20,6 @@ import SearchBar from "./SearchBar";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [typingStarted, setTypingStarted] = useState(false);
   useEffect(() => {
     const userAgent = window.navigator.userAgent;
     setIsMobile(
@@ -33,9 +32,6 @@ const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [searchContainerFixed, setSearchContainerFixed] = useState(false);
   const [upperDivHidden, setUpperDivHidden] = useState(false);
-  const handleTypingStart = () => {
-    setTypingStarted(true);
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -94,7 +90,7 @@ const Navbar = () => {
               <h1>&apos;</h1>
             </div>
             <MicIcon /> */}
-            <SearchBar display={"none"} handleTypingStart={handleTypingStart} />
+            <SearchBar display={"none"} />
           </button>
           <div>
             <Link href={"/account/login"} style={{ textDecoration: "none" }}>

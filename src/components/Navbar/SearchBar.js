@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import "./Navbar.css";
 import MicIcon from "@mui/icons-material/Mic";
+import SearchPage from "../SearchBar/SearchPage";
 
 function SearchBar({ display }) {
   const words = [
@@ -41,16 +42,47 @@ function SearchBar({ display }) {
     return () => clearTimeout(timeoutId);
   }, [currentIndex, typingIndex, fixedText, words]);
 
+  const [isCardOpen, setIsCardOpen] = useState(false);
+
+  const toggleCard = () => {
+    setIsCardOpen(!isCardOpen);
+  };
+
   return (
-    <>
+    <div
+      onClick={toggleCard}
+      style={{
+        position: "relative",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        justifyItems: "center",
+      }}
+    >
       <SearchIcon />
-      <input type="text" placeholder={placeholder} />
+      <input
+        type="text"
+        placeholder={placeholder}
+        disabled
+        className="cursor-pointer"
+      />
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          cursor: "pointer",
+        }}
+      ></div>
+      {isCardOpen && <SearchPage />}
       <div className="left-32 absolute flex">
         {/* <h1>&apos;</h1>
         <h1>&apos;</h1> */}
       </div>
       <MicIcon style={{ display: display }} />
-    </>
+    </div>
   );
 }
 

@@ -12,6 +12,7 @@ function Poster() {
       <div className="mt-5 p-5 block sm:hidden cursor-pointer mb-5 ">
         <Image src={posterMobile} className="rounded-lg" />
       </div>
+      <hr className="bg-gray-100 p-1 block sm:hidden" />
     </div>
   );
 }
