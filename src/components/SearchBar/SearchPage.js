@@ -38,7 +38,7 @@ function SearchPage() {
   }, [open]);
 
   if (isMobile) {
-    redirect("/searchsuggestion");
+    router.push("/searchsuggestion");
   }
   return (
     <React.Fragment>

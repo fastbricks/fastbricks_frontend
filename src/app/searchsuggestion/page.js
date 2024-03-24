@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Dialog from "@mui/material/Dialog";
 import AppBar from "@mui/material/AppBar";
@@ -17,28 +17,31 @@ const Transition = (props) => {
 };
 
 export default function SearchSuggestion() {
-  const [open, setOpen] = useState(true);
   const router = useRouter();
 
+  // useEffect(() => {
+  //   const handleAndroidBackButton = (event) => {
+  //     if (event.key === "Backspace" || event.key === "Back") {
+  //       event.preventDefault();
+  //       if (router.pathname !== "/") {
+  //         router.replace("/");
+  //       }
+  //     }
+  //   };
+
+  //   document.addEventListener("keydown", handleAndroidBackButton);
+
+  //   return () => {
+  //     document.removeEventListener("keydown", handleAndroidBackButton);
+  //   };
+  // }, [router]);
+
   const handleClose = () => {
-    router.push("/"); // Navigate to the home screen
+    router.replace("/");
   };
 
-  useEffect(() => {
-    const handleBackButton = (event) => {
-      event.preventDefault();
-      handleClose();
-    };
-
-    window.addEventListener("popstate", handleBackButton);
-
-    return () => {
-      window.removeEventListener("popstate", handleBackButton);
-    };
-  }, []);
-
   return (
-    <Dialog fullScreen open={true}>
+    <Dialog fullScreen open={true} TransitionComponent={Transition}>
       <AppBar sx={{ position: "relative", backgroundColor: "#fff" }}>
         <Toolbar>
           <IconButton
@@ -58,5 +61,6 @@ export default function SearchSuggestion() {
       </AppBar>
       <List></List>
     </Dialog>
+    // <div>search page</div>
   );
 }
