@@ -14,7 +14,7 @@ function ServiceSection() {
           </Typography>
           <ServiceCategory />
         </div>
-        <Card className="w-full md:2/4 rounded-lg md:h-full p-0 sm:p-2 ">
+        <Card className="w-full md:2/4 rounded-lg md:h-full ">
           <HomeCarousel />
         </Card>
       </div>
