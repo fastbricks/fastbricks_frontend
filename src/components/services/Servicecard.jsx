@@ -40,17 +40,16 @@ function ServiceCard() {
       }}
     >
       <hr className="bg-gray-100 p-1 block sm:hidden" />
-
-      <span
-        style={{
-          fontSize: "25px",
-          marginInline: "15px",
-          fontFamily: "sans-serif",
-        }}
-      >
-        Services on Rent
-      </span>
-      <Box>
+      <Box className="pt-8">
+        <span
+          style={{
+            fontSize: "25px",
+            marginInline: "15px",
+            fontFamily: "sans-serif",
+          }}
+        >
+          Services on Rent
+        </span>
         <Carousel
           responsive={responsive}
           customLeftArrow={<CustomLeftArrow />}

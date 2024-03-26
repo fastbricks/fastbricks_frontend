@@ -13,6 +13,8 @@ import { FaBoxOpen } from "react-icons/fa";
 import { PiCubeDuotone } from "react-icons/pi";
 import { TbClipboardText } from "react-icons/tb";
 import { FaClipboard } from "react-icons/fa";
+import { IoChatbox } from "react-icons/io5";
+import { IoChatboxOutline } from "react-icons/io5";
 
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
@@ -111,19 +113,19 @@ function BottomNavBar() {
         }
       />
       <BottomNavigationAction
-        label="Orders"
+        label="Community"
         value={1}
         icon={
           value === 1 ? (
-            <FaBoxOpen style={{ color: "#FD9696" }} />
+            <IoChatbox style={{ color: "#FD9696" }} />
           ) : (
-            <PiCubeDuotone style={{ color: "#f7adad" }} />
+            <IoChatboxOutline style={{ color: "#f7adad" }} />
           )
         }
         sx={{
           "& .MuiBottomNavigationAction-label": {
-            color: value === 2 ? "#FD9696" : "gray",
-            fontWeight: value === 2 ? "bold" : "normal",
+            color: value === 1 ? "#FD9696" : "gray",
+            fontWeight: value === 1 ? "bold" : "normal",
           },
         }}
       />
@@ -139,8 +141,8 @@ function BottomNavBar() {
         }
         sx={{
           "& .MuiBottomNavigationAction-label": {
-            color: value === 1 ? "#FD9696" : "gray",
-            fontWeight: value === 1 ? "bold" : "normal",
+            color: value === 2 ? "#FD9696" : "gray",
+            fontWeight: value === 2 ? "bold" : "normal",
             fontFamily: "sans-serif",
           },
         }}

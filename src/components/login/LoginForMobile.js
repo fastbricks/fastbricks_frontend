@@ -169,18 +169,6 @@ export default function LoginForMobile() {
                           padding: "10px",
                         }}
                       >
-                        <Box className="login_Textfield_box">
-                          <Typography
-                            sx={{
-                              fontWeight: 500,
-                              fontSize: 25,
-                              color: "grey",
-                              paddingLeft: "20px",
-                            }}
-                          >
-                            Sign in
-                          </Typography>
-                        </Box>
                         <Box
                           sx={{
                             display: "grid",
@@ -316,7 +304,7 @@ export default function LoginForMobile() {
                       }}
                     >
                       <Divider>
-                        <Typography sx={{ color: "grey", fontSize: 13.5 }}>
+                        <Typography sx={{ color: "black", fontSize: 13.5 }}>
                           Existing User?
                         </Typography>
                       </Divider>
@@ -334,7 +322,11 @@ export default function LoginForMobile() {
                             },
                           }}
                         >
-                          sign in
+                          <span
+                            style={{ textTransform: "none", color: "#fd9696" }}
+                          >
+                            Sign in
+                          </span>
                         </Button>
                       </div>
                     </Box>

@@ -33,17 +33,11 @@ function ServiceCategory() {
           }}
         >
           <div className={styles.services_box}>
-            <Box>
-              <div className={styles.service_category_icon_design}></div>
-              <div className={styles.service_category_icon_design}></div>
-            </Box>
-            <Box>
-              <div className={styles.service_category_icon_design}></div>
-              <div className={styles.service_category_icon_design}></div>
-            </Box>
+            <Image src={mason} className={styles.service_category_images} />
           </div>
-          <p className={styles.machine_font}>Categories</p>
+          <p className={styles.machine_font}>Mason</p>
         </div>
+
         <div
           style={{
             display: "grid",
@@ -89,27 +83,7 @@ function ServiceCategory() {
           </div>
           <p className={styles.machine_font}>Mason</p>
         </div>
-        <div
-          style={{
-            display: "grid",
-            justifyContent: "center",
-            alignItems: "center",
-            textAlign: "center",
-            marginBottom: "10px",
-          }}
-        >
-          <div className={styles.services_box}>
-            <Box>
-              <div className={styles.service_category_icon_design}></div>
-              <div className={styles.service_category_icon_design}></div>
-            </Box>
-            <Box>
-              <div className={styles.service_category_icon_design}></div>
-              <div className={styles.service_category_icon_design}></div>
-            </Box>
-          </div>
-          <p className={styles.machine_font}>Categories</p>
-        </div>
+
         <div
           style={{
             display: "grid",
@@ -140,41 +114,6 @@ function ServiceCategory() {
             <Image src={plumber} className={styles.service_category_images} />
           </div>
           <p className={styles.machine_font}>Plumber</p>
-        </div>
-        <div
-          style={{
-            display: "grid",
-            justifyContent: "center",
-            alignItems: "center",
-            textAlign: "center",
-            marginBottom: "10px",
-          }}
-        >
-          <div className={styles.services_box}>
-            <Image src={mason} className={styles.service_category_images} />
-          </div>
-          <p className={styles.machine_font}>Mason</p>
-        </div>
-        <div
-          style={{
-            display: "grid",
-            justifyContent: "center",
-            alignItems: "center",
-            textAlign: "center",
-            marginBottom: "10px",
-          }}
-        >
-          <div className={styles.services_box}>
-            <Box>
-              <div className={styles.service_category_icon_design}></div>
-              <div className={styles.service_category_icon_design}></div>
-            </Box>
-            <Box>
-              <div className={styles.service_category_icon_design}></div>
-              <div className={styles.service_category_icon_design}></div>
-            </Box>
-          </div>
-          <p className={styles.machine_font}>Categories</p>
         </div>
       </div>
     </div>
