@@ -78,6 +78,7 @@ function BottomNavBar() {
         width: "100%",
         position: "fixed",
         bottom: "0px",
+        left: 0,
         zIndex: 999,
         // backgroundColor: "#FFEFEB",
         backgroundColor: "#fff",
