@@ -162,7 +162,7 @@ export default function LoginForMobile() {
                 {account.view === "login" ? (
                   <Box>
                     <Box className="login_box" sx={{ display: "flex" }}>
-                      <Card
+                      <div
                         sx={{
                           display: "grid",
                           margin: "5px",
@@ -215,7 +215,7 @@ export default function LoginForMobile() {
                             </Button>
                           </div>
                         </Box>
-                      </Card>
+                      </div>
                     </Box>
                     <Box
                       sx={{
@@ -252,7 +252,7 @@ export default function LoginForMobile() {
                 ) : (
                   <Box>
                     <Box className="login_box" sx={{ display: "flex" }}>
-                      <Card
+                      <div
                         sx={{
                           display: "grid",
                           margin: "5px",
@@ -305,7 +305,7 @@ export default function LoginForMobile() {
                             </Button>
                           </div>
                         </Box>
-                      </Card>
+                      </div>
                     </Box>
                     <Box
                       sx={{
