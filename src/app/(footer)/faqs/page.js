@@ -35,9 +35,6 @@ export default function Faqs() {
         </Wrapper>
         <div style={{ padding: "10px" }}>
           <AccordionComponent />
-          <AccordionComponent />
-          <AccordionComponent />
-          <AccordionComponent />
         </div>
       </Container>
     </div>
