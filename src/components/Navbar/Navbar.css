@@ -12,7 +12,7 @@
     /* background: #f7c8bd ; */
     background: #ffffff ;
 
-    border-bottom:none !important;
+    border-bottom:1px solid #f28e7a7a;
    box-shadow:0px -1px 5cap 0px rgba(150, 150, 150, 0.2);
 
 }
@@ -157,7 +157,9 @@
         justify-content: space-between;
         background: #ffffff ;
         
-        border-bottom:1px solid #f28e7aa5;
+        border-bottom:none;
+   box-shadow:0px -1px 5cap 0px rgba(150, 150, 150, 0.2);
+
     }
     .left .logo{
         width: 150px;
