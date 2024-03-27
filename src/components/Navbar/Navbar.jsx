@@ -34,7 +34,6 @@ const Navbar = () => {
   const [searchContainerFixed, setSearchContainerFixed] = useState(false);
   const [upperDivHidden, setUpperDivHidden] = useState(false);
   const isCommunityPage = pathname === "/community";
-  console.log(isCommunityPage);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -143,7 +142,7 @@ const Navbar = () => {
               width: "100%",
               paddingBottom: "5px",
 
-              gap: "50px",
+              gap: "70px",
             }}
           >
             <div
