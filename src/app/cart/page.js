@@ -1,29 +1,20 @@
 "use client";
 import BottomNavBar from "@/components/BottomNavigation/BottomNavBar";
 import GroupedButton from "@/components/cart/ButtonGroup";
-// import { Card, Box, Grid, Typography, styled } from "@mui/material";
+import Image from "next/image";
 import { Box, Card, Typography, styled, Grid, Button } from "@mui/material";
-// import styled from "styled-components";
+import cart from "@/assets/cart.png";
 
 const cartItems = [
-  {
-    id: "1",
-    title: "Tiles- 40mm * 60mm ",
-    image: "/img/logo.png",
-    Seller: "Ray materials",
-    price: "500",
-    mrp: "600",
-    discount: "100",
-  },
-  {
-    id: "2",
-    title: "Tiles- 40mm * 60mm",
-    image: "/img/logo.png",
-    Seller: "Ray materials",
-    price: "500",
-    mrp: "600",
-    discount: "100",
-  },
+  // {
+  //   id: "1",
+  //   title: "Tiles- 40mm * 60mm ",
+  //   image: "/img/logo.png",
+  //   Seller: "Ray materials",
+  //   price: "500",
+  //   mrp: "600",
+  //   discount: "100",
+  // },
 ];
 
 const Header = styled(Box)`
@@ -110,17 +101,6 @@ export default function Cart() {
                 </Component>
               );
             })}
-            <Box
-              sx={{
-                padding: "10px 20px",
-                boxShadow: "0 -2px 10px 0 rgb(0 0 0 / 10%)",
-                borderTop: "1px solid #f0f0f0",
-                backgroundColor: "#fff",
-                borderRadius: "5px",
-              }}
-            >
-              <OrderButton>Place Order</OrderButton>
-            </Box>
           </LeftGrid>
           <Grid
             item
@@ -154,11 +134,31 @@ export default function Cart() {
                 <Discount>You will save 200 on this order</Discount>
               </ContainerOrderDetails>
             </div>
+            <Box
+              sx={{
+                padding: "10px 10px",
+                boxShadow: "0 -2px 10px 0 rgb(0 0 0 / 10%)",
+                borderTop: "1px solid #f0f0f0",
+                backgroundColor: "#fff",
+                borderRadius: "5px",
+              }}
+            >
+              <OrderButton>Place Order</OrderButton>
+            </Box>
           </Grid>
         </Container>
       ) : (
-        <div>
-          <Typography>Your cart is Empty</Typography>
+        <div className="h-[80vh] flex justify-center items-center">
+          <div
+            className=" flex justify-center items-center flex-col
+          "
+          >
+            <Image src={cart} className=" h-56 w-56" />
+            <Typography className="font-bold ">Oops!</Typography>
+            <Typography className="font-bold ">
+              Your cart is currently empty.
+            </Typography>
+          </div>
         </div>
       )}
 
@@ -219,9 +219,10 @@ const OrderButton = styled(Button)(({ theme }) => ({
   color: "#fff !important",
   borderRadius: "4px",
   padding: "10px",
+  width: " 100%",
 
   [theme.breakpoints.down("sm")]: {
-    width: " 90%",
+    width: " 100%",
     padding: "15px",
   },
   [theme.breakpoints.down("md")]: {},
