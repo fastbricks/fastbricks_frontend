@@ -16,6 +16,7 @@ import { MdOutlineAccountCircle } from "react-icons/md";
 import "./Navbar.css";
 import styles from "./mobileNav.module.css";
 import SearchBar from "./SearchBar";
+import TabBar from "../community/TabBar";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -208,7 +209,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          {/* {showSearch && ( */}
+
           <div
             style={{
               // display: "flex",
@@ -225,22 +226,18 @@ const Navbar = () => {
               <SearchBar />
             </div>
           </div>
-          {/* )} */}
         </div>
       </div>
 
       {/* searchContainer  */}
-      {/* {showSearch && ( */}
+
       <div
         style={{
           backgroundColor: "#fff",
-          // display: "flex",
           display: isCommunityPage ? "none" : "flex",
-
           paddingTop: 5,
           paddingBottom: 5,
           zIndex: 9999,
-
           justifyContent: "center",
         }}
         className={`${""} ${searchContainerFixed ? styles.fixed : styles.mt}`}
@@ -249,7 +246,21 @@ const Navbar = () => {
           <SearchBar />
         </div>
       </div>
-      {/* )} */}
+
+      {/* TabBar for community Page */}
+      {/* <div
+        style={{
+          backgroundColor: "#fff",
+          display: isCommunityPage ? "flex" : "none",
+          paddingTop: 5,
+          paddingBottom: 5,
+          zIndex: 9999,
+          justifyContent: "center",
+        }}
+        className={`${""} ${searchContainerFixed ? styles.fixed : styles.mt}`}
+      >
+        <TabBar />
+      </div> */}
     </div>
   );
 };
