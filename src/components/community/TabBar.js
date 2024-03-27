@@ -20,11 +20,10 @@ export default function TabBar() {
           value={value}
           onChange={handleChange}
           variant="scrollable"
-          scrollButtons
-          allowScrollButtonsMobile
-          aria-label="scrollable force tabs example"
+          scrollButtons={false}
+          aria-label="scrollable prevent tabs example"
           TabIndicatorProps={{
-            style: { backgroundColor: "red" }, // Change the indicator color here
+            style: { backgroundColor: "transparent", padding: 0, margin: 0 }, // Change the indicator color here
           }}
           sx={{
             backgroundColor: "white",
@@ -32,13 +31,104 @@ export default function TabBar() {
             margin: 0,
           }}
         >
-          <Tab label="Item One" sx={{ "&.Mui-selected": { color: "red" } }} />
-          <Tab label="Item Two" sx={{ "&.Mui-selected": { color: "red" } }} />
-          <Tab label="Item Three" sx={{ "&.Mui-selected": { color: "red" } }} />
-          <Tab label="Item Four" sx={{ "&.Mui-selected": { color: "red" } }} />
-          <Tab label="Item Five" sx={{ "&.Mui-selected": { color: "red" } }} />
-          <Tab label="Item Six" sx={{ "&.Mui-selected": { color: "red" } }} />
-          <Tab label="Item Seven" sx={{ "&.Mui-selected": { color: "red" } }} />
+          <Tab
+            label="A"
+            sx={{
+              textTransform: "capitalize",
+
+              "&.Mui-selected": {
+                color: "orange",
+                backgroundColor: "#fff7f7",
+                borderRadius: "10px",
+                margin: 0,
+                padding: 0,
+              },
+            }}
+          />
+          <Tab
+            label="B"
+            sx={{
+              textTransform: "capitalize",
+
+              "&.Mui-selected": {
+                color: "orange",
+                backgroundColor: "#fff7f7",
+                borderRadius: "10px",
+                margin: 0,
+                padding: 0,
+              },
+            }}
+          />
+          <Tab
+            label="C"
+            sx={{
+              textTransform: "capitalize",
+
+              "&.Mui-selected": {
+                color: "orange",
+                backgroundColor: "#fff7f7",
+                borderRadius: "10px",
+                margin: 0,
+                padding: 0,
+              },
+            }}
+          />
+          <Tab
+            label="D"
+            sx={{
+              textTransform: "capitalize",
+
+              "&.Mui-selected": {
+                color: "orange",
+                backgroundColor: "#fff7f7",
+                borderRadius: "10px",
+                margin: 0,
+                padding: 0,
+              },
+            }}
+          />
+          <Tab
+            label="E"
+            sx={{
+              textTransform: "capitalize",
+
+              "&.Mui-selected": {
+                color: "orange",
+                backgroundColor: "#fff7f7",
+                borderRadius: "10px",
+                margin: 0,
+                padding: 0,
+              },
+            }}
+          />
+          <Tab
+            label="F"
+            sx={{
+              textTransform: "capitalize",
+
+              "&.Mui-selected": {
+                color: "orange",
+                backgroundColor: "#fff7f7",
+                borderRadius: "10px",
+                margin: 0,
+                padding: 0,
+              },
+            }}
+          />
+          <Tab
+            label="G"
+            sx={{
+              textTransform: "capitalize",
+
+              "&.Mui-selected": {
+                color: "orange",
+                backgroundColor: "#fff7f7",
+                borderRadius: "10px",
+                margin: 0,
+                padding: 0,
+              },
+            }}
+          />
         </Tabs>
         <button className="">
           <AddBoxIcon className="text-orange-500 text-4xl " />
