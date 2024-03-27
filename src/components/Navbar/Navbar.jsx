@@ -6,7 +6,8 @@ import StorefrontIcon from "@mui/icons-material/Storefront";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Menu from "./Menu";
-import Head from "next/head";
+import { useRouter } from "next/navigation";
+
 import LoginDialog from "./loginDialog";
 import Link from "next/link";
 import { Anton } from "next/font/google";
@@ -20,6 +21,8 @@ import SearchBar from "./SearchBar";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const router = useRouter();
+
   useEffect(() => {
     const userAgent = window.navigator.userAgent;
     setIsMobile(
@@ -58,9 +61,6 @@ const Navbar = () => {
   if (!isMobile) {
     return (
       <div className="navbar">
-        <div className="navbar-menu">
-          <Menu />
-        </div>
         <a href="/" style={{ textDecoration: "none" }}>
           <div className="nav_left">
             <Image
@@ -92,6 +92,12 @@ const Navbar = () => {
             <MicIcon /> */}
             <SearchBar display={"none"} />
           </button>
+          <button
+            className="search_icon"
+            onClick={() => router.push("/searchsuggestion")}
+          >
+            <SearchIcon />
+          </button>
           <div>
             <Link href={"/account/login"} style={{ textDecoration: "none" }}>
               <h3 title="Login" tagType="button" className="login">
@@ -113,14 +119,17 @@ const Navbar = () => {
               </div>
             </Link>
           </div>
-        </div>
-        <div className="right">
-          <Link href={"/cart"} style={{ textDecoration: "none" }}>
-            <div className="cart">
-              <ShoppingCartOutlinedIcon className="cart-icon" />
-              <h1 className="seller">Cart</h1>
-            </div>
-          </Link>
+          <div className="right">
+            <Link href={"/cart"} style={{ textDecoration: "none" }}>
+              <div className="cart">
+                <ShoppingCartOutlinedIcon className="cart-icon" />
+                <h1 className="seller">Cart</h1>
+              </div>
+            </Link>
+          </div>
+          <div className="navbar-menu">
+            <Menu />
+          </div>
         </div>
       </div>
     ); // Render nothing on desktop
