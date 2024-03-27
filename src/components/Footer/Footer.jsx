@@ -13,45 +13,45 @@ const Footer = () => {
   return (
     <Box sx={{ marginTop: "30px" }}>
       <Card className="footer-wrapper">
-        <div className="social">
-          <div>
-            <h1>SOCIAL</h1>
-          </div>
-          <div className="">
+        <div class="py-6 bg-[#fd9696] items-center justify-items-center justify-around flex md:items-center md:justify-around border-b-[5px] border-white">
+          <span class="text-2xl font-extrabold text-white sm:text-center font-serif">
+            SOCIAL
+          </span>
+          <div class="flex mt-0 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
             <Link
               href="https://www.instagram.com/fastbricks.in/"
               target="blank"
               style={{ color: "#fff" }}
             >
-              <Instagram fontSize="large" className="SocialLink" />
+              <Instagram />
             </Link>
             <Link
               href="https://www.linkedin.com/company/fastbricks/"
               target="blank"
               style={{ color: "#fff" }}
             >
-              <LinkedIn fontSize="large" className="SocialLink" />
+              <LinkedIn />
             </Link>
             <Link
               href="https://www.facebook.com/fastbricks.in/"
               target="blank"
               style={{ color: "#fff" }}
             >
-              <Facebook fontSize="large" className="SocialLink" />
+              <Facebook />
             </Link>
             <Link
               href="https://www.youtube.com/@fastbricks/"
               target="blank"
               style={{ color: "#fff" }}
             >
-              <YouTube fontSize="large" className="SocialLink" />
+              <YouTube />
             </Link>
             <Link
               href="https://www.twitter.com/fastbricks_/"
               target="blank"
               style={{ color: "#fff" }}
             >
-              <Twitter fontSize="large" className="SocialLink" />
+              <Twitter />
             </Link>
           </div>
         </div>
