@@ -38,7 +38,7 @@ function BottomNavBar() {
     switch (route) {
       case "/":
         return 0;
-      case "/":
+      case "/community":
         return 1;
       case "/bookings":
         return 2;
@@ -57,7 +57,7 @@ function BottomNavBar() {
         break;
 
       case 1:
-        router.push("/");
+        router.push("/community");
         break;
       case 2:
         router.push("/bookings");

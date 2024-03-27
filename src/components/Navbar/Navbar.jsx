@@ -19,7 +19,7 @@ import styles from "./mobileNav.module.css";
 import TypeAnimationComp from "../TypeAnimation/TypeAnimation";
 import SearchBar from "./SearchBar";
 
-const Navbar = () => {
+const Navbar = ({ showSearch }) => {
   const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
 
@@ -228,37 +228,32 @@ const Navbar = () => {
               paddingTop: "5px",
             }}
           >
-            <div className={styles.searchContainer}>
-              {/* <SearchIcon />
-              <input type="text" placeholder="Search for" />
-              <div className="left-32 absolute flex">
-                <h1>&apos;</h1>
-                <TypeAnimationComp />
-                <h1>&apos;</h1>
+            {showSearch && (
+              <div className={styles.searchContainer}>
+                <SearchBar />
               </div>
-              <MicIcon /> */}
-              <SearchBar />
-            </div>
+            )}
           </div>
         </div>
       </div>
 
       {/* searchContainer  */}
-      <div
-        style={{
-          backgroundColor: "#fff",
-          display: "flex",
-          paddingTop: 5,
-          paddingBottom: 5,
-          zIndex: 9999,
-          // boxShadow: "0px -1px 10px 0 rgba(0, 0, 0, 20%)",
+      {showSearch && (
+        <div
+          style={{
+            backgroundColor: "#fff",
+            display: "flex",
+            paddingTop: 5,
+            paddingBottom: 5,
+            zIndex: 9999,
+            // boxShadow: "0px -1px 10px 0 rgba(0, 0, 0, 20%)",
 
-          justifyContent: "center",
-        }}
-        className={`${""} ${searchContainerFixed ? styles.fixed : styles.mt}`}
-      >
-        <div className={styles.searchContainer}>
-          {/* <SearchIcon />
+            justifyContent: "center",
+          }}
+          className={`${""} ${searchContainerFixed ? styles.fixed : styles.mt}`}
+        >
+          <div className={styles.searchContainer}>
+            {/* <SearchIcon />
           <input type="text" placeholder="Search for" />
           <div className="left-32 absolute flex">
             <h1>&apos;</h1>
@@ -266,9 +261,10 @@ const Navbar = () => {
             <h1>&apos;</h1>
           </div>
           <MicIcon /> */}
-          <SearchBar />
+            <SearchBar />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

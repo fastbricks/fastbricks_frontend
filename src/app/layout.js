@@ -15,7 +15,7 @@ const inter = Inter({ subsets: ["latin"] });
 //   // themeColor: "#f7c8bd",
 // };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, showSearch = true }) {
   return (
     <html lang="en">
       <head>
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <Navbar />
+        <Navbar showSearch={showSearch} />
         <div className=" mt-0 sm:mt-20">{children}</div>
         {/* <BottomNavBar /> */}
         <div className="marginBottomForMob">

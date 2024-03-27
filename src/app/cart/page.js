@@ -153,9 +153,11 @@ export default function Cart() {
             className=" flex justify-center items-center flex-col
           "
           >
-            <Image src={cart} className=" h-56 w-56" />
-            <Typography className="font-bold ">Oops!</Typography>
-            <Typography className="font-bold ">
+            <Image src={cart} className=" h-64 w-56" />
+            <Typography className="font-bold font-sans text-xl">
+              Oops!
+            </Typography>
+            <Typography className="font-bold font-sans text-lg">
               Your cart is currently empty.
             </Typography>
           </div>
