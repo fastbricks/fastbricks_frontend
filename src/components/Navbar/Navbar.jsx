@@ -7,7 +7,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Menu from "./Menu";
 import { useRouter } from "next/navigation";
-
+import { usePathname } from "next/navigation";
 import LoginDialog from "./loginDialog";
 import Link from "next/link";
 import { Anton } from "next/font/google";
@@ -19,10 +19,10 @@ import styles from "./mobileNav.module.css";
 import TypeAnimationComp from "../TypeAnimation/TypeAnimation";
 import SearchBar from "./SearchBar";
 
-const Navbar = ({ showSearch }) => {
+const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
-
+  const pathname = usePathname();
   useEffect(() => {
     const userAgent = window.navigator.userAgent;
     setIsMobile(
@@ -35,6 +35,8 @@ const Navbar = ({ showSearch }) => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [searchContainerFixed, setSearchContainerFixed] = useState(false);
   const [upperDivHidden, setUpperDivHidden] = useState(false);
+  const isCommunityPage = pathname === "/community";
+  console.log(isCommunityPage);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -100,7 +102,7 @@ const Navbar = ({ showSearch }) => {
           </button>
           <div>
             <Link href={"/account/login"} style={{ textDecoration: "none" }}>
-              <h3 title="Login" tagType="button" className="login">
+              <h3 title="Login" className="login">
                 Login
               </h3>
             </Link>
@@ -134,6 +136,7 @@ const Navbar = ({ showSearch }) => {
       </div>
     ); // Render nothing on desktop
   }
+
   return (
     <div>
       <div
@@ -162,8 +165,8 @@ const Navbar = ({ showSearch }) => {
               }}
             >
               {/* <div className={styles.navbarMenu}>
-                <Menu />
-              </div> */}
+                  <Menu />
+                </div> */}
               <a href="/" style={{ textDecoration: "none" }}>
                 <div className={styles.nav_left}>
                   <Image
@@ -201,7 +204,7 @@ const Navbar = ({ showSearch }) => {
                   textAlign: "center",
                 }}
               >
-                <h3 title="Login" tagType="button" className={styles.login}>
+                <h3 title="Login" className={styles.login}>
                   <MdOutlineAccountCircle
                     style={{
                       fontSize: "1.3rem",
@@ -217,10 +220,12 @@ const Navbar = ({ showSearch }) => {
               </div>
             </div>
           </div>
-
+          {/* {showSearch && ( */}
           <div
             style={{
-              display: "flex",
+              // display: "flex",
+              display: isCommunityPage ? "none" : "flex",
+
               flexDirection: "row",
               justifyContent: "space-around",
               width: "100%",
@@ -228,43 +233,35 @@ const Navbar = ({ showSearch }) => {
               paddingTop: "5px",
             }}
           >
-            {showSearch && (
-              <div className={styles.searchContainer}>
-                <SearchBar />
-              </div>
-            )}
+            <div className={styles.searchContainer}>
+              <SearchBar />
+            </div>
           </div>
+          {/* )} */}
         </div>
       </div>
 
       {/* searchContainer  */}
-      {showSearch && (
-        <div
-          style={{
-            backgroundColor: "#fff",
-            display: "flex",
-            paddingTop: 5,
-            paddingBottom: 5,
-            zIndex: 9999,
-            // boxShadow: "0px -1px 10px 0 rgba(0, 0, 0, 20%)",
+      {/* {showSearch && ( */}
+      <div
+        style={{
+          backgroundColor: "#fff",
+          // display: "flex",
+          display: isCommunityPage ? "none" : "flex",
 
-            justifyContent: "center",
-          }}
-          className={`${""} ${searchContainerFixed ? styles.fixed : styles.mt}`}
-        >
-          <div className={styles.searchContainer}>
-            {/* <SearchIcon />
-          <input type="text" placeholder="Search for" />
-          <div className="left-32 absolute flex">
-            <h1>&apos;</h1>
-            <TypeAnimationComp />
-            <h1>&apos;</h1>
-          </div>
-          <MicIcon /> */}
-            <SearchBar />
-          </div>
+          paddingTop: 5,
+          paddingBottom: 5,
+          zIndex: 9999,
+
+          justifyContent: "center",
+        }}
+        className={`${""} ${searchContainerFixed ? styles.fixed : styles.mt}`}
+      >
+        <div className={styles.searchContainer}>
+          <SearchBar />
         </div>
-      )}
+      </div>
+      {/* )} */}
     </div>
   );
 };

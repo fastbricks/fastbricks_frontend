@@ -6,7 +6,7 @@ import ServiceCard from "@/components/services/Servicecard";
 import Poster from "@/components/featured/Poster";
 import PosterSecond from "@/components/featured/PosterSecond";
 import Testimonials from "@/components/Testimonials/Testimonials";
-
+import RootLayout from "./layout";
 import ServiceSection from "@/components/featured/ServiceSection";
 import RentalSection from "@/components/featured/RentalSection";
 export const metadata = {
@@ -33,8 +33,10 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="pl-0 pr-0 md:pl-20 md:pr-20">
-      <div>
+    <div>
+      {/* <RootLayout showSearch={true}> */}
+      <main className="pl-0 pr-0 md:pl-20 md:pr-20">
+        {/* <div> */}
         <BottomNavBar />
         <ServiceSection />
         <Poster />
@@ -43,7 +45,9 @@ export default function Home() {
         <PosterSecond />
 
         <Testimonials />
-      </div>
-    </main>
+        {/* </div> */}
+      </main>
+      {/* </RootLayout> */}
+    </div>
   );
 }
