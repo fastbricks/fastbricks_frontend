@@ -8,15 +8,13 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Menu from "./Menu";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
-import LoginDialog from "./loginDialog";
 import Link from "next/link";
 import { Anton } from "next/font/google";
 const anton = Anton({ subsets: ["latin"], weight: "400" });
-import { FaRegHeart } from "react-icons/fa";
+
 import { MdOutlineAccountCircle } from "react-icons/md";
 import "./Navbar.css";
 import styles from "./mobileNav.module.css";
-import TypeAnimationComp from "../TypeAnimation/TypeAnimation";
 import SearchBar from "./SearchBar";
 
 const Navbar = () => {
@@ -84,14 +82,6 @@ const Navbar = () => {
         </a>
         <div className="center">
           <button className="search-container relative">
-            {/* <SearchIcon />
-            <input type="text" placeholder="Search for" />
-            <div className="left-32 absolute flex">
-              <h1>&apos;</h1>
-              <TypeAnimationComp />
-              <h1>&apos;</h1>
-            </div>
-            <MicIcon /> */}
             <SearchBar display={"none"} />
           </button>
           <button
@@ -195,7 +185,6 @@ const Navbar = () => {
                 alignItems: "center",
               }}
             >
-              <FaRegHeart style={{ color: "#FD9696", fontSize: "1.2rem" }} />
               <Link
                 href={"/account/login"}
                 style={{
