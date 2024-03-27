@@ -33,21 +33,16 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div>
-      {/* <RootLayout showSearch={true}> */}
-      <main className="pl-0 pr-0 md:pl-20 md:pr-20">
-        {/* <div> */}
-        <BottomNavBar />
+    <main className="pl-0 pr-0 md:pl-20 md:pr-20">
+      <div>
         <ServiceSection />
         <Poster />
         <RentalSection />
         <ServiceCard />
         <PosterSecond />
-
         <Testimonials />
-        {/* </div> */}
-      </main>
-      {/* </RootLayout> */}
-    </div>
+      </div>
+      <BottomNavBar />
+    </main>
   );
 }
