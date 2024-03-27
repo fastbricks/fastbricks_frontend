@@ -32,7 +32,7 @@ export default function TabBar() {
           }}
         >
           <Tab
-            label="A"
+            label="All"
             sx={{
               textTransform: "capitalize",
 
