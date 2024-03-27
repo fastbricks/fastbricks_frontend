@@ -55,113 +55,154 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <footer className="footer">
-          <div className="footer_container">
-            <div className="footer-content">
-              <div className="footer-column">
-                <h1>About</h1>
-                <Link href="/contact" style={{ textDecoration: "none" }}>
-                  <h4>Contact Us</h4>
-                </Link>
-                <Link href="/about" style={{ textDecoration: "none" }}>
-                  <h4>About Us</h4>
-                </Link>
-                <Link
-                  href="https://blog.fastbricks.in/"
-                  target="_blank"
-                  style={{ textDecoration: "none" }}
-                >
-                  <h4>Blog</h4>
-                </Link>
-                <Link
-                  href="https://careers.fastbricks.in/"
-                  target="blank"
-                  style={{ textDecoration: "none" }}
-                >
-                  <h4>We&apos;re hiring!</h4>
-                  <style jsx>{`
-                    h4 {
-                      font-size: 25px;
-                      font-family: "Oswald", sans-serif;
-                      letter-spacing: 0;
-                      padding: 0.25em 0 0.325em;
-                      display: block;
-                      margin: 0 auto;
-                      text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
 
-                      /* Clip Background Image */
-
-                      background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png)
-                        repeat-y;
-                      -webkit-background-clip: text;
-                      background-clip: text;
-
-                      /* Animate Background Image */
-
-                      -webkit-text-fill-color: transparent;
-                      -webkit-animation: aitf 80s linear infinite;
-
-                      /* Activate hardware acceleration for smoother animations */
-
-                      -webkit-transform: translate3d(0, 0, 0);
-                      -webkit-backface-visibility: hidden;
-                    }
-
-                    /* Animate Background Image */
-
-                    @-webkit-keyframes aitf {
-                      0% {
-                        background-position: 0% 50%;
-                      }
-                      100% {
-                        background-position: 100% 50%;
-                      }
-                    }
-                    @media only screen and (min-width: 321px) and (max-width: 768px) {
-                      h4 {
-                        font-size: 20px;
-                        white-space: nowrap;
-                      }
-                    }
-                  `}</style>
-                </Link>
+        <footer class="bg-[#E49295] ">
+          <div class="mx-auto w-full max-w-screen-xl">
+            <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4 justify-center items-center justify-items-center">
+              <div>
+                <ul class="text-white font-medium">
+                  <li class="mb-4">
+                    <img src="/footer-image.png" />
+                  </li>
+                </ul>
               </div>
+              <div>
+                <h2 class="mb-6 text-sm font-bold uppercase text-white">
+                  About
+                </h2>
+                <ul class="text-white font-medium">
+                  <li class="mb-4">
+                    <Link href="/contact" style={{ textDecoration: "none" }}>
+                      <h4>Contact Us</h4>
+                    </Link>
+                  </li>
+                  <li class="mb-4">
+                    <Link href="/about" style={{ textDecoration: "none" }}>
+                      <h4>About Us</h4>
+                    </Link>
+                  </li>
+                  <li class="mb-4">
+                    <Link
+                      href="https://blog.fastbricks.in/"
+                      target="_blank"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <h4>Blog</h4>
+                    </Link>
+                  </li>
+                  <li class="mb-4">
+                    <Link
+                      href="https://careers.fastbricks.in/"
+                      target="blank"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <h4>We&apos;re hiring!</h4>
+                      <style jsx>{`
+                        h4 {
+                          font-size: 25px;
+                          font-family: "Oswald", sans-serif;
+                          letter-spacing: 0;
+                          padding: 0.25em 0 0.325em;
+                          display: block;
+                          margin: 0 auto;
+                          text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
 
-              <div className="footer-column">
-                <h1>Help</h1>
+                          /* Clip Background Image */
 
-                <Link href={"/payment"} style={{ textDecoration: "none" }}>
-                  <h4>Payment</h4>
-                </Link>
-                <Link href={"/shipping"} style={{ textDecoration: "none" }}>
-                  <h4>Shipping</h4>
-                </Link>
-                <Link
-                  href={"/cancellation-return"}
-                  style={{ textDecoration: "none" }}
-                >
-                  <h4>Cancellation & Return</h4>
-                </Link>
-                <Link href={"/faqs"} style={{ textDecoration: "none" }}>
-                  <h4>FAQs</h4>
-                </Link>
+                          background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png)
+                            repeat-y;
+                          -webkit-background-clip: text;
+                          background-clip: text;
+
+                          /* Animate Background Image */
+
+                          -webkit-text-fill-color: transparent;
+                          -webkit-animation: aitf 80s linear infinite;
+
+                          /* Activate hardware acceleration for smoother animations */
+
+                          -webkit-transform: translate3d(0, 0, 0);
+                          -webkit-backface-visibility: hidden;
+                        }
+
+                        /* Animate Background Image */
+
+                        @-webkit-keyframes aitf {
+                          0% {
+                            background-position: 0% 50%;
+                          }
+                          100% {
+                            background-position: 100% 50%;
+                          }
+                        }
+                        @media only screen and (min-width: 321px) and (max-width: 768px) {
+                          h4 {
+                            font-size: 20px;
+                            white-space: nowrap;
+                          }
+                        }
+                      `}</style>
+                    </Link>
+                  </li>
+                </ul>
               </div>
-              <div className="footer-column">
-                <h1>Policy</h1>
+              <div>
+                <h2 class="mb-6 text-sm font-bold uppercase text-white">
+                  Help
+                </h2>
+                <ul class="text-white font-medium">
+                  <li class="mb-4">
+                    <Link href={"/payment"} style={{ textDecoration: "none" }}>
+                      <h4>Payment</h4>
+                    </Link>
+                  </li>
+                  <li class="mb-4">
+                    <Link href={"/shipping"} style={{ textDecoration: "none" }}>
+                      <h4>Shipping</h4>
+                    </Link>
+                  </li>
+                  <li class="mb-4">
+                    <Link
+                      href={"/cancellation-return"}
+                      style={{ textDecoration: "none" }}
+                    >
+                      <h4>Cancellation & Return</h4>
+                    </Link>
+                  </li>
+                  <li class="mb-4">
+                    <Link href={"/faqs"} style={{ textDecoration: "none" }}>
+                      <h4>FAQs</h4>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h1 class="mb-6 text-sm font-bold uppercase text-white">
+                  Policy
+                </h1>
 
-                <Link href={"/return"} style={{ textDecoration: "none" }}>
-                  <h4>Return Policy</h4>
-                </Link>
-                <Link href={"/terms"} style={{ textDecoration: "none" }}>
-                  <h4>Terms of Use</h4>
-                </Link>
-                <Link href={"/security"} style={{ textDecoration: "none" }}>
-                  <h4>Security</h4>
-                </Link>
+                <ul class="text-white font-medium">
+                  <li class="mb-4">
+                    <Link href={"/return"} style={{ textDecoration: "none" }}>
+                      <h4>Return Policy</h4>
+                    </Link>
+                  </li>
+                  <li class="mb-4">
+                    <Link href={"/terms"} style={{ textDecoration: "none" }}>
+                      <h4>Terms of Use</h4>
+                    </Link>
+                  </li>
+                  <li class="mb-4">
+                    <Link href={"/security"} style={{ textDecoration: "none" }}>
+                      <h4>Security</h4>
+                    </Link>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </footer>
+
         <div className="desc_banner_img">
           <img className="desc_banner_img" src="/banner2.png" alt="" />
         </div>
