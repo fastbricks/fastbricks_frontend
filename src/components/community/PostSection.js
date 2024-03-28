@@ -1,11 +1,12 @@
 import React from "react";
 import UserAvatar from "./UserAvatar";
 import Image from "next/image";
+import OptionsMenu from "./OptionsMenu";
 function PostSection() {
   return (
     <div className="flex flex-col space-y-2.5 bg-white mb-10">
-      <div className="flex items-center justify-between px-3 sm:px-0">
-        <div className="flex space-x-3 items-center p-2 justify-between w-[100%]">
+      <div className="flex items-center justify-between px-0 sm:px-0">
+        <div className="flex space-x-3 items-center pt-2 justify-between w-[100%]">
           <div className="flex gap-5">
             <UserAvatar />
             <div className="text-sm">
@@ -19,7 +20,12 @@ function PostSection() {
               </p>
             </div>
           </div>
-          <span className="font-medium text-neutral-500 text-xs  ">Labour</span>
+          <div className="font-medium text-neutral-500 text-xs flex items-center ">
+            <span>Labour</span>
+            <span>
+              <OptionsMenu />
+            </span>
+          </div>
         </div>
       </div>
       <div className="relative h-[450px] w-full overflow-hidden rounded-none sm:rounded-md">

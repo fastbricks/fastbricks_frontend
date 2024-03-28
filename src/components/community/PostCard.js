@@ -7,7 +7,6 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import AddBoxIcon from "@mui/icons-material/AddBox";
 import dynamic from "next/dynamic";
-import styles from "./postCard.module.css";
 // import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 const ReactQuillNoSSRWrapper = dynamic(() => import("react-quill"), {
