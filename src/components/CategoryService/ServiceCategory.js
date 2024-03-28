@@ -55,6 +55,7 @@ function ServiceCategory() {
           </div>
           <p className={styles.machine_font}>Electrician</p>
         </div>
+
         <div
           style={{
             display: "grid",
@@ -79,9 +80,9 @@ function ServiceCategory() {
           }}
         >
           <div className={styles.services_box}>
-            <Image src={mason} className={styles.service_category_images} />
+            <Image src={labour} className={styles.service_category_images} />
           </div>
-          <p className={styles.machine_font}>Mason</p>
+          <p className={styles.machine_font}>Labour</p>
         </div>
 
         <div
@@ -94,12 +95,39 @@ function ServiceCategory() {
           }}
         >
           <div className={styles.services_box}>
-            <Image
-              src={electrician}
-              className={styles.service_category_images}
-            />
+            <Image src={carpenter} className={styles.service_category_images} />
           </div>
-          <p className={styles.machine_font}>Electrician</p>
+          <p className={styles.machine_font}>Carpenter</p>
+        </div>
+
+        <div
+          style={{
+            display: "grid",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+            marginBottom: "10px",
+          }}
+        >
+          <div className={styles.services_box}>
+            <Image src={tile} className={styles.service_category_images} />
+          </div>
+          <p className={styles.machine_font}>Tile work</p>
+        </div>
+
+        <div
+          style={{
+            display: "grid",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+            marginBottom: "10px",
+          }}
+        >
+          <div className={styles.services_box}>
+            <Image src={arch} className={styles.service_category_images} />
+          </div>
+          <p className={styles.machine_font}>Architect</p>
         </div>
         <div
           style={{
@@ -111,9 +139,23 @@ function ServiceCategory() {
           }}
         >
           <div className={styles.services_box}>
-            <Image src={plumber} className={styles.service_category_images} />
+            <Image src={painter} className={styles.service_category_images} />
           </div>
-          <p className={styles.machine_font}>Plumber</p>
+          <p className={styles.machine_font}>Painter</p>
+        </div>
+        <div
+          style={{
+            display: "grid",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+            marginBottom: "10px",
+          }}
+        >
+          <div className={styles.services_box}>
+            <Image src={home} className={styles.service_category_images} />
+          </div>
+          <p className={styles.machine_font}>Interior</p>
         </div>
       </div>
     </div>
