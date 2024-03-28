@@ -10,7 +10,7 @@ function PostSection() {
             <UserAvatar />
             <div className="text-sm">
               <p className="space-x-1 flex items-center gap-5">
-                <span className="font-semibold">{"Anubhav Ray"}</span>
+                <span className="font-semibold">{"Ray"}</span>
 
                 {/* <Timestamp createdAt={post.createdAt} /> */}
               </p>
