@@ -35,6 +35,7 @@ const Navbar = () => {
   const [searchContainerFixed, setSearchContainerFixed] = useState(false);
   const [upperDivHidden, setUpperDivHidden] = useState(false);
   const isCommunityPage = pathname === "/community";
+  const isLoginPage = pathname === "/account/login";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -214,6 +215,7 @@ const Navbar = () => {
             style={{
               // display: "flex",
               display: isCommunityPage ? "none" : "flex",
+              display: isLoginPage ? "none" : "flex",
 
               flexDirection: "row",
               justifyContent: "space-around",
@@ -235,6 +237,7 @@ const Navbar = () => {
         style={{
           backgroundColor: "#fff",
           display: isCommunityPage ? "none" : "flex",
+          display: isLoginPage ? "none" : "flex",
           paddingTop: 5,
           paddingBottom: 5,
           zIndex: 9999,
