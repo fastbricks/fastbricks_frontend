@@ -62,8 +62,25 @@ export default function PostCard() {
             ref={descriptionElementRef}
             tabIndex={-1}
           >
+            <div className="border w-[100%] h-20 flex justify-center mb-2">
+              <input
+                type="file"
+                id="image"
+                onChange={(e) => setFile(e.target.files[0])}
+                style={{ display: "none" }}
+              />
+              <div className="flex justify-center items-center justify-items-center flex-col">
+                <span className="text-gray-500 capitalize">Choose image</span>
+                <button className="">
+                  <label htmlFor="image">
+                    <Image src="/image.png" alt="" width={16} height={16} />
+                  </label>
+                </button>
+              </div>
+            </div>
+
             <div className="h-[100vh]">
-              <div className={styles.editor}>
+              <div className="">
                 <ReactQuillNoSSRWrapper
                   className="h-[50vh] w-full"
                   theme="snow"
@@ -76,27 +93,9 @@ export default function PostCard() {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <div className=" flex justify-center items-center justify-items-center">
-            <Button onClick={handleClose} className="">
-              <div>
-                <input
-                  type="file"
-                  id="image"
-                  onChange={(e) => setFile(e.target.files[0])}
-                  style={{ display: "none" }}
-                />
-                <button className={styles.addButton}>
-                  <label htmlFor="image">
-                    <Image src="/image.png" alt="" width={16} height={16} />
-                  </label>
-                </button>
-              </div>
-            </Button>
+          <div className=" flex justify-around items-center justify-items-center w-full">
             <div className="">
-              <select
-                className={styles.select}
-                onChange={(e) => setCatSlug(e.target.value)}
-              >
+              <select className="" onChange={(e) => setCatSlug(e.target.value)}>
                 <option value="style">House design</option>
                 <option value="fashion">Proposals</option>
                 <option value="food">show your house</option>
