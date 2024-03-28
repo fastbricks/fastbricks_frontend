@@ -213,9 +213,7 @@ const Navbar = () => {
 
           <div
             style={{
-              // display: "flex",
-              display: isCommunityPage ? "none" : "flex",
-              display: isLoginPage ? "none" : "flex",
+              display: isCommunityPage || isLoginPage ? "none" : "flex",
 
               flexDirection: "row",
               justifyContent: "space-around",
@@ -236,8 +234,7 @@ const Navbar = () => {
       <div
         style={{
           backgroundColor: "#fff",
-          display: isCommunityPage ? "none" : "flex",
-          display: isLoginPage ? "none" : "flex",
+          display: isCommunityPage || isLoginPage ? "none" : "flex",
           paddingTop: 5,
           paddingBottom: 5,
           zIndex: 9999,
