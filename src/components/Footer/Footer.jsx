@@ -9,9 +9,14 @@ import {
 import { Card, styled, Box, Typography } from "@mui/material";
 import Link from "next/link";
 import React from "react";
+import { usePathname } from "next/navigation";
+
 const Footer = () => {
+  const pathname = usePathname();
+  const isCommunityPage = pathname === "/community";
+
   return (
-    <Box sx={{ marginTop: "30px" }}>
+    <Box sx={{ marginTop: "30px", display: isCommunityPage ? "none" : "flex" }}>
       <Card className="footer-wrapper">
         <div class="py-6 bg-[#fd9696] items-center justify-items-center justify-around flex md:items-center md:justify-around border-b-[5px] border-white">
           <span class="text-2xl font-extrabold text-white sm:text-center font-serif">

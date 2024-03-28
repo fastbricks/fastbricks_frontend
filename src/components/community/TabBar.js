@@ -3,7 +3,8 @@ import * as React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
-import AddBoxIcon from "@mui/icons-material/AddBox";
+import PostCard from "./PostCard";
+import PostSection from "./PostSection";
 export default function TabBar() {
   const [value, setValue] = React.useState(0);
 
@@ -11,7 +12,7 @@ export default function TabBar() {
     setValue(newValue);
   };
 
-  const contentHeight = `calc(100vh - 100px - 64px)`; // Adjust 100px and 64px according to your footer and bottom navbar heights
+  const contentHeight = `calc(100vh)`; // Adjust 100px and 64px according to your footer and bottom navbar heights
 
   return (
     <div style={{ width: "100vw", height: "100vh", overflow: "hidden" }}>
@@ -46,7 +47,7 @@ export default function TabBar() {
             }}
           />
           <Tab
-            label="B"
+            label="House design"
             sx={{
               textTransform: "capitalize",
 
@@ -60,7 +61,20 @@ export default function TabBar() {
             }}
           />
           <Tab
-            label="C"
+            label="Proposals"
+            sx={{
+              textTransform: "capitalize",
+              "&.Mui-selected": {
+                color: "orange",
+                backgroundColor: "#fff7f7",
+                borderRadius: "10px",
+                margin: 0,
+                padding: 0,
+              },
+            }}
+          />
+          <Tab
+            label="show your house"
             sx={{
               textTransform: "capitalize",
 
@@ -74,7 +88,7 @@ export default function TabBar() {
             }}
           />
           <Tab
-            label="D"
+            label="Contractors"
             sx={{
               textTransform: "capitalize",
 
@@ -88,7 +102,7 @@ export default function TabBar() {
             }}
           />
           <Tab
-            label="E"
+            label="Labours"
             sx={{
               textTransform: "capitalize",
 
@@ -102,21 +116,7 @@ export default function TabBar() {
             }}
           />
           <Tab
-            label="F"
-            sx={{
-              textTransform: "capitalize",
-
-              "&.Mui-selected": {
-                color: "orange",
-                backgroundColor: "#fff7f7",
-                borderRadius: "10px",
-                margin: 0,
-                padding: 0,
-              },
-            }}
-          />
-          <Tab
-            label="G"
+            label="Masons"
             sx={{
               textTransform: "capitalize",
 
@@ -131,7 +131,7 @@ export default function TabBar() {
           />
         </Tabs>
         <button className="">
-          <AddBoxIcon className="text-orange-500 text-4xl " />
+          <PostCard />
         </button>
       </div>
       {/* Content for Tab One */}
@@ -140,11 +140,20 @@ export default function TabBar() {
           style={{
             width: "100%",
             height: contentHeight,
-            padding: "20px",
+            paddingLeft: "20px",
+            paddingRight: "20px",
+            paddingTop: "10px",
+            paddingBottom: "100px",
             backgroundColor: "#f0f0f0",
+            overflow: "auto",
           }}
         >
-          firstpage
+          <div className="pl-0 pr-0 md:pl-36 md:pr-36 overflow-scroll">
+            <PostSection />
+            <PostSection />
+            <PostSection />
+            <PostSection />
+          </div>
         </div>
       )}
       {/* Content for Tab Two */}
@@ -153,11 +162,16 @@ export default function TabBar() {
           style={{
             width: "100%",
             height: contentHeight,
-            padding: "20px",
+            paddingLeft: "20px",
+            paddingRight: "20px",
+            paddingTop: "10px",
             backgroundColor: "#f0f0f0",
+            paddingBottom: "100px",
           }}
         >
-          Content for Tab Two
+          <div className="pl-0 pr-0 md:pl-36 md:pr-36">
+            <PostSection />
+          </div>
         </div>
       )}
       {/* Content for Tab Three */}
@@ -166,11 +180,16 @@ export default function TabBar() {
           style={{
             width: "100%",
             height: contentHeight,
-            padding: "20px",
+            paddingLeft: "20px",
+            paddingRight: "20px",
+            paddingTop: "10px",
             backgroundColor: "#f0f0f0",
+            paddingBottom: "100px",
           }}
         >
-          Content for Tab Three
+          <div className="pl-0 pr-0 md:pl-36 md:pr-36">
+            <PostSection />
+          </div>
         </div>
       )}
       {/* Content for Tab Four */}
@@ -179,11 +198,16 @@ export default function TabBar() {
           style={{
             width: "100%",
             height: contentHeight,
-            padding: "20px",
+            paddingLeft: "20px",
+            paddingRight: "20px",
+            paddingTop: "10px",
             backgroundColor: "#f0f0f0",
+            paddingBottom: "100px",
           }}
         >
-          Content for Tab Four
+          <div className="pl-0 pr-0 md:pl-36 md:pr-36">
+            <PostSection />
+          </div>
         </div>
       )}
       {/* Content for Tab Five */}
@@ -192,11 +216,16 @@ export default function TabBar() {
           style={{
             width: "100%",
             height: contentHeight,
-            padding: "20px",
+            paddingLeft: "20px",
+            paddingRight: "20px",
+            paddingTop: "10px",
             backgroundColor: "#f0f0f0",
+            paddingBottom: "100px",
           }}
         >
-          Content for Tab Five
+          <div className="pl-0 pr-0 md:pl-36 md:pr-36">
+            <PostSection />
+          </div>
         </div>
       )}
       {/* Content for Tab Six */}
@@ -205,11 +234,16 @@ export default function TabBar() {
           style={{
             width: "100%",
             height: contentHeight,
-            padding: "20px",
+            paddingLeft: "20px",
+            paddingRight: "20px",
+            paddingTop: "10px",
             backgroundColor: "#f0f0f0",
+            paddingBottom: "100px",
           }}
         >
-          Content for Tab Six
+          <div className="pl-0 pr-0 md:pl-36 md:pr-36">
+            <PostSection />
+          </div>
         </div>
       )}
       {/* Content for Tab Seven */}
@@ -218,11 +252,17 @@ export default function TabBar() {
           style={{
             width: "100%",
             height: contentHeight,
-            padding: "20px",
+            paddingLeft: "20px",
+            paddingRight: "20px",
+            paddingTop: "10px",
             backgroundColor: "#f0f0f0",
+            paddingBottom: "100px",
+            paddingBottom: "100px",
           }}
         >
-          Content for Tab Seven
+          <div className="pl-0 pr-0 md:pl-36 md:pr-36">
+            <PostSection />
+          </div>
         </div>
       )}
     </div>
