@@ -32,7 +32,7 @@ export default function SearchSuggestion() {
           padding: "5px",
         }}
       >
-        <Toolbar>
+        <Toolbar className="flex justify-between">
           <IconButton
             edge="start"
             color="gray"
