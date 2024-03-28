@@ -145,10 +145,10 @@ export default function TabBar() {
             paddingTop: "10px",
             paddingBottom: "100px",
             backgroundColor: "#f0f0f0",
-            overflow: "auto",
+            overflowY: "auto",
           }}
         >
-          <div className="pl-0 pr-0 md:pl-36 md:pr-36 overflow-scroll">
+          <div className="pl-0 pr-0 md:pl-36 md:pr-36">
             <PostSection />
             <PostSection />
             <PostSection />
