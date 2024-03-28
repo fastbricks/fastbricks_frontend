@@ -8,12 +8,12 @@ import DialogTitle from "@mui/material/DialogTitle";
 import AddBoxIcon from "@mui/icons-material/AddBox";
 import dynamic from "next/dynamic";
 import styles from "./postCard.module.css";
-import ReactQuill from "react-quill";
+// import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-// const ReactQuillNoSSRWrapper = dynamic(() => import("react-quill"), {
-//   // Import ReactQuill dynamically
-//   ssr: false, // Exclude it from server-side rendering
-// });
+const ReactQuillNoSSRWrapper = dynamic(() => import("react-quill"), {
+  // Import ReactQuill dynamically
+  ssr: false, // Exclude it from server-side rendering
+});
 import Image from "next/image";
 
 export default function PostCard() {
@@ -64,7 +64,7 @@ export default function PostCard() {
           >
             <div className="h-[100vh]">
               <div className={styles.editor}>
-                <ReactQuill
+                <ReactQuillNoSSRWrapper
                   className="h-[50vh] w-full"
                   theme="snow"
                   value={value}
