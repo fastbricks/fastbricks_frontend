@@ -12,6 +12,7 @@ import Head from "next/head";
 import { Box, Card, TextField, Divider, Typography } from "@mui/material";
 import Link from "next/link";
 import LoginForMobile from "@/components/login/LoginForMobile";
+import { FcGoogle } from "react-icons/fc";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -79,7 +80,7 @@ export default function Login() {
               {account.view === "login" ? (
                 <Box>
                   <Box className="login_box" sx={{ display: "flex" }}>
-                    <Card
+                    <Box
                       sx={{
                         display: "grid",
                         margin: "5px",
@@ -128,7 +129,7 @@ export default function Login() {
                           Request OTP
                         </Button>
                       </Box>
-                    </Card>
+                    </Box>
                   </Box>
                   <Box
                     sx={{
@@ -139,13 +140,12 @@ export default function Login() {
                     }}
                   >
                     <Divider>
-                      {" "}
                       <Typography sx={{ color: "grey", fontSize: 13.5 }}>
                         New to Fastbricks?
                       </Typography>
                     </Divider>
 
-                    <Card onClick={toggleSignup}>
+                    <div onClick={toggleSignup}>
                       <Button autoFocus>
                         <span
                           style={{ textTransform: "none", color: "#fd9696" }}
@@ -153,13 +153,13 @@ export default function Login() {
                           Create Your Fastbricks account
                         </span>
                       </Button>
-                    </Card>
+                    </div>
                   </Box>
                 </Box>
               ) : (
                 <Box>
                   <Box className="login_box" sx={{ display: "flex" }}>
-                    <Card
+                    <Box
                       sx={{
                         display: "grid",
                         margin: "5px",
@@ -175,7 +175,7 @@ export default function Login() {
                             paddingLeft: "20px",
                           }}
                         >
-                          Sign up
+                          Welcome! you are new here!
                         </Typography>
                       </Box>
                       <Box
@@ -208,7 +208,7 @@ export default function Login() {
                           continue
                         </Button>
                       </Box>
-                    </Card>
+                    </Box>
                   </Box>
                   <Box
                     sx={{
@@ -223,7 +223,7 @@ export default function Login() {
                         Existing User?
                       </Typography>
                     </Divider>
-                    <Card onClick={toggleSignin}>
+                    <div onClick={toggleSignin}>
                       <Button
                         variant="contained"
                         disableElevation
@@ -232,6 +232,7 @@ export default function Login() {
                           height: "100%",
                           width: "100%",
                           color: "#fd9696",
+                          textTransform: "capitalize",
                           ":hover": {
                             backgroundColor: "#eee",
                           },
@@ -239,17 +240,28 @@ export default function Login() {
                       >
                         sign in
                       </Button>
-                    </Card>
+                    </div>
                   </Box>
                 </Box>
               )}
             </DialogContent>
+            <div className="pb-16 text-center">
+              or
+              <div className="flex justify-center justify-items-center w-full">
+                <button className="flex items-center border-[1px] border-gray-300 justify-center gap-5 bg-gray-50 pt-3 rounded-lg pb-3 pl-5 pr-5">
+                  <div className="">
+                    <FcGoogle className="scale-150" />
+                  </div>
+                  <Typography>Sign in with google</Typography>
+                </button>
+              </div>
+            </div>
           </div>
         </FirstCard>
         <SecondCard sx={{}}>
           <img
             src="/login/loginred1.png"
-            style={{ width: "100%", height: "92vh" }}
+            style={{ width: "100%", height: "100%" }}
           />
         </SecondCard>
       </Wrapper>
@@ -276,6 +288,7 @@ const FirstCard = styled(Card)(({ theme }) => ({
   height: "100%",
   marginTop: 50,
   marginLeft: 50,
+  backgroundColor: "#ffffff",
   [theme.breakpoints.down("md")]: {
     width: "100%",
     marginLeft: 0,
@@ -294,7 +307,7 @@ const Wrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   gap: 10,
   justifyContent: "space-between",
-  paddingTop: 5,
+  paddingTop: 0,
   flexDirection: "row",
 
   [theme.breakpoints.down("sm")]: {
