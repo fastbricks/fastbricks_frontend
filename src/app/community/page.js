@@ -1,6 +1,7 @@
 import BottomNavBar from "@/components/BottomNavigation/BottomNavBar";
 import RootLayout from "../layout";
 import TabBar from "@/components/community/TabBar";
+import Head from "next/head";
 export const metadata = {
   title: "Fastbricks | Community of skilled construction professionals",
   description:
@@ -34,6 +35,32 @@ export const metadata = {
 export default function Community() {
   return (
     <main>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        {/* Open Graph tags */}
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta
+          property="og:description"
+          content={metadata.openGraph.description}
+        />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        {metadata.openGraph.images.map((image, index) => (
+          <meta property="og:image" content={image.url} key={index} />
+        ))}
+        <meta
+          property="og:image:width"
+          content={metadata.openGraph.images[0].width}
+        />
+        <meta
+          property="og:image:height"
+          content={metadata.openGraph.images[0].height}
+        />
+        <meta
+          property="og:image:alt"
+          content={metadata.openGraph.images[0].alt}
+        />
+      </Head>
       <div>
         <div className="flex">
           <TabBar />
