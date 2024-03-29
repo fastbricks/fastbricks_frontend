@@ -158,7 +158,7 @@ export default function Bookings() {
               Oops!
             </Typography>
             <Typography className="font-bold font-sans text-lg">
-              Your cart is currently empty.
+              Your booking is currently empty.
             </Typography>
           </div>
         </div>
