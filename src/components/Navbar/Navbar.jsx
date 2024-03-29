@@ -112,14 +112,14 @@ const Navbar = () => {
               </div>
             </Link>
           </div>
-          {/* <div className="right">
-            <Link href={"/cart"} style={{ textDecoration: "none" }}>
+          <div className="right">
+            <Link href={"/bookings"} style={{ textDecoration: "none" }}>
               <div className="cart">
                 <ShoppingCartOutlinedIcon className="cart-icon" />
-                <h1 className="seller">Cart</h1>
+                <h1 className="seller">Bookings</h1>
               </div>
             </Link>
-          </div> */}
+          </div>
           <div className="navbar-menu">
             <Menu />
           </div>
