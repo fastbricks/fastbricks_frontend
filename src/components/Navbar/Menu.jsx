@@ -84,14 +84,14 @@ export default function Menu() {
               <ListItemText>Bookings</ListItemText>
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
+          {/* <ListItem disablePadding>
             <ListItemButton href="/cart">
               <ListItemIcon>
                 <ShoppingCartOutlinedIcon className="cart-icon" />
               </ListItemIcon>
               <ListItemText>My Cart</ListItemText>
             </ListItemButton>
-          </ListItem>
+          </ListItem> */}
           <ListItem disablePadding>
             <ListItemButton href="/account">
               <ListItemIcon>
