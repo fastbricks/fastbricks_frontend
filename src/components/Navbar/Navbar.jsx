@@ -16,7 +16,7 @@ import { MdOutlineAccountCircle } from "react-icons/md";
 import "./Navbar.css";
 import styles from "./mobileNav.module.css";
 import SearchBar from "./SearchBar";
-import TabBar from "../community/TabBar";
+import { TbClipboardText } from "react-icons/tb";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -98,24 +98,22 @@ const Navbar = () => {
               </h3>
             </Link>
           </div>
-          <div className="">
+          <div className="right">
             <Link
               href={"https://seller.fastbricks.in/"}
               target="blank"
               style={{ textDecoration: "none" }}
             >
-              <div>
-                <h1 className="seller">
-                  <StorefrontIcon className="cart-icon" />
-                  Become a Partner
-                </h1>
+              <div className="cart">
+                <StorefrontIcon className="cart-icon" />
+                <h1 className="seller">Become a Partner</h1>
               </div>
             </Link>
           </div>
           <div className="right">
             <Link href={"/bookings"} style={{ textDecoration: "none" }}>
               <div className="cart">
-                <ShoppingCartOutlinedIcon className="cart-icon" />
+                <TbClipboardText className="cart-icon scale-150" />
                 <h1 className="seller">Bookings</h1>
               </div>
             </Link>
