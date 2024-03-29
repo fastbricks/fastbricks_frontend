@@ -21,7 +21,13 @@ export const metadata = {
       "Fastbricks Community of contractors, labours, masons, architects and many more where you can show your skills to the world and you can show your house to the world and can post construction proposals also.",
     url: "https://fastbricks.in/community",
     metadataBase: new URL("https://fastbricks.in/community"),
-    images: "/img/logoServiceLarge.png",
+    images: [
+      {
+        url: "https://fastbricks.in/img/logoServiceLarge.png",
+        width: 800,
+        height: 600,
+      },
+    ],
   },
 };
 
