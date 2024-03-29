@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 import YoutubeEmbed from "@/Lottie/youtubeEmbedded";
 import { Box, Card, Typography, styled } from "@mui/material";
 import Link from "next/link";
@@ -25,34 +26,68 @@ const LottieBoxTwo = styled(Box)(({ theme }) => ({
 }));
 
 export default function About() {
+  const [showFullText, setShowFullText] = useState(false);
+
+  useEffect(() => {
+    // Determine the initial state based on the screen size
+    setShowFullText(window.innerWidth >= 768); // 768px is the breakpoint for md size
+  }, []);
   return (
     <>
       <head>
         <title>{metadata.title}</title>
       </head>
       <section className=" bg-white flex flex-col md:flex md:flex-row p-0 md:p-10">
-        <div className=" p-5 md:pl-12 w-full md:w-1/2 ">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-4 ">
+        <div className="p-5 md:pl-12 w-full md:w-1/2">
+          <h2 className="text-3xl font-semibold text-gray-800 mb-4">
             About Us
           </h2>
-          <p className="text-gray-700 leading-relaxed mb-6 text-2xl hidden sm:block">
+          <p className="text-gray-700 leading-relaxed mb-6 text-xl sm:text-2xl">
             <b>Fastbricks</b> is a platform which is on an expedition to change
             the way construction is going on in India. We ensure better
             construction materials, services and machineries to our customers.
+            {showFullText || (
+              <span className="hidden md:block">
+                {" "}
+                {/* Show only a portion of the text if showFullText is false */}
+                We are transforming construction materials, machineries and
+                services through technology...
+              </span>
+            )}
           </p>
-          <p className="text-gray-700 leading-relaxed mb-6 text-xl">
-            We are transforming construction materials, machineries and services
-            through technology
-          </p>
-          <button className="bg-orange-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-            Explore More
-          </button>
+          {/* Show the full text if showFullText is true */}
+          {showFullText && (
+            <p className="text-gray-700 leading-relaxed mb-6 text-xl ">
+              We are transforming construction materials, machineries and
+              services through technology
+            </p>
+          )}
+          {/* Toggle buttons based on showFullText state */}
+          {window.innerWidth < 768 && (
+            <div>
+              {!showFullText ? (
+                <button
+                  className="bg-orange-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  onClick={() => setShowFullText(true)}
+                >
+                  Read More
+                </button>
+              ) : (
+                <button
+                  className="bg-orange-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  onClick={() => setShowFullText(false)}
+                >
+                  Read Less
+                </button>
+              )}
+            </div>
+          )}
         </div>
 
         <div className=" pl-5 pr-5 h-1/2 w-full md:w-2/3">
           <img
             className="w-full h-full  bg-cover rounded-lg"
-            src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://plus.unsplash.com/premium_photo-1681989490797-dbe51c438b61?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="About Us Background"
           />
         </div>
@@ -175,18 +210,18 @@ export default function About() {
             </div>
             <div className="p-5 w-full md:w-2/4 flex justify-center ">
               <div className="flex justify-center justify-items-center border-0 shadow-none p-5 items-center">
-                <Typography className="text-blue-gray-900 font-sans text-lg">
+                <p className="text-gray-900 font-sans text-lg font-semibold pl-2 pr-2">
                   <b>Fastbricks</b> will be the first-choice construction
                   partner providing all construction services, machinery rentals
                   to customer.
-                </Typography>
+                </p>
               </div>
             </div>
           </div>
         </section>
         <div className="video-responsive ">{/* <YoutubeEmbed /> */}</div>
       </Box>
-      <section>
+      <section className="p-0 sm:p-10">
         <Testimonials />
       </section>
     </>
