@@ -18,11 +18,11 @@ const Footer = () => {
   return (
     <Box sx={{ marginTop: "30px", display: isCommunityPage ? "none" : "flex" }}>
       <Card className="footer-wrapper">
-        <div class="py-6 bg-[#fd9696] items-center justify-items-center justify-around flex md:items-center md:justify-around border-b-[5px] border-white">
-          <span class="text-2xl font-extrabold text-white sm:text-center font-serif">
+        <div className="py-6 bg-[#fd9696] items-center justify-items-center justify-around flex md:items-center md:justify-around border-b-[5px] border-white">
+          <span className="text-2xl font-extrabold text-white sm:text-center font-serif">
             SOCIAL
           </span>
-          <div class="flex mt-0 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+          <div className="flex mt-0 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
             <Link
               href="https://www.instagram.com/fastbricks.in/"
               target="blank"
@@ -61,32 +61,32 @@ const Footer = () => {
           </div>
         </div>
 
-        <footer class="bg-[#E49295] ">
-          <div class="mx-auto w-full max-w-screen-xl">
-            <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4 justify-center items-center justify-items-center">
+        <footer className="bg-[#E49295] ">
+          <div className="mx-auto w-full max-w-screen-xl">
+            <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4 justify-center items-center justify-items-center">
               <div>
-                <ul class="text-white font-medium">
-                  <li class="mb-4">
+                <ul className="text-white font-medium">
+                  <li className="mb-4">
                     <img src="/footer-image.png" />
                   </li>
                 </ul>
               </div>
               <div>
-                <h2 class="mb-6 text-sm font-bold uppercase text-white">
+                <h2 className="mb-6 text-sm font-bold uppercase text-white">
                   About
                 </h2>
-                <ul class="text-white font-medium">
-                  <li class="mb-4">
+                <ul className="text-white font-medium">
+                  <li className="mb-4">
                     <Link href="/contact" style={{ textDecoration: "none" }}>
                       <h4>Contact Us</h4>
                     </Link>
                   </li>
-                  <li class="mb-4">
+                  <li className="mb-4">
                     <Link href="/about" style={{ textDecoration: "none" }}>
                       <h4>About Us</h4>
                     </Link>
                   </li>
-                  <li class="mb-4">
+                  <li className="mb-4">
                     <Link
                       href="https://blog.fastbricks.in/"
                       target="_blank"
@@ -95,7 +95,7 @@ const Footer = () => {
                       <h4>Blog</h4>
                     </Link>
                   </li>
-                  <li class="mb-4">
+                  <li className="mb-4">
                     <Link
                       href="https://careers.fastbricks.in/"
                       target="blank"
@@ -152,21 +152,21 @@ const Footer = () => {
                 </ul>
               </div>
               <div>
-                <h2 class="mb-6 text-sm font-bold uppercase text-white">
+                <h2 className="mb-6 text-sm font-bold uppercase text-white">
                   Help
                 </h2>
-                <ul class="text-white font-medium">
-                  <li class="mb-4">
+                <ul className="text-white font-medium">
+                  <li className="mb-4">
                     <Link href={"/payment"} style={{ textDecoration: "none" }}>
                       <h4>Payment</h4>
                     </Link>
                   </li>
-                  <li class="mb-4">
+                  <li className="mb-4">
                     <Link href={"/shipping"} style={{ textDecoration: "none" }}>
                       <h4>Shipping</h4>
                     </Link>
                   </li>
-                  <li class="mb-4">
+                  <li className="mb-4">
                     <Link
                       href={"/cancellation-return"}
                       style={{ textDecoration: "none" }}
@@ -174,7 +174,7 @@ const Footer = () => {
                       <h4>Cancellation & Return</h4>
                     </Link>
                   </li>
-                  <li class="mb-4">
+                  <li className="mb-4">
                     <Link href={"/faqs"} style={{ textDecoration: "none" }}>
                       <h4>FAQs</h4>
                     </Link>
@@ -182,22 +182,22 @@ const Footer = () => {
                 </ul>
               </div>
               <div>
-                <h1 class="mb-6 text-sm font-bold uppercase text-white">
+                <h1 className="mb-6 text-sm font-bold uppercase text-white">
                   Policy
                 </h1>
 
-                <ul class="text-white font-medium">
-                  <li class="mb-4">
+                <ul className="text-white font-medium">
+                  <li className="mb-4">
                     <Link href={"/return"} style={{ textDecoration: "none" }}>
                       <h4>Return Policy</h4>
                     </Link>
                   </li>
-                  <li class="mb-4">
+                  <li className="mb-4">
                     <Link href={"/terms"} style={{ textDecoration: "none" }}>
                       <h4>Terms of Use</h4>
                     </Link>
                   </li>
-                  <li class="mb-4">
+                  <li className="mb-4">
                     <Link href={"/security"} style={{ textDecoration: "none" }}>
                       <h4>Security</h4>
                     </Link>

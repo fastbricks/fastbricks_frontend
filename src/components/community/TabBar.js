@@ -130,7 +130,7 @@ export default function TabBar() {
             }}
           />
         </Tabs>
-        <button className="">
+        <button className="pr-3">
           <PostCard />
         </button>
       </div>
