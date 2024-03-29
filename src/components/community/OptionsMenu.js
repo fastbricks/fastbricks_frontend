@@ -72,7 +72,6 @@ export default function OptionsMenu() {
         transformOrigin={{ horizontal: "right", vertical: "top" }}
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
-        <Divider />
         <MenuItem onClick={handleClose}>Edit</MenuItem>
         <MenuItem onClick={handleClose} className="text-red-500">
           Delete
