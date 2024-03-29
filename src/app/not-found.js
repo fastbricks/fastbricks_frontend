@@ -4,6 +4,16 @@ import { Box, styled, Button } from "@mui/material";
 import Link from "next/link";
 import animationData from "../Lottie/stop.json";
 
+export const metadata = {
+  title: "Page not found",
+
+  openGraph: {
+    title: "Page not found",
+
+    images: "/img/logo@2x.png",
+  },
+};
+
 export default function NotFound() {
   return (
     <div className="flex flex-col h-[90vh] items-center text-center justify-center">
