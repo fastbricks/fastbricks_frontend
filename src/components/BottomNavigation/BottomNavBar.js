@@ -12,6 +12,8 @@ import { FaCartShopping } from "react-icons/fa6";
 import { IoCartOutline } from "react-icons/io5";
 import { FaBoxOpen } from "react-icons/fa";
 import { PiCubeDuotone } from "react-icons/pi";
+import { BsPerson } from "react-icons/bs";
+import { BsPersonFill } from "react-icons/bs";
 import { TbClipboardText } from "react-icons/tb";
 import { FaClipboard } from "react-icons/fa";
 import { IoChatbox } from "react-icons/io5";
@@ -43,7 +45,7 @@ function BottomNavBar() {
         return 1;
       case "/bookings":
         return 2;
-      case "/cart":
+      case "/account":
         return 3;
       default:
         return 0;
@@ -64,7 +66,7 @@ function BottomNavBar() {
         router.push("/bookings");
         break;
       case 3:
-        router.push("/cart");
+        router.push("/account");
         break;
       default:
         break;
@@ -150,13 +152,13 @@ function BottomNavBar() {
       />
 
       <BottomNavigationAction
-        label="Cart"
+        label="Account"
         value={3}
         icon={
           value === 3 ? (
-            <FaCartShopping style={{ color: "#FD9696" }} />
+            <BsPersonFill style={{ color: "#FD9696" }} />
           ) : (
-            <IoCartOutline style={{ color: "#f7adad" }} />
+            <BsPerson style={{ color: "#f7adad" }} />
           )
         }
         sx={{
