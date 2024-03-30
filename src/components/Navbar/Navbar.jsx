@@ -36,6 +36,7 @@ const Navbar = () => {
   const [upperDivHidden, setUpperDivHidden] = useState(false);
   const isCommunityPage = pathname === "/community";
   const isLoginPage = pathname === "/account/login";
+  const isAccountPage = pathname === "/account";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -211,7 +212,10 @@ const Navbar = () => {
 
           <div
             style={{
-              display: isCommunityPage || isLoginPage ? "none" : "flex",
+              display:
+                isCommunityPage || isLoginPage || isAccountPage
+                  ? "none"
+                  : "flex",
 
               flexDirection: "row",
               justifyContent: "space-around",
@@ -232,7 +236,8 @@ const Navbar = () => {
       <div
         style={{
           backgroundColor: "#fff",
-          display: isCommunityPage || isLoginPage ? "none" : "flex",
+          display:
+            isCommunityPage || isLoginPage || isAccountPage ? "none" : "flex",
           paddingTop: 5,
           paddingBottom: 5,
           zIndex: 9999,

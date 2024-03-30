@@ -1,7 +1,7 @@
 "use client";
 import { Card, styled, Box, Typography } from "@mui/material";
 
-export default function Return() {
+export default function PrivacyPolicy() {
   return (
     <main>
       <Card

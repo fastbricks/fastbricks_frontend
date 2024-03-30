@@ -39,7 +39,7 @@ function HomeCarousel() {
         responsive={responsive}
         autoPlay={true}
         infinite={true}
-        autoPlaySpeed={5000}
+        autoPlaySpeed={10000}
         className=" sm:h-[82vh] h-[200px] rounded-lg"
         customLeftArrow={<CustomLeftArrow />}
         customRightArrow={<CustomRightArrow />}
