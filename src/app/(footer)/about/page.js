@@ -45,14 +45,6 @@ export default function About() {
             <b>Fastbricks</b> is a platform which is on an expedition to change
             the way construction is going on in India. We ensure better
             construction materials, services and machineries to our customers.
-            {showFullText || (
-              <span className="hidden md:block">
-                {" "}
-                {/* Show only a portion of the text if showFullText is false */}
-                We are transforming construction materials, machineries and
-                services through technology...
-              </span>
-            )}
           </p>
           {/* Show the full text if showFullText is true */}
           {showFullText && (
