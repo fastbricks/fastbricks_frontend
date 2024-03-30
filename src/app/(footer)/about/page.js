@@ -62,7 +62,7 @@ export default function About() {
             </p>
           )}
           {/* Toggle buttons based on showFullText state */}
-          {window.innerWidth < 768 && (
+          {true && (
             <div>
               {!showFullText ? (
                 <button
