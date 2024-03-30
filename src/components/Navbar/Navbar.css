@@ -12,7 +12,8 @@
     /* background: #f7c8bd ; */
     background: #ffffff ;
 
-    border-bottom:1px solid #f28e7a7a;
+    /* border-bottom:1px solid #f28e7a7a; */
+    border-bottom:1px solid #ffe4df;
    box-shadow:0px -1px 5cap 0px rgba(150, 150, 150, 0.2);
 
 }
@@ -57,8 +58,10 @@
     width: 33vw;
     height: 40px;
     padding: 0 10px;
-    background: white;
-    border: 1px solid #f28e7a;
+    /* background: white; */
+    background: #fff7f7;
+    /* border: 1px solid #ffe4df; */
+    transition: top 0.3s ease;
     
     justify-content: space-between;
     align-items: center;
