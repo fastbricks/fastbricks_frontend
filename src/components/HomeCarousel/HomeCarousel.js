@@ -1,23 +1,7 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-// import jcb from "@/components/services/assets/carousel/jcb.png";
-// import cm from "@/components/services/assets/carousel/cm.png";
-// import ct from "@/components/services/assets/carousel/ct.png";
-// import cmt from "@/components/services/assets/carousel/cmt.png";
-// import wpm from "@/components/services/assets/carousel/wpm.png";
-// import fw from "@/components/services/assets/carousel/fw.png";
-// import t from "@/components/services/assets/carousel/t.png";
-// import one from "@/components/services/assets/slider/1.png";
-// import two from "@/components/services/assets/slider/2.png";
-// import three from "@/components/services/assets/slider/3.png";
-// import four from "@/components/services/assets/slider/4.png";
-// import five from "@/components/services/assets/slider/5.png";
-// import six from "@/components/services/assets/slider/6.png";
-// import seven from "@/components/services/assets/slider/7.png";
-// import eight from "@/components/services/assets/slider/8.png";
-// import nine from "@/components/services/assets/slider/9.png";
-// import ten from "@/components/services/assets/slider/10.png";
+
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import {
@@ -25,9 +9,6 @@ import {
   CustomRightArrow,
 } from "@/components/services/helper/carouselarrowButton";
 
-import styles from "@/components/services/styles/serviceCategory.module.css";
-import { Box, Button } from "@mui/material";
-import ServiceCategory from "../CategoryService/ServiceCategory";
 function HomeCarousel() {
   const responsive = {
     superLargeDesktop: {
@@ -50,12 +31,7 @@ function HomeCarousel() {
   };
   const data = [
     { id: "1", image: "/homeSlider/mockup-engineer-zoom.jpeg" },
-    // { id: "2", image: "/homeSlider/serviceMockup2-zoom.jpeg" },
-    // { id: "3", image: "/homeSlider/mockupreal.jpeg" },
-
-    // { id: "3", image: "/homeSlider/hs1.jpg" },
-    // { id: "4", image: "/homeSlider/hs2.jpg" },
-    // { id: "5", image: "/homeSlider/hs3.jpg" },
+    { id: "2", image: "/homeSlider/mockupreal.jpeg" },
   ];
   return (
     <div>
@@ -64,9 +40,12 @@ function HomeCarousel() {
         autoPlay={true}
         infinite={true}
         autoPlaySpeed={5000}
-        className=" sm:h-[82vh] h-[30vh] rounded-lg"
+        className=" sm:h-[82vh] h-[200px] rounded-lg"
         customLeftArrow={<CustomLeftArrow />}
         customRightArrow={<CustomRightArrow />}
+        showDots={true}
+        dotListClass="custom-dot-list"
+        customDot={<CustomDot />}
       >
         {data.map((data) => {
           return (
@@ -85,3 +64,15 @@ function HomeCarousel() {
 }
 
 export default HomeCarousel;
+const CustomDot = ({ onClick, active }) => {
+  return (
+    <div className=" rounded-md">
+      <button
+        className={`${
+          active ? "bg-red-300 rounded-md" : " bg-[#ffffff58]"
+        } w-10 h-2 transition-all duration-300`}
+        onClick={() => onClick()}
+      ></button>
+    </div>
+  );
+};

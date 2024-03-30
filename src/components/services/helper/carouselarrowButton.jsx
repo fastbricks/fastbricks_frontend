@@ -20,7 +20,7 @@ const CustomLeftArrow = ({ onClick }) => {
   }
 
   return (
-    <div className="flex justify-between items-center absolute text-white left-0 rounded-[50%] p-2 scale-150">
+    <div className=" justify-between items-center absolute text-white left-0 rounded-[50%] p-2 scale-150 hidden">
       <ChevronLeftIcon onClick={() => onClick()} className="" />
     </div>
   );
@@ -43,7 +43,7 @@ const CustomRightArrow = ({ onClick }) => {
   }
 
   return (
-    <div className="flex justify-between items-center absolute text-white right-0 rounded-[50%] p-2 scale-150">
+    <div className="hidden justify-between items-center absolute text-white right-0 rounded-[50%] p-2 scale-150">
       <ChevronRightIcon onClick={() => onClick()} className="" />
     </div>
   );
