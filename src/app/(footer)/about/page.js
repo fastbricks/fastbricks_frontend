@@ -26,11 +26,10 @@ const LottieBoxTwo = styled(Box)(({ theme }) => ({
 }));
 
 export default function About() {
-  const [showFullText, setShowFullText] = useState(false);
+  const [showFullText, setShowFullText] = useState(true);
 
   useEffect(() => {
-    // Determine the initial state based on the screen size
-    setShowFullText(window.innerWidth >= 768); // 768px is the breakpoint for md size
+    setShowFullText(false);
   }, []);
   return (
     <>
