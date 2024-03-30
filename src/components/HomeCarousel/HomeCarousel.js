@@ -49,11 +49,13 @@ function HomeCarousel() {
     },
   };
   const data = [
-    { id: "1", image: "/serviceMockup1-zoom.jpeg" },
-    { id: "1", image: "/serviceMockup2-zoom.jpeg" },
-    // { id: "1", image: "/carousel/ct.png" },
-    // { id: "1", image: "/carousel/jcb.png" },
-    // { id: "1", image: "/carousel/wpm.png" },
+    { id: "1", image: "/homeSlider/mockup-engineer-zoom.jpeg" },
+    // { id: "2", image: "/homeSlider/serviceMockup2-zoom.jpeg" },
+    // { id: "3", image: "/homeSlider/mockupreal.jpeg" },
+
+    // { id: "3", image: "/homeSlider/hs1.jpg" },
+    // { id: "4", image: "/homeSlider/hs2.jpg" },
+    // { id: "5", image: "/homeSlider/hs3.jpg" },
   ];
   return (
     <div>
@@ -68,9 +70,9 @@ function HomeCarousel() {
       >
         {data.map((data) => {
           return (
-            <div key={data.id}>
+            <div key={data.id} className=" w-full object-fill">
               <img
-                className="object-cover h-[80vh] md:object-cover sm:h-[90vh]"
+                className="object-contain h-[80vh] sm:object-cover sm:h-[90vh]"
                 src={data.image}
                 alt="slide"
               />
