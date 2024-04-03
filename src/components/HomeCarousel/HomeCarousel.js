@@ -70,7 +70,7 @@ const CustomDot = ({ onClick, active }) => {
       <button
         className={`${
           active ? "bg-red-300 rounded-md" : " bg-[#ffffff58]"
-        } w-10 h-2 transition-all duration-300`}
+        } w-10 h-2 transition-all duration-300 rounded-md`}
         onClick={() => onClick()}
       ></button>
     </div>
