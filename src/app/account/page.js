@@ -27,7 +27,7 @@ export default function Account() {
               </div>
               <div className=" w-2/3 pl-5">
                 <h1 className="font-semibold font-sans">Hey User!</h1>
-                <p className=" font-sans">
+                <p className=" font-sans text-gray-500">
                   Login or Signup to get access to your account.
                 </p>
               </div>
@@ -36,7 +36,7 @@ export default function Account() {
               href={"https://fastbricks.in/account/login"}
               className="w-[90%] mt-5 mb-5"
             >
-              <button className="bg-red-300 p-3 rounded text-white w-[100%] ">
+              <button className="bg-red-300 p-3 rounded text-white w-[100%] font-bold">
                 Login
               </button>
             </Link>
