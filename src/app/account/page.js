@@ -32,9 +32,14 @@ export default function Account() {
                 </p>
               </div>
             </div>
-            <button className="bg-red-300 p-3 rounded text-white w-[90%] mt-5 mb-5">
-              Login
-            </button>
+            <Link
+              href={"https://fastbricks.in/account/login"}
+              className="w-[90%] mt-5 mb-5"
+            >
+              <button className="bg-red-300 p-3 rounded text-white w-[100%] ">
+                Login
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -47,7 +52,7 @@ export default function Account() {
             <Divider />
             <div className="flex flex-row justify-between items-center pb-5 pt-5 cursor-pointer ">
               <Person2Icon className="scale-150 text-gray-400" />
-              <h1 className="font-semibold font-sans text-gray-500">
+              <h1 className="font-semibold font-sans text-gray-500 hover:text-gray-600">
                 Edit Profile
                 <ChevronRightIcon />
               </h1>
@@ -56,7 +61,7 @@ export default function Account() {
 
             <div className="flex flex-row justify-between items-center pt-5">
               <MyLocationIcon className="scale-150 text-gray-400" />
-              <h1 className="font-semibold font-sans text-gray-500">
+              <h1 className="font-semibold font-sans text-gray-500 hover:text-gray-600">
                 Saved Addresses
                 <ChevronRightIcon />
               </h1>
@@ -71,31 +76,35 @@ export default function Account() {
               Get Help
             </h1>
             <Divider />
-            <div className="flex flex-row justify-between items-center pb-5 pt-5 cursor-pointer">
-              <LiveHelpIcon className="scale-150 text-gray-400" />
-              <h1 className="font-semibold font-sans text-gray-500">
-                Frequently asked questions
-                <ChevronRightIcon />
-              </h1>
-            </div>
+            <Link href={"https://fastbricks.in/faqs"}>
+              <div className="flex flex-row justify-between items-center pb-5 pt-5 cursor-pointer">
+                <LiveHelpIcon className="scale-150 text-gray-400" />
+                <h1 className="font-semibold font-sans text-gray-500 hover:text-gray-600">
+                  Frequently asked questions
+                  <ChevronRightIcon />
+                </h1>
+              </div>
+            </Link>
             <Divider />
-
-            <div className="flex flex-row justify-between items-center pt-5 pb-5">
-              <GavelIcon className="scale-150 text-gray-400" />
-              <h1 className="font-semibold font-sans text-gray-500">
-                Terms and Policies
-                <ChevronRightIcon />
-              </h1>
-            </div>
+            <Link href={"https://fastbricks.in/terms"}>
+              <div className="flex flex-row justify-between items-center pt-5 pb-5">
+                <GavelIcon className="scale-150 text-gray-400" />
+                <h1 className="font-semibold font-sans text-gray-500 hover:text-gray-600">
+                  Terms and Policies
+                  <ChevronRightIcon />
+                </h1>
+              </div>
+            </Link>
             <Divider />
-
-            <div className="flex flex-row justify-between items-center pt-5">
-              <ConnectWithoutContactIcon className="scale-150 text-gray-400" />
-              <h1 className="font-semibold font-sans text-gray-500">
-                Contact us
-                <ChevronRightIcon />
-              </h1>
-            </div>
+            <Link href={"https://fastbricks.in/contact"}>
+              <div className="flex flex-row justify-between items-center pt-5">
+                <ConnectWithoutContactIcon className="scale-150 text-gray-400" />
+                <h1 className="font-semibold font-sans text-gray-500 hover:text-gray-600">
+                  Contact us
+                  <ChevronRightIcon />
+                </h1>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -106,13 +115,15 @@ export default function Account() {
               Earn with Fastbricks
             </h1>
             <Divider />
-            <div className="flex flex-row justify-between items-center pt-5 cursor-pointer">
-              <StorefrontIcon className="scale-150 text-gray-400" />
-              <h1 className="font-semibold font-sans text-gray-500">
-                Become a partner
-                <ChevronRightIcon />
-              </h1>
-            </div>
+            <Link href={"https://seller.fastbricks.in/"} target="_blank">
+              <div className="flex flex-row justify-between items-center pt-5 cursor-pointer">
+                <StorefrontIcon className="scale-150 text-gray-400" />
+                <h1 className="font-semibold font-sans text-gray-500 hover:text-gray-600">
+                  Become a partner
+                  <ChevronRightIcon />
+                </h1>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -127,16 +138,16 @@ export default function Account() {
             <Link href={"/about"}>
               <div className="flex flex-row justify-between items-center pb-5 pt-5 cursor-pointer">
                 <InfoIcon className="scale-150 text-gray-400" />
-                <h1 className="font-semibold font-sans text-gray-500">
+                <h1 className="font-semibold font-sans text-gray-500 hover:text-gray-600">
                   About Fastbricks <ChevronRightIcon />
                 </h1>
               </div>
             </Link>
             <Divider />
             <Link href={"https://blog.fastbricks.in/"} target="_blank">
-              <div className="flex flex-row justify-between items-center pt-5">
-                <NewspaperIcon className="scale-150 text-gray-400" />
-                <h1 className="font-semibold font-sans text-gray-500">
+              <div className="flex flex-row justify-between items-center pt-5 ">
+                <NewspaperIcon className="scale-150 text-gray-400 " />
+                <h1 className="font-semibold font-sans text-gray-500 hover:text-gray-600">
                   Read Articles
                   <ChevronRightIcon />
                 </h1>
