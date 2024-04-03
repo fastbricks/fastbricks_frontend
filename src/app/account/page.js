@@ -12,6 +12,8 @@ import Person2Icon from "@mui/icons-material/Person2";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { Divider } from "@mui/material";
 import Link from "next/link";
+import EditProfile from "@/components/account/EditProfile";
+import SavedAddress from "@/components/account/SavedAddress";
 export const metadata = {
   title: "My Account",
 };
@@ -52,19 +54,14 @@ export default function Account() {
             <Divider />
             <div className="flex flex-row justify-between items-center pb-5 pt-5 cursor-pointer ">
               <Person2Icon className="scale-150 text-gray-400" />
-              <h1 className="font-semibold font-sans text-gray-500 hover:text-gray-600">
-                Edit Profile
-                <ChevronRightIcon />
-              </h1>
+              <EditProfile />
             </div>
             <Divider />
 
             <div className="flex flex-row justify-between items-center pt-5">
               <MyLocationIcon className="scale-150 text-gray-400" />
-              <h1 className="font-semibold font-sans text-gray-500 hover:text-gray-600">
-                Saved Addresses
-                <ChevronRightIcon />
-              </h1>
+
+              <SavedAddress />
             </div>
           </div>
         </div>
