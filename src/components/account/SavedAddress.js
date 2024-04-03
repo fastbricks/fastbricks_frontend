@@ -83,7 +83,7 @@ export default function SavedAddress() {
         </AppBar>
 
         <form className="p-5">
-          <div className="space-y-12">
+          <div className="space-y-12 md:pl-56 md:pr-56">
             <div className="border-b border-gray-900/10 pb-12">
               <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                 <div className="sm:col-span-3">

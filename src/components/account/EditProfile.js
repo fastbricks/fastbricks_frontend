@@ -1,4 +1,6 @@
 "use client";
+
+import EditIcon from "@mui/icons-material/Edit";
 import * as React from "react";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
@@ -21,6 +23,11 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 export default function EditProfile() {
   const [open, setOpen] = React.useState(false);
+  const [editable, setEditable] = React.useState(false);
+  const [firstName, setFirstName] = React.useState("Anubhav");
+  const [lastName, setLastName] = React.useState("Ray");
+  const [email, setEmail] = React.useState("anubhav@fastbricks.in");
+  const [phone, setPhone] = React.useState("9876543210");
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -28,6 +35,10 @@ export default function EditProfile() {
 
   const handleClose = () => {
     setOpen(false);
+  };
+
+  const handleEdit = () => {
+    setEditable(!editable);
   };
 
   return (
@@ -78,7 +89,7 @@ export default function EditProfile() {
               </button>
               <button
                 type="submit"
-                className="rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
+                className="rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
               >
                 Save
               </button>
@@ -87,32 +98,12 @@ export default function EditProfile() {
         </AppBar>
 
         <form className="p-5">
-          <div className="space-y-12">
-            <div className="border-b border-gray-900/10 pb-12">
-              <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          <div className="space-y-12 md:pl-56 md:pr-56">
+            <div className="">
+              <div className=" grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                 <div className="col-span-full">
                   <label
-                    for="about"
-                    className="block text-sm font-medium leading-6 text-gray-900"
-                  >
-                    About
-                  </label>
-                  <div className="mt-2">
-                    <textarea
-                      id="about"
-                      name="about"
-                      rows="3"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    ></textarea>
-                  </div>
-                  <p className="mt-3 text-sm leading-6 text-gray-600">
-                    Write a few sentences about yourself.
-                  </p>
-                </div>
-
-                <div className="col-span-full">
-                  <label
-                    for="photo"
+                    htmlFor="photo"
                     className="block text-sm font-medium leading-6 text-gray-900"
                   >
                     Photo
@@ -125,77 +116,41 @@ export default function EditProfile() {
                       aria-hidden="true"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                        clip-rule="evenodd"
+                        clipRule="evenodd"
                       />
                     </svg>
                     <button
                       type="button"
                       className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
                     >
-                      Change
-                    </button>
-                  </div>
-                </div>
-
-                <div className="col-span-full">
-                  <label
-                    for="cover-photo"
-                    className="block text-sm font-medium leading-6 text-gray-900"
-                  >
-                    Cover photo
-                  </label>
-                  <div className="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
-                    <div className="text-center">
-                      <svg
-                        className="mx-auto h-12 w-12 text-gray-300"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        aria-hidden="true"
+                      <label
+                        htmlFor="file-upload"
+                        className="relative cursor-pointer rounded-md bg-white font-semibold text-blue-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-white focus-within:ring-offset-2 hover:text-blue-500"
                       >
-                        <path
-                          fill-rule="evenodd"
-                          d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z"
-                          clip-rule="evenodd"
+                        <span>Change</span>
+                        <input
+                          id="file-upload"
+                          name="file-upload"
+                          type="file"
+                          className="sr-only"
                         />
-                      </svg>
-                      <div className="mt-4 flex text-sm leading-6 text-gray-600">
-                        <label
-                          for="file-upload"
-                          className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500"
-                        >
-                          <span>Upload a file</span>
-                          <input
-                            id="file-upload"
-                            name="file-upload"
-                            type="file"
-                            className="sr-only"
-                          />
-                        </label>
-                        <p className="pl-1">or drag and drop</p>
-                      </div>
-                      <p className="text-xs leading-5 text-gray-600">
-                        PNG, JPG, GIF up to 10MB
-                      </p>
-                    </div>
+                      </label>
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div className="border-b border-gray-900/10 pb-12">
+            <div className="">
               <h2 className="text-base font-semibold leading-7 text-gray-900">
                 Personal Information
               </h2>
-              <p className="mt-1 text-sm leading-6 text-gray-600">
-                Use a permanent address where you can receive mail.
-              </p>
 
               <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                 <div className="sm:col-span-3">
                   <label
-                    for="first-name"
+                    htmlFor="first-name"
                     className="block text-sm font-medium leading-6 text-gray-900"
                   >
                     First name
@@ -205,15 +160,24 @@ export default function EditProfile() {
                       type="text"
                       name="first-name"
                       id="first-name"
-                      autocomplete="given-name"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      autoComplete="given-name"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6 p-2 ${
+                        editable ? "" : "pointer-events-none bg-gray-100"
+                      }`}
+                      disabled={!editable}
                     />
+                    <IconButton onClick={handleEdit}>
+                      {/* Display different icons based on editable state */}
+                      {editable ? <CloseIcon /> : <EditIcon />}
+                    </IconButton>
                   </div>
                 </div>
 
                 <div className="sm:col-span-3">
                   <label
-                    for="last-name"
+                    htmlFor="last-name"
                     className="block text-sm font-medium leading-6 text-gray-900"
                   >
                     Last name
@@ -223,15 +187,40 @@ export default function EditProfile() {
                       type="text"
                       name="last-name"
                       id="last-name"
-                      autocomplete="family-name"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      autoComplete="family-name"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                      className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6 p-2 ${
+                        editable ? "" : "pointer-events-none bg-gray-100"
+                      }`}
+                      disabled={!editable}
                     />
                   </div>
                 </div>
 
                 <div className="sm:col-span-4">
                   <label
-                    for="email"
+                    htmlFor="email"
+                    className="block text-sm font-medium leading-6 text-gray-900"
+                  >
+                    Phone number
+                  </label>
+                  <div className="mt-2">
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="phone"
+                      autoComplete="phone"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6 p-2`}
+                      disabled={true}
+                    />
+                  </div>
+                </div>
+                <div className="sm:col-span-4">
+                  <label
+                    htmlFor="email"
                     className="block text-sm font-medium leading-6 text-gray-900"
                   >
                     Email address
@@ -241,120 +230,17 @@ export default function EditProfile() {
                       id="email"
                       name="email"
                       type="email"
-                      autocomplete="email"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    />
-                  </div>
-                </div>
-
-                <div className="sm:col-span-3">
-                  <label
-                    for="country"
-                    className="block text-sm font-medium leading-6 text-gray-900"
-                  >
-                    Country
-                  </label>
-                  <div className="mt-2">
-                    <select
-                      id="country"
-                      name="country"
-                      autocomplete="country-name"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
-                    >
-                      <option>India</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div className="col-span-full">
-                  <label
-                    for="street-address"
-                    className="block text-sm font-medium leading-6 text-gray-900"
-                  >
-                    Street address
-                  </label>
-                  <div className="mt-2">
-                    <input
-                      type="text"
-                      name="street-address"
-                      id="street-address"
-                      autocomplete="street-address"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    />
-                  </div>
-                </div>
-
-                <div className="sm:col-span-2 sm:col-start-1">
-                  <label
-                    for="city"
-                    className="block text-sm font-medium leading-6 text-gray-900"
-                  >
-                    City
-                  </label>
-                  <div className="mt-2">
-                    <input
-                      type="text"
-                      name="city"
-                      id="city"
-                      autocomplete="address-level2"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    />
-                  </div>
-                </div>
-
-                <div className="sm:col-span-2">
-                  <label
-                    for="region"
-                    className="block text-sm font-medium leading-6 text-gray-900"
-                  >
-                    State / Province
-                  </label>
-                  <div className="mt-2">
-                    <input
-                      type="text"
-                      name="region"
-                      id="region"
-                      autocomplete="address-level1"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    />
-                  </div>
-                </div>
-
-                <div className="sm:col-span-2">
-                  <label
-                    for="postal-code"
-                    className="block text-sm font-medium leading-6 text-gray-900"
-                  >
-                    ZIP / Postal code
-                  </label>
-                  <div className="mt-2">
-                    <input
-                      type="text"
-                      name="postal-code"
-                      id="postal-code"
-                      autocomplete="postal-code"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      autoComplete="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6 p-2`}
+                      disabled={true}
                     />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* <div className="mt-6 flex items-center justify-end gap-x-6">
-            <button
-              type="button"
-              className="text-sm font-semibold leading-6 text-gray-900"
-            >
-              Cancel
-            </button>
-            <button
-              type="submit"
-              className="rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Save
-            </button>
-          </div> */}
         </form>
       </Dialog>
     </React.Fragment>

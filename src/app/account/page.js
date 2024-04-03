@@ -58,7 +58,7 @@ export default function Account() {
             </div>
             <Divider />
 
-            <div className="flex flex-row justify-between items-center pt-5">
+            <div className="flex flex-row justify-between items-center pt-5 cursor-pointer">
               <MyLocationIcon className="scale-150 text-gray-400" />
 
               <SavedAddress />
