@@ -34,7 +34,7 @@ export const metadata = {
 
 export default function Community() {
   return (
-    <main>
+    <main className="">
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
@@ -61,11 +61,11 @@ export default function Community() {
           content={metadata.openGraph.images[0].alt}
         />
       </Head>
-      <div>
-        <div className="flex">
-          <TabBar />
-        </div>
+      {/* <div> */}
+      <div className="flex h-[85vh]">
+        <TabBar />
       </div>
+      {/* </div> */}
       <BottomNavBar />
     </main>
   );

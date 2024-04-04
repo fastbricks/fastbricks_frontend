@@ -15,7 +15,7 @@ export default function TabBar() {
   const contentHeight = `calc(100vh)`; // Adjust 100px and 64px according to your footer and bottom navbar heights
 
   return (
-    <div style={{ width: "100vw", height: "100vh", overflow: "hidden" }}>
+    <div style={{ width: "100vw", overflow: "hidden" }}>
       <div className="flex w-[100vw] p-2 justify-around">
         <Tabs
           value={value}
@@ -143,7 +143,7 @@ export default function TabBar() {
             paddingLeft: "20px",
             paddingRight: "20px",
             paddingTop: "10px",
-            paddingBottom: "100px",
+            paddingBottom: "200px",
             backgroundColor: "#f0f0f0",
             overflowY: "auto",
           }}
