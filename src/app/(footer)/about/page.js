@@ -36,7 +36,7 @@ export default function About() {
       <head>
         <title>{metadata.title}</title>
       </head>
-      <section className=" bg-white flex flex-col md:flex md:flex-row p-0 md:p-10">
+      <section className=" bg-white flex flex-col md:flex md:flex-row p-0 md:p-10 justify-around">
         <div className="p-5 md:pl-12 w-full md:w-1/2">
           <h2 className="text-3xl font-semibold text-gray-800 mb-4">
             About Us
@@ -75,10 +75,10 @@ export default function About() {
           )}
         </div>
 
-        <div className=" pl-5 pr-5 h-1/2 w-full md:w-2/3">
+        <div className=" pl-5 pr-5 h-[400px] w-full md:w-2/5 md:h-[550px]">
           <img
             className="w-full h-full  bg-cover rounded-lg"
-            src="https://plus.unsplash.com/premium_photo-1681989490797-dbe51c438b61?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1558227691-41ea78d1f631?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="About Us Background"
           />
         </div>
