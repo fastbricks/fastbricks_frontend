@@ -93,11 +93,6 @@ const Footer = () => {
                   </h2>
                   <ul className="text-white font-medium">
                     <li className="mb-4">
-                      <Link href="/contact" style={{ textDecoration: "none" }}>
-                        <h4>Contact Us</h4>
-                      </Link>
-                    </li>
-                    <li className="mb-4">
                       <Link href="/about" style={{ textDecoration: "none" }}>
                         <h4>About Us</h4>
                       </Link>
@@ -109,6 +104,15 @@ const Footer = () => {
                         style={{ textDecoration: "none" }}
                       >
                         <h4>Blog</h4>
+                      </Link>
+                    </li>
+                    <li className="mb-4">
+                      <Link
+                        href="/community"
+                        target="_blank"
+                        style={{ textDecoration: "none" }}
+                      >
+                        <h4>Community</h4>
                       </Link>
                     </li>
                     <li className="mb-4">
@@ -180,14 +184,7 @@ const Footer = () => {
                         <h4>Payment</h4>
                       </Link>
                     </li>
-                    <li className="mb-4">
-                      <Link
-                        href={"/shipping"}
-                        style={{ textDecoration: "none" }}
-                      >
-                        <h4>Shipping</h4>
-                      </Link>
-                    </li>
+
                     <li className="mb-4">
                       <Link
                         href={"/cancellation-return"}
@@ -199,6 +196,11 @@ const Footer = () => {
                     <li className="mb-4">
                       <Link href={"/faqs"} style={{ textDecoration: "none" }}>
                         <h4>FAQs</h4>
+                      </Link>
+                    </li>
+                    <li className="mb-4">
+                      <Link href="/contact" style={{ textDecoration: "none" }}>
+                        <h4>Contact Us</h4>
                       </Link>
                     </li>
                   </ul>
@@ -353,11 +355,6 @@ const Footer = () => {
                 </h2>
                 <ul className="text-white font-medium">
                   <li className="mb-4">
-                    <Link href="/contact" style={{ textDecoration: "none" }}>
-                      <h4>Contact Us</h4>
-                    </Link>
-                  </li>
-                  <li className="mb-4">
                     <Link href="/about" style={{ textDecoration: "none" }}>
                       <h4>About Us</h4>
                     </Link>
@@ -369,6 +366,15 @@ const Footer = () => {
                       style={{ textDecoration: "none" }}
                     >
                       <h4>Blog</h4>
+                    </Link>
+                  </li>
+                  <li className="mb-4">
+                    <Link
+                      href="/community"
+                      target="_blank"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <h4>Community</h4>
                     </Link>
                   </li>
                   <li className="mb-4">
@@ -437,17 +443,18 @@ const Footer = () => {
                       <h4>Payment</h4>
                     </Link>
                   </li>
-                  <li className="mb-4">
-                    <Link href={"/shipping"} style={{ textDecoration: "none" }}>
-                      <h4>Shipping</h4>
-                    </Link>
-                  </li>
+
                   <li className="mb-4">
                     <Link
                       href={"/cancellation-return"}
                       style={{ textDecoration: "none" }}
                     >
                       <h4>Cancellation & Return</h4>
+                    </Link>
+                  </li>
+                  <li className="mb-4">
+                    <Link href="/contact" style={{ textDecoration: "none" }}>
+                      <h4>Contact Us</h4>
                     </Link>
                   </li>
                   <li className="mb-4">

@@ -9,6 +9,7 @@ import Testimonials from "@/components/Testimonials/Testimonials";
 import RootLayout from "./layout";
 import ServiceSection from "@/components/featured/ServiceSection";
 import RentalSection from "@/components/featured/RentalSection";
+import CommunityPoster from "@/components/featured/CommunityPoster";
 export const metadata = {
   title: "Fastbricks | Build Strong",
   description: "Fastbricks - with you in your construction journey ",
@@ -41,6 +42,7 @@ export default function Home() {
         <ServiceCard />
         <PosterSecond />
         <Testimonials />
+        <CommunityPoster />
       </div>
       <BottomNavBar />
     </main>
