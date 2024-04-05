@@ -19,7 +19,7 @@ export default function SearchSuggestion() {
   const router = useRouter();
 
   const handleClose = () => {
-    router.replace("/");
+    router.back();
   };
 
   return (
