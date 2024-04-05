@@ -23,32 +23,37 @@ export default function SearchSuggestion() {
   };
 
   return (
-    <Dialog fullScreen open={true} TransitionComponent={Transition}>
-      <AppBar
-        sx={{
-          position: "relative",
-          backgroundColor: "#fff",
-          boxShadow: "0px -1px 5cap 0px rgba(150, 150, 150, 0.2)",
-          padding: "5px",
-        }}
-      >
-        <Toolbar className="flex justify-between">
-          <IconButton
-            edge="start"
-            color="gray"
-            onClick={handleClose}
-            aria-label="close"
-          >
-            <WestIcon />
-          </IconButton>
-          <div className={styles.searchContainer}>
-            <SearchIcon />
-            <input type="text" placeholder="Search for ..." />
-            <MicIcon />
-          </div>
-        </Toolbar>
-      </AppBar>
-      <List></List>
-    </Dialog>
+    <>
+      <head>
+        <title>Fastbricks | Search</title>
+      </head>
+      <Dialog fullScreen open={true} TransitionComponent={Transition}>
+        <AppBar
+          sx={{
+            position: "relative",
+            backgroundColor: "#fff",
+            boxShadow: "0px -1px 5cap 0px rgba(150, 150, 150, 0.2)",
+            padding: "5px",
+          }}
+        >
+          <Toolbar className="flex justify-between">
+            <IconButton
+              edge="start"
+              color="gray"
+              onClick={handleClose}
+              aria-label="close"
+            >
+              <WestIcon />
+            </IconButton>
+            <div className={styles.searchContainer}>
+              <SearchIcon />
+              <input type="text" placeholder="Search for ..." />
+              <MicIcon />
+            </div>
+          </Toolbar>
+        </AppBar>
+        <List></List>
+      </Dialog>
+    </>
   );
 }
