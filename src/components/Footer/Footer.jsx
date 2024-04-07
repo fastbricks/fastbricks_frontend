@@ -495,7 +495,12 @@ const Footer = () => {
         </footer>
 
         <div className="desc_banner_img">
-          <img className="desc_banner_img" src="/banner2.png" alt="" />
+          <img
+            className="desc_banner_img"
+            src="/banner2.png"
+            alt=""
+            style={{ width: "-webkit-fill-available" }}
+          />
         </div>
         <Box
           sx={{
