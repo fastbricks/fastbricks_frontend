@@ -33,7 +33,7 @@ const Footer = () => {
       <Box
         sx={{ marginTop: "30px", display: isCommunityPage ? "none" : "flex" }}
       >
-        <Card className="footer-wrapper">
+        <Card className="footer-wrapper" style={{ display: "block" }}>
           <div className="py-6 bg-[#fd9696] items-center justify-items-center justify-around flex md:items-center md:justify-around border-b-[5px] border-white">
             <span className="text-2xl font-extrabold text-white sm:text-center font-serif">
               SOCIAL
@@ -295,7 +295,7 @@ const Footer = () => {
           isCommunityPage || isAccountPage || isBookingPage ? "none" : "flex",
       }}
     >
-      <Card className="footer-wrapper">
+      <Card className="footer-wrapper" style={{ display: "block" }}>
         <div className="py-6 bg-[#fd9696] items-center justify-items-center justify-around flex md:items-center md:justify-around border-b-[5px] border-white">
           <span className="text-2xl font-extrabold text-white sm:text-center font-serif">
             SOCIAL
