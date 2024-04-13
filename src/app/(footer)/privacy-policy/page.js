@@ -1,5 +1,8 @@
 import { Card, Box, Typography } from "@mui/material";
-export const metadata = {};
+export const metadata = {
+  title: "Fastbricks | Privacy Policy",
+  description: "Welcome to Fastbricks's privacy policy.",
+};
 
 export default function PrivacyPolicy() {
   return (
