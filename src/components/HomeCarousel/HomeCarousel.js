@@ -51,7 +51,7 @@ function HomeCarousel() {
           return (
             <div key={data.id} className=" w-full object-fill">
               <img
-                className="object-contain h-[80vh] sm:object-cover sm:h-[90vh]"
+                className="object-contain h-[100vh] sm:object-cover sm:h-[100vh]"
                 src={data.image}
                 alt="slide"
               />

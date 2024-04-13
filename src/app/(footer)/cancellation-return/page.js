@@ -18,7 +18,7 @@ export default function Cancellation() {
           boxShadow: "none",
         }}
       >
-        <h1 className=" font-bold text-2xl uppercase">
+        <h1 className=" font-bold text-xl uppercase">
           Cancellation & Return Policy
         </h1>
       </Card>
