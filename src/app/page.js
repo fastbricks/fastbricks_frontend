@@ -28,7 +28,7 @@ export const metadata = {
     description: "Fastbricks - with you in your construction journey ",
     url: "https://fastbricks.in/",
     metadataBase: new URL("https://fastbricks.in/"),
-    images: "/img/logo@2x.png",
+    images: "/first.png",
   },
 };
 
