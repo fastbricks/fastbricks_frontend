@@ -1,5 +1,5 @@
-"use client";
-import { Card, styled, Box, Typography } from "@mui/material";
+import { Card, Box, Typography } from "@mui/material";
+export const metadata = {};
 
 export default function PrivacyPolicy() {
   return (
@@ -12,11 +12,12 @@ export default function PrivacyPolicy() {
           justifyContent: "center",
           alignItems: "center",
           backgroundColor: "#f2f2f2",
+          boxShadow: "none",
         }}
       >
         <h1 className=" font-bold text-2xl">PRIVACY POLICY</h1>
       </Card>
-      <Container>
+      <div className=" pl-5 pr-5 pt-10 md:pl-40 md:pr-40">
         <Card sx={{ height: "", padding: "20px" }}>
           <div>
             <p className=" text-center text-xl p-2">
@@ -153,15 +154,15 @@ export default function PrivacyPolicy() {
             </p>
           </div>
         </Card>
-      </Container>
+      </div>
     </main>
   );
 }
-const Container = styled(Box)(({ theme }) => ({
-  padding: "20px 200px",
-  backgroundColor: "white",
+// const Container = styled(Box)(({ theme }) => ({
+//   padding: "20px 200px",
+//   backgroundColor: "white",
 
-  [theme.breakpoints.down("md")]: {
-    padding: "20px 20px",
-  },
-}));
+//   [theme.breakpoints.down("md")]: {
+//     padding: "20px 20px",
+//   },
+// }));
