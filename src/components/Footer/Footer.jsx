@@ -186,14 +186,6 @@ const Footer = () => {
                     </li>
 
                     <li className="mb-4">
-                      <Link
-                        href={"/cancellation-return"}
-                        style={{ textDecoration: "none" }}
-                      >
-                        <h4>Cancellation & Return</h4>
-                      </Link>
-                    </li>
-                    <li className="mb-4">
                       <Link href={"/faqs"} style={{ textDecoration: "none" }}>
                         <h4>FAQs</h4>
                       </Link>
@@ -226,10 +218,10 @@ const Footer = () => {
                     </li>
                     <li className="mb-4">
                       <Link
-                        href={"/security"}
+                        href={"/cancellation-return"}
                         style={{ textDecoration: "none" }}
                       >
-                        <h4>Security</h4>
+                        <h4>Cancellation & Return</h4>
                       </Link>
                     </li>
                   </ul>
@@ -445,14 +437,6 @@ const Footer = () => {
                   </li>
 
                   <li className="mb-4">
-                    <Link
-                      href={"/cancellation-return"}
-                      style={{ textDecoration: "none" }}
-                    >
-                      <h4>Cancellation & Return</h4>
-                    </Link>
-                  </li>
-                  <li className="mb-4">
                     <Link href="/contact" style={{ textDecoration: "none" }}>
                       <h4>Contact Us</h4>
                     </Link>
@@ -484,8 +468,11 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li className="mb-4">
-                    <Link href={"/security"} style={{ textDecoration: "none" }}>
-                      <h4>Security</h4>
+                    <Link
+                      href={"/cancellation-return"}
+                      style={{ textDecoration: "none" }}
+                    >
+                      <h4>Cancellation & Return</h4>
                     </Link>
                   </li>
                 </ul>
