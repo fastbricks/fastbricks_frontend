@@ -3,41 +3,46 @@ import AccordionComponent from "@/components/common/AccordionComponent";
 import { Card, styled, Box, Typography, Button } from "@mui/material";
 export default function Faqs() {
   return (
-    <div style={{ padding: "10px 10px" }}>
-      <Container>
-        <Wrapper style={{}}>
-          <Typography
-            variant="h3"
-            sx={{ fontFamily: "sans-serif", fontWeight: 800 }}
-          >
-            Frequently Asked
-            <br /> Questions ?
-          </Typography>
-          <Box sx={{ paddingRight: "50px" }}>
-            <Typography sx={{ paddingTop: "10px" }}>
-              Fastbricks Help Center resolves construction services and rentals
-              issues promptly.Get help with services, rentals, and more.
-              Simplify construction marketplace experience.
+    <>
+      <head>
+        <title>Fastbricks | FAQs</title>
+      </head>
+      <div style={{ padding: "10px 10px" }}>
+        <Container>
+          <Wrapper style={{}}>
+            <Typography
+              variant="h3"
+              sx={{ fontFamily: "sans-serif", fontWeight: 800 }}
+            >
+              Frequently Asked
+              <br /> Questions ?
             </Typography>
-          </Box>
+            <Box sx={{ paddingRight: "50px" }}>
+              <Typography sx={{ paddingTop: "10px" }}>
+                Fastbricks Help Center resolves construction services and
+                rentals issues promptly.Get help with services, rentals, and
+                more. Simplify construction marketplace experience.
+              </Typography>
+            </Box>
 
-          <Button
-            variant="contained"
-            color="warning"
-            className="bg-orange-500"
-            sx={{ paddingTop: "10px", margin: "10px 0px" }}
-          >
-            Read more
-          </Button>
-          <Box sx={{ paddingTop: "10px" }}>
-            <img src="/faq.jpg" alt="" width={"100%"} />
-          </Box>
-        </Wrapper>
-        <div style={{ padding: "10px" }}>
-          <AccordionComponent />
-        </div>
-      </Container>
-    </div>
+            <Button
+              variant="contained"
+              color="warning"
+              className="bg-orange-500"
+              sx={{ paddingTop: "10px", margin: "10px 0px" }}
+            >
+              Read more
+            </Button>
+            <Box sx={{ paddingTop: "10px" }}>
+              <img src="/faq.jpg" alt="" width={"100%"} />
+            </Box>
+          </Wrapper>
+          <div style={{ padding: "10px" }}>
+            <AccordionComponent />
+          </div>
+        </Container>
+      </div>
+    </>
   );
 }
 const Container = styled(Card)(({ theme }) => ({
