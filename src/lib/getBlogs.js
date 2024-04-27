@@ -1,11 +1,7 @@
-// src/lib/getBlogs.js
-
 export default async function getBlogs() {
   try {
-    // Replace 'http://api.example.com/posts' with the URL of your API server
     const response = await fetch("https://blog.fastbricks.in/api/blog");
 
-    // Check if the response is successful
     if (!response.ok) {
       throw new Error(`Error fetching blog posts: ${response.statusText}`);
     }
