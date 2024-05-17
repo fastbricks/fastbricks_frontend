@@ -22,7 +22,13 @@ function CommunityPoster() {
         <hr className="bg-gray-100 p-1 block sm:hidden" />
         <Link href={"/community"}>
           <div className=" p-2  cursor-pointer mb-5">
-            <Image src={poster} className="rounded" alt="community" />
+            <Image
+              src={poster}
+              className="rounded"
+              alt="community"
+              loading="lazy"
+              placeholder="blur"
+            />
           </div>
         </Link>
       </div>

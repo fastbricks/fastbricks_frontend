@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import {
@@ -50,10 +50,11 @@ function HomeCarousel() {
         {data.map((data) => {
           return (
             <div key={data.id} className=" w-full object-fill">
-              <img
+              <LazyLoadImage
                 className="object-contain h-[100vh] sm:object-cover sm:h-[100vh]"
                 src={data.image}
-                alt="slide"
+                alt="banner"
+                effect="blur"
               />
             </div>
           );

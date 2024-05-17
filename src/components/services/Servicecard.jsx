@@ -15,6 +15,7 @@ import {
   CustomLeftArrow,
   CustomRightArrow,
 } from "./helper/carouselarrowButton";
+
 function ServiceCard() {
   const responsive = {
     desktop: {

@@ -83,7 +83,7 @@ const Footer = () => {
                 <div>
                   <ul className="text-white font-medium">
                     <li className="mb-4">
-                      <img src="/footer-image.png" />
+                      <img src="/footer-image.png" loading="lazy" />
                     </li>
                   </ul>
                 </div>
@@ -231,7 +231,12 @@ const Footer = () => {
           </footer>
 
           <div className="desc_banner_img">
-            <img className="desc_banner_img" src="/banner2.png" alt="" />
+            <img
+              className="desc_banner_img"
+              src="/banner2.png"
+              alt=""
+              loading="lazy"
+            />
           </div>
           <Box
             sx={{
@@ -337,7 +342,7 @@ const Footer = () => {
               <div>
                 <ul className="text-white font-medium">
                   <li className="mb-4">
-                    <img src="/footer-image.png" />
+                    <img src="/footer-image.png" loading="lazy" />
                   </li>
                 </ul>
               </div>
@@ -487,6 +492,7 @@ const Footer = () => {
             src="/banner2.png"
             alt=""
             style={{ width: "-webkit-fill-available" }}
+            loading="lazy"
           />
         </div>
         <Box

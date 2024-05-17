@@ -6,6 +6,7 @@ import {
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Testimonials = () => {
   const testimonials = [
@@ -95,10 +96,11 @@ const Testimonials = () => {
             key={index}
             className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 m-5"
           >
-            <img
+            <LazyLoadImage
               src={testimonial.image}
               alt={testimonial.service}
               className="w-full h-48 object-fill "
+              effect="blur"
             />
             <div className="p-4 h-full sm:h-52 overflow-hidden">
               <div className="flex items-center justify-between">

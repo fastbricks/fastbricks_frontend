@@ -6,10 +6,22 @@ function PosterSecond() {
   return (
     <div>
       <div className="mt-5 p-2 hidden sm:block cursor-pointer">
-        <Image src={adv} className="rounded" alt="poster" />
+        <Image
+          src={adv}
+          className="rounded"
+          alt="poster"
+          loading="lazy"
+          placeholder="blur"
+        />
       </div>
       <div className="mt-5 p-5 block sm:hidden cursor-pointer">
-        <Image src={advMobile} className="rounded-lg" alt="poster" />
+        <Image
+          src={advMobile}
+          className="rounded-lg"
+          alt="poster"
+          loading="lazy"
+          placeholder="blur"
+        />
       </div>
     </div>
   );

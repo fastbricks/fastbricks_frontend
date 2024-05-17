@@ -2,6 +2,7 @@ import React from "react";
 import { Card, Typography } from "@mui/material";
 import RentalCategory from "@/components/RentalCategory/RentalCategory";
 import RentalImage from "../../../public/rentals.png";
+
 import Image from "next/image";
 function RentalSection() {
   return (
@@ -15,7 +16,13 @@ function RentalSection() {
           <RentalCategory />
         </div>
         <div className="w-full md:2/4 rounded-lg md:h-full p-0 sm:p-2 ">
-          <Image src={RentalImage} className="" alt="poster" />
+          <Image
+            src={RentalImage}
+            className=""
+            alt="poster"
+            loading="lazy"
+            placeholder="blur"
+          />
         </div>
       </div>
     </div>
