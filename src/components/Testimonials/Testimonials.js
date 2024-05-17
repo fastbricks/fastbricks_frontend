@@ -100,7 +100,6 @@ const Testimonials = () => {
               src={testimonial.image}
               alt={testimonial.service}
               className="w-full h-48 object-fill "
-              effect="blur"
             />
             <div className="p-4 h-full sm:h-52 overflow-hidden">
               <div className="flex items-center justify-between">

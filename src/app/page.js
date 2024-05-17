@@ -11,7 +11,7 @@ import ServiceSection from "@/components/featured/ServiceSection";
 import RentalSection from "@/components/featured/RentalSection";
 import CommunityPoster from "@/components/featured/CommunityPoster";
 export const metadata = {
-  title: "Fastbricks | Build Strong",
+  title: "Fastbricks - Build Strong",
   description: "Fastbricks - with you in your construction journey ",
   url: "https://fastbricks.in/",
   metadataBase: new URL("https://fastbricks.in/"),

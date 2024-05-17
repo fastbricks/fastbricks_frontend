@@ -38,7 +38,7 @@ function HomeCarousel() {
     {
       id: "2",
       image:
-        "https://firebasestorage.googleapis.com/v0/b/fastbricks-blog-666fb.appspot.com/o/mockupreal.jpeg?alt=media&token=aacc6160-1a3e-4d87-a8f2-dccac4338401",
+        "https://firebasestorage.googleapis.com/v0/b/fastbricks-blog-666fb.appspot.com/o/mockupreal.jpeg?alt=media&token=81276a33-c081-468d-9675-1dd9ffba67f4",
     },
   ];
   return (

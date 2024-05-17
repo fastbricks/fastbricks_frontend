@@ -4,13 +4,7 @@ import { Box } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Cardset from "./Cardset";
-import one from "@/components/services/assets/cardimage/1.png";
-import two from "@/components/services/assets/cardimage/2.png";
-import three from "@/components/services/assets/cardimage/3.png";
-import four from "@/components/services/assets/cardimage/4.png";
-import five from "@/components/services/assets/cardimage/5.png";
-import six from "@/components/services/assets/cardimage/6.png";
-import seven from "@/components/services/assets/cardimage/7.png";
+
 import {
   CustomLeftArrow,
   CustomRightArrow,
@@ -30,6 +24,13 @@ function ServiceCard() {
       items: 1.3,
     },
   };
+  const one = "/rentalSlider/1.png";
+  const two = "/rentalSlider/2.png";
+  const three = "/rentalSlider/3.png";
+  const four = "/rentalSlider/4.png";
+  const five = "/rentalSlider/5.png";
+  const six = "/rentalSlider/6.png";
+  const seven = "/rentalSlider/7.png";
   return (
     <Box
       sx={{
