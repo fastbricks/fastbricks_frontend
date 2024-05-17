@@ -30,8 +30,16 @@ function HomeCarousel() {
     },
   };
   const data = [
-    { id: "1", image: "/homeSlider/mockup-engineer-zoom.jpeg" },
-    { id: "2", image: "/homeSlider/mockupreal.jpeg" },
+    {
+      id: "1",
+      image:
+        "https://firebasestorage.googleapis.com/v0/b/fastbricks-blog-666fb.appspot.com/o/mockup-engineer-zoom.jpeg?alt=media&token=180abf5d-9ea3-4af2-8822-264d3602f000",
+    },
+    {
+      id: "2",
+      image:
+        "https://firebasestorage.googleapis.com/v0/b/fastbricks-blog-666fb.appspot.com/o/mockupreal.jpeg?alt=media&token=aacc6160-1a3e-4d87-a8f2-dccac4338401",
+    },
   ];
   return (
     <div>
@@ -50,11 +58,11 @@ function HomeCarousel() {
         {data.map((data) => {
           return (
             <div key={data.id} className=" w-full object-fill">
-              <LazyLoadImage
+              <img
                 className="object-contain h-[100vh] sm:object-cover sm:h-[100vh]"
                 src={data.image}
                 alt="banner"
-                effect="blur"
+                loading="lazy"
               />
             </div>
           );
