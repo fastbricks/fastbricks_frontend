@@ -44,7 +44,7 @@ export default function EditProfile() {
   return (
     <React.Fragment>
       <h1
-        className="font-semibold font-sans text-gray-500 hover:text-gray-600"
+        className="font-semibold font-sans text-gray-500 hover:text-gray-600 w-full justify-between flex pl-2 pr-2"
         onClick={handleClickOpen}
       >
         Edit Profile
