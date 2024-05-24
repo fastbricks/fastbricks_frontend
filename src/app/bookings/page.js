@@ -52,6 +52,9 @@ export default function Bookings() {
   const fassured = "";
   return (
     <>
+      <head>
+        <title>Your Bookings on fastbricks.in</title>
+      </head>
       {cartItems.length ? (
         <Container container>
           <LeftGrid item lg={9} md={9} sm={12} xs={12}>

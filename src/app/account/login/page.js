@@ -14,15 +14,6 @@ import Link from "next/link";
 import LoginForMobile from "@/components/login/LoginForMobile";
 import { FcGoogle } from "react-icons/fc";
 
-const BootstrapDialog = styled(Dialog)(({ theme }) => ({
-  "& .MuiDialogContent-root": {
-    padding: theme.spacing(2),
-  },
-  "& .MuiDialogActions-root": {
-    padding: theme.spacing(1),
-  },
-}));
-
 function BootstrapDialogTitle(props) {
   const { children, onClose, ...other } = props;
 
@@ -72,203 +63,214 @@ export default function Login() {
   };
 
   return (
-    <Box sx={{ backgroundColor: "white" }}>
-      <Wrapper>
-        <FirstCard sx={{}}>
-          <div style={{ display: "grid", justifyContent: "center" }}>
-            <DialogContent>
-              {account.view === "login" ? (
-                <Box>
-                  <Box className="login_box" sx={{ display: "flex" }}>
-                    <Box
-                      sx={{
-                        display: "grid",
-                        margin: "5px",
-                        padding: "10px",
-                      }}
-                    >
-                      <Box className="login_Textfield_box">
-                        <Typography
-                          sx={{
-                            fontWeight: 500,
-                            fontSize: 25,
-                            color: "grey",
-                            paddingLeft: "20px",
-                          }}
-                        >
-                          Sign in
-                        </Typography>
-                      </Box>
+    <>
+      <head>
+        <title>Login with fastbricks</title>
+      </head>
+      <Box sx={{ backgroundColor: "white" }}>
+        <Wrapper>
+          <FirstCard sx={{}}>
+            <div style={{ display: "grid", justifyContent: "center" }}>
+              <DialogContent>
+                {account.view === "login" ? (
+                  <Box>
+                    <Box className="login_box" sx={{ display: "flex" }}>
                       <Box
-                        sx={{ display: "grid", padding: "10px 20px 20px 20px" }}
-                      >
-                        <TextField
-                          id="outlined-basic"
-                          label="Enter Phone number"
-                          variant="outlined"
-                          color="warning"
-                        />
-                        <TermBoxStyle>
-                          By continuing, you agree to Fastbricks&apos;s &nbsp;
-                          <StyledLink href={{}}>Terms of Use</StyledLink>&nbsp;
-                          and&nbsp;
-                          <StyledLink href={{}}>Privacy Policy</StyledLink>.
-                        </TermBoxStyle>
-                        <Button
-                          variant="contained"
-                          disableElevation
-                          className="bg-red-500"
-                          sx={{
-                            margin: "5px 5px",
-                            backgroundColor: "#fb5d0e",
-                            ":hover": {
-                              backgroundColor: "#fb5d0e",
-                            },
-                          }}
-                        >
-                          Request OTP
-                        </Button>
-                      </Box>
-                    </Box>
-                  </Box>
-                  <Box
-                    sx={{
-                      justifyContent: "center",
-                      display: "grid",
-                      alignItems: "center",
-                      marginTop: "10px",
-                    }}
-                  >
-                    <Divider>
-                      <Typography sx={{ color: "grey", fontSize: 13.5 }}>
-                        New to Fastbricks?
-                      </Typography>
-                    </Divider>
-
-                    <div onClick={toggleSignup}>
-                      <Button autoFocus>
-                        <span
-                          style={{ textTransform: "none", color: "#fd9696" }}
-                        >
-                          Create Your Fastbricks account
-                        </span>
-                      </Button>
-                    </div>
-                  </Box>
-                </Box>
-              ) : (
-                <Box>
-                  <Box className="login_box" sx={{ display: "flex" }}>
-                    <Box
-                      sx={{
-                        display: "grid",
-                        margin: "5px",
-                        padding: "10px",
-                      }}
-                    >
-                      <Box className="login_Textfield_box">
-                        <Typography
-                          sx={{
-                            fontWeight: 500,
-                            fontSize: 25,
-                            color: "grey",
-                            paddingLeft: "20px",
-                          }}
-                        >
-                          Welcome! you are new here!
-                        </Typography>
-                      </Box>
-                      <Box
-                        sx={{ display: "grid", padding: "10px 20px 20px 20px" }}
-                      >
-                        <TextField
-                          id="outlined-basic"
-                          label="Enter Phone number"
-                          variant="outlined"
-                          color="warning"
-                        />
-                        <TermBoxStyle>
-                          By continuing, you agree to Fastbricks&apos;s &nbsp;
-                          <StyledLink href={{}}>Terms of Use</StyledLink>&nbsp;
-                          and&nbsp;
-                          <StyledLink href={{}}>Privacy Policy</StyledLink>.
-                        </TermBoxStyle>
-                        <Button
-                          variant="contained"
-                          className="bg-orange-500"
-                          disableElevation
-                          sx={{
-                            margin: "5px 5px",
-                            backgroundColor: "red",
-                            ":hover": {
-                              backgroundColor: "#fb5d0e",
-                            },
-                          }}
-                        >
-                          continue
-                        </Button>
-                      </Box>
-                    </Box>
-                  </Box>
-                  <Box
-                    sx={{
-                      justifyContent: "center",
-                      display: "grid",
-                      alignItems: "center",
-                      marginTop: "10px",
-                    }}
-                  >
-                    <Divider>
-                      <Typography sx={{ color: "grey", fontSize: 13.5 }}>
-                        Existing User?
-                      </Typography>
-                    </Divider>
-                    <div onClick={toggleSignin}>
-                      <Button
-                        variant="contained"
-                        disableElevation
                         sx={{
-                          backgroundColor: "#fff",
-                          height: "100%",
-                          width: "100%",
-                          color: "#fd9696",
-                          textTransform: "capitalize",
-                          ":hover": {
-                            backgroundColor: "#eee",
-                          },
+                          display: "grid",
+                          margin: "5px",
+                          padding: "10px",
                         }}
                       >
-                        sign in
-                      </Button>
-                    </div>
+                        <Box className="login_Textfield_box">
+                          <Typography
+                            sx={{
+                              fontWeight: 500,
+                              fontSize: 25,
+                              color: "grey",
+                              paddingLeft: "20px",
+                            }}
+                          >
+                            Sign in
+                          </Typography>
+                        </Box>
+                        <Box
+                          sx={{
+                            display: "grid",
+                            padding: "10px 20px 20px 20px",
+                          }}
+                        >
+                          <TextField
+                            id="outlined-basic"
+                            label="Enter Phone number"
+                            variant="outlined"
+                            color="warning"
+                          />
+                          <TermBoxStyle>
+                            By continuing, you agree to Fastbricks&apos;s &nbsp;
+                            <StyledLink href={{}}>Terms of Use</StyledLink>
+                            &nbsp; and&nbsp;
+                            <StyledLink href={{}}>Privacy Policy</StyledLink>.
+                          </TermBoxStyle>
+                          <Button
+                            variant="contained"
+                            disableElevation
+                            className="bg-red-500"
+                            sx={{
+                              margin: "5px 5px",
+                              backgroundColor: "#fb5d0e",
+                              ":hover": {
+                                backgroundColor: "#fb5d0e",
+                              },
+                            }}
+                          >
+                            Request OTP
+                          </Button>
+                        </Box>
+                      </Box>
+                    </Box>
+                    <Box
+                      sx={{
+                        justifyContent: "center",
+                        display: "grid",
+                        alignItems: "center",
+                        marginTop: "10px",
+                      }}
+                    >
+                      <Divider>
+                        <Typography sx={{ color: "grey", fontSize: 13.5 }}>
+                          New to Fastbricks?
+                        </Typography>
+                      </Divider>
+
+                      <div onClick={toggleSignup}>
+                        <Button autoFocus>
+                          <span
+                            style={{ textTransform: "none", color: "#fd9696" }}
+                          >
+                            Create Your Fastbricks account
+                          </span>
+                        </Button>
+                      </div>
+                    </Box>
                   </Box>
-                </Box>
-              )}
-            </DialogContent>
-            <div className="pb-16 text-center">
-              or
-              <div className="flex justify-center justify-items-center w-full">
-                <button className="flex items-center border-[1px] border-gray-300 justify-center gap-5 bg-gray-50 pt-3 rounded-lg pb-3 pl-5 pr-5">
-                  <div className="">
-                    <FcGoogle className="scale-150" />
-                  </div>
-                  <Typography>Sign in with google</Typography>
-                </button>
+                ) : (
+                  <Box>
+                    <Box className="login_box" sx={{ display: "flex" }}>
+                      <Box
+                        sx={{
+                          display: "grid",
+                          margin: "5px",
+                          padding: "10px",
+                        }}
+                      >
+                        <Box className="login_Textfield_box">
+                          <Typography
+                            sx={{
+                              fontWeight: 500,
+                              fontSize: 25,
+                              color: "grey",
+                              paddingLeft: "20px",
+                            }}
+                          >
+                            Welcome! you are new here!
+                          </Typography>
+                        </Box>
+                        <Box
+                          sx={{
+                            display: "grid",
+                            padding: "10px 20px 20px 20px",
+                          }}
+                        >
+                          <TextField
+                            id="outlined-basic"
+                            label="Enter Phone number"
+                            variant="outlined"
+                            color="warning"
+                          />
+                          <TermBoxStyle>
+                            By continuing, you agree to Fastbricks&apos;s &nbsp;
+                            <StyledLink href={{}}>Terms of Use</StyledLink>
+                            &nbsp; and&nbsp;
+                            <StyledLink href={{}}>Privacy Policy</StyledLink>.
+                          </TermBoxStyle>
+                          <Button
+                            variant="contained"
+                            className="bg-orange-500"
+                            disableElevation
+                            sx={{
+                              margin: "5px 5px",
+                              backgroundColor: "red",
+                              ":hover": {
+                                backgroundColor: "#fb5d0e",
+                              },
+                            }}
+                          >
+                            continue
+                          </Button>
+                        </Box>
+                      </Box>
+                    </Box>
+                    <Box
+                      sx={{
+                        justifyContent: "center",
+                        display: "grid",
+                        alignItems: "center",
+                        marginTop: "10px",
+                      }}
+                    >
+                      <Divider>
+                        <Typography sx={{ color: "grey", fontSize: 13.5 }}>
+                          Existing User?
+                        </Typography>
+                      </Divider>
+                      <div onClick={toggleSignin}>
+                        <Button
+                          variant="contained"
+                          disableElevation
+                          sx={{
+                            backgroundColor: "#fff",
+                            height: "100%",
+                            width: "100%",
+                            color: "#fd9696",
+                            textTransform: "capitalize",
+                            ":hover": {
+                              backgroundColor: "#eee",
+                            },
+                          }}
+                        >
+                          sign in
+                        </Button>
+                      </div>
+                    </Box>
+                  </Box>
+                )}
+              </DialogContent>
+              <div className="pb-16 text-center">
+                or
+                <div className="flex justify-center justify-items-center w-full">
+                  <button className="flex items-center border-[1px] border-gray-300 justify-center gap-5 bg-gray-50 pt-3 rounded-lg pb-3 pl-5 pr-5">
+                    <div className="">
+                      <FcGoogle className="scale-150" />
+                    </div>
+                    <Typography>Sign in with google</Typography>
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        </FirstCard>
-        <SecondCard sx={{}}>
-          <img
-            src="/login/loginred1.png"
-            style={{ width: "100%", height: "100%" }}
-          />
-        </SecondCard>
-      </Wrapper>
-      <LoginForMobileCard>
-        <LoginForMobile />
-      </LoginForMobileCard>
-    </Box>
+          </FirstCard>
+          <SecondCard sx={{}}>
+            <img
+              src="/login/loginred1.png"
+              style={{ width: "100%", height: "100%" }}
+            />
+          </SecondCard>
+        </Wrapper>
+        <LoginForMobileCard>
+          <LoginForMobile />
+        </LoginForMobileCard>
+      </Box>
+    </>
   );
 }
 const TermBoxStyle = styled(Box)(({ theme }) => ({
