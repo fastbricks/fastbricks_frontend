@@ -18,6 +18,7 @@ const Footer = () => {
   const [isMobile, setIsMobile] = useState(false);
   const isAccountPage = pathname === "/account";
   const isBookingPage = pathname === "/bookings";
+  const isLoginPage = pathname === "/account/login";
 
   useEffect(() => {
     const userAgent = window.navigator.userAgent;
@@ -289,7 +290,9 @@ const Footer = () => {
       sx={{
         marginTop: "30px",
         display:
-          isCommunityPage || isAccountPage || isBookingPage ? "none" : "flex",
+          isCommunityPage || isAccountPage || isBookingPage || isLoginPage
+            ? "none"
+            : "flex",
       }}
     >
       <Card className="footer-wrapper" style={{ display: "block" }}>

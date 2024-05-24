@@ -1,10 +1,12 @@
 "use client";
 import BottomNavBar from "@/components/BottomNavigation/BottomNavBar";
 import GroupedButton from "@/components/cart/ButtonGroup";
+import React, { useState } from "react";
+
 import Image from "next/image";
 import { Box, Card, Typography, styled, Grid, Button } from "@mui/material";
-import cart from "@/assets/cart.png";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import { ClipLoader } from "react-spinners";
 const cartItems = [
   // {
   //   id: "1",
@@ -50,6 +52,11 @@ const Discount = styled(Typography)`
 `;
 export default function Bookings() {
   const fassured = "";
+  const [loading, setLoading] = useState(true);
+
+  const handleImageLoad = () => {
+    setLoading(false);
+  };
   return (
     <>
       <head>
@@ -152,11 +159,18 @@ export default function Bookings() {
         </Container>
       ) : (
         <div className="h-[80vh] flex justify-center items-center">
-          <div
-            className=" flex justify-center items-center flex-col
-          "
-          >
-            <Image src={cart} className=" h-64 w-56" />
+          <div className="flex justify-center items-center flex-col">
+            <LazyLoadImage
+              src="/cart.png"
+              alt="Logo"
+              className="h-64 w-56"
+              placeholder={
+                <div className="flex justify-center items-center h-full">
+                  <ClipLoader size={50} color={"#f87171"} loading={loading} />
+                </div>
+              }
+              onLoad={handleImageLoad}
+            />
             <Typography className="font-bold font-sans text-xl">
               Oops!
             </Typography>
